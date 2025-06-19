@@ -22,41 +22,30 @@
 //																																						//
 ////////////////////////////////////////////////////////////////////////////////
 
-/**
- * User class used by the network.
- */
+#ifdef __linux__
 
-#pragma once
+// FILE: LinMain.h ////////////////////////////////////////////////////////////
+//
+// Header for entry point for Win32 application
+//
+// Author: Cristiano Beato, June 2025
+//
+///////////////////////////////////////////////////////////////////////////////
 
-#ifndef __USER_H
-#define __USER_H
+#ifndef __LINMAIN_H_
+#define __LINMAIN_H_
 
-#include "GameNetwork/NetworkDefs.h"
-#include "Common/UnicodeString.h"
+// SYSTEM INCLUDES ////////////////////////////////////////////////////////////
 
-class User : public MemoryPoolObject
-{
-	MEMORY_POOL_GLUE_WITH_USERLOOKUP_CREATE(User, "User")		
-public:
-	User() {}
-	User(UnicodeString name, UnsignedInt addr, UnsignedInt port);
-	User &operator= (const User *other);
-	Bool operator== (const User *other);
-	Bool operator!= (const User *other);
-
-	inline UnicodeString GetName() { return m_name; }
-	void setName(UnicodeString name);
-	inline UnsignedShort GetPort() { return m_port; }
-	inline UnsignedInt GetIPAddr() { return m_ipaddr; }
-	inline void SetPort(UnsignedShort port) { m_port = port; }
-	inline void SetIPAddr(UnsignedInt ipaddr) { m_ipaddr = ipaddr; }
+// USER INCLUDES //////////////////////////////////////////////////////////////
+#include "LinuxDevice/GameClient/LinuxMouse.h"
 
 
-private:
-	UnicodeString m_name;
-	UnsignedShort m_port;
-	UnsignedInt m_ipaddr;
-};
-EMPTY_DTOR(User)
+// EXTERNAL ///////////////////////////////////////////////////////////////////
+extern HINSTANCE ApplicationHInstance;  ///< our application instance
+extern HWND ApplicationHWnd;  ///< our application window handle
+extern Win32Mouse *TheWin32Mouse;  ///< global for win32 mouse only!
 
-#endif
+#endif  // end __LINMAIN_H_
+
+#endif //__linux__

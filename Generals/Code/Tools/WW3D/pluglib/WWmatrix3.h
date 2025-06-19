@@ -63,7 +63,7 @@
 
 #include "always.h"
 #include "vector3.h"
-//#include "wwdebug.h"
+#include "wwdebug.h"
 
 
 class Matrix3D;

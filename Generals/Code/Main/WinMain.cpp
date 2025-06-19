@@ -22,6 +22,8 @@
 //																																						//
 ////////////////////////////////////////////////////////////////////////////////
 
+#ifdef _WIN32
+
 // FILE: WinMain.cpp //////////////////////////////////////////////////////////
 // 
 // Entry point for game application
@@ -300,8 +302,7 @@ static const char *messageToString(unsigned int message)
 // WndProc ====================================================================
 /** Window Procedure */
 //=============================================================================
-LRESULT CALLBACK WndProc( HWND hWnd, UINT message, 
-													WPARAM wParam, LPARAM lParam )
+LRESULT CALLBACK WndProc( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam )
 {
 
 	try
@@ -1071,3 +1072,5 @@ GameEngine *CreateGameEngine( void )
 	return engine;
 
 }  // end CreateGameEngine
+
+#endif //_WIN32

@@ -42,11 +42,10 @@
 #ifndef WWMATH_H
 #define WWMATH_H
 
-#include "always.h"
-#include <math.h>
-#include <float.h>
+#include "WWLib/always.h"
+#include <cmath>
+#include <cfloat>
 #include <assert.h>
-#include <float.h>
 
 /*
 ** Some global constants.

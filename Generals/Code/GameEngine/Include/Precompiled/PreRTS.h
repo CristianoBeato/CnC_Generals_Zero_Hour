@@ -35,56 +35,63 @@
 //#define _STLP_USE_CUSTOM_NEWALLOC		STLSpecialAlloc
 class STLSpecialAlloc;
 
+// BEATO Begin:
+#include <cstdio>
+#include <cstdint>
+#include <cstdio>
+#include <cstdarg>
+#include <cstddef>
+#include <cstdlib>
+#include <ctime>
+#include <ctype.h>
+#include <cstring>
+#include <fstream>
+#include <assert.h>
+#include <limits.h>
+#include <sys/stat.h>
+#include <sys/timeb.h>
+#include <sys/types.h>
+#include <cmath>
+#include <float.h>
+#include <memory.h>
+#include <algorithm>
 
+#if defined( __linux__)
+#elif defined( _WIN32 )
 // We actually don't use Windows for much other than timeGetTime, but it was included in 40 
 // different .cpp files, so I bit the bullet and included it here.
 // PLEASE DO NOT ABUSE WINDOWS OR IT WILL BE REMOVED ENTIRELY. :-)
 //--------------------------------------------------------------------------------- System Includes 
-#define WIN32_LEAN_AND_MEAN
-#include <atlbase.h>
-#include <windows.h>
 
-#include <assert.h>
-#include <ctype.h>
-#include <direct.h>
-#include <EXCPT.H>
-#include <float.h>
-#include <fstream.h>
-#include <imagehlp.h>
-#include <io.h>
-#include <limits.h>
-#include <lmcons.h>
-#include <mapicode.h>
-#include <math.h>
-#include <memory.h>
-#include <mmsystem.h>
-#include <objbase.h>
-#include <ocidl.h>
-#include <process.h>
-#include <shellapi.h>
-#include <shlobj.h>
-#include <shlguid.h>
-#include <snmp.h>
-#include <stdarg.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/stat.h>
-#include <sys/timeb.h>
-#include <sys/types.h>
-#include <TCHAR.H>
-#include <time.h>
-#include <vfw.h>
-#include <winerror.h>
-#include <wininet.h>
-#include <winreg.h>
+#   define WIN32_LEAN_AND_MEAN
+#   include <atlbase.h>
+#   include <windows.h>
+#   include <direct.h>
+#   include <EXCPT.H>
+#   include <imagehlp.h>
+#   include <lmcons.h>
+#   include <mapicode.h>
+#   include <mmsystem.h>
+#   include <objbase.h>
+#   include <ocidl.h>
+#   include <process.h>
+#   include <shellapi.h>
+#   include <shlobj.h>
+#   include <shlguid.h>
+#   include <snmp.h>
+#   include <TCHAR.H>
+#   include <vfw.h>
+#   include <winerror.h>
+#   include <wininet.h>
+#   include <winreg.h>
 
 #ifndef DIRECTINPUT_VERSION
 #	define DIRECTINPUT_VERSION	0x800
 #endif
 
 #include <dinput.h>
+#endif // _WIN32
+// BEATO End
 
 //------------------------------------------------------------------------------------ STL Includes
 // srj sez: no, include STLTypesdefs below, instead, thanks
@@ -101,7 +108,7 @@ class STLSpecialAlloc;
 
 //------------------------------------------------------------------------------------ RTS Includes
 // Icky. These have to be in this order.
-#include "Lib/Basetype.h"
+#include "Lib/BaseType.h"
 #include "Common/STLTypedefs.h"
 #include "Common/Errors.h"
 #include "Common/Debug.h"

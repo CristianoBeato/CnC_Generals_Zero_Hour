@@ -22,6 +22,8 @@
 //																																						//
 ////////////////////////////////////////////////////////////////////////////////
 
+#ifdef _WIN32
+
 // FILE: WinMain.h ////////////////////////////////////////////////////////////
 //
 // Header for entry point for Win32 application
@@ -46,3 +48,4 @@ extern Win32Mouse *TheWin32Mouse;  ///< global for win32 mouse only!
 
 #endif  // end __WINMAIN_H_
 
+#endif //_WIN32

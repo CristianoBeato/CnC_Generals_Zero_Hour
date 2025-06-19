@@ -41,12 +41,12 @@
 #ifndef POINTGR_H
 #define POINTGR_H
 
-#include "sharebuf.h"
-#include "shader.h"
-#include "vector4.h"
-#include "vector3.h"
-#include "vector2.h"
-#include "vector.h"
+#include "WWLib/sharebuf.h"
+#include "WW3D2/shader.h"
+#include "WWMath/vector4.h"
+#include "WWMath/vector3.h"
+#include "WWMath/vector2.h"
+#include "WWLib/Vector.H"  // #include "WWMath/vector.h"
 
 class VertexMaterialClass;
 class RenderInfoClass;
@@ -66,14 +66,15 @@ class TextureClass;
 class PointGroupClass
 {
 public:
-
-	enum PointModeEnum {
+	enum PointModeEnum 
+	{
 		TRIS,			// each point is a triangle
 		QUADS,		// each point is a quad formed out of two triangles
 		SCREENSPACE	// each point is a tri placed to affect certain pixels (should be used with 2D camera)
 	};
 
-	enum FlagsType {
+	enum FlagsType 
+	{
 		TRANSFORM,	// transform points w. modelview matrix (worldspace points)
 	};
 

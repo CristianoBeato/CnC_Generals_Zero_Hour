@@ -62,8 +62,8 @@
 
 // SYSTEM INCLUDES ////////////////////////////////////////////////////////////
 
-#include <new.h>
-#include <stdio.h>
+#include <new>
+#include <cstdio>
 #ifdef MEMORYPOOL_OVERRIDE_MALLOC
 	#include <malloc.h>
 #endif

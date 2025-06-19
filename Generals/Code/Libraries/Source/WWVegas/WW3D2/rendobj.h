@@ -42,14 +42,14 @@
 #ifndef RENDOBJ_H
 #define RENDOBJ_H
 
-#include "always.h"
-#include "refcount.h"
-#include "sphere.h"
+#include "WWLib/always.h" // "always.h"
+#include "WWLib/refcount.h"
+#include "WWMath/sphere.h" // sphere.h
 #include "coltype.h"
-#include "aabox.h"
-#include "persist.h"
-#include "multilist.h"
-#include "robjlist.h"
+#include "WWMath/aabox.h" // aabox.h"
+#include "WWSaveLoad/persist.h" //"persist.h"
+#include "WWLib/multilist.h" //"multilist.h"
+#include "WW3D2/robjlist.h" //"robjlist.h"
 #include <float.h>
 
 class	Vector3;

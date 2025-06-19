@@ -33,11 +33,16 @@
  *---------------------------------------------------------------------------------------------*
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "registry.h"
+#include "WWLib/registry.h"
 #include <assert.h>
-#include <windows.h>
 
-//#include "wwdebug.h"
+#if defined( _WIN32 )
+#include <windows.h>
+#elif defined( __linux__ )
+// TODO: implement a config file 
+#endif 
+
+#include "WWDebug/wwdebug.h"
 
 /*
 **
@@ -45,85 +50,105 @@
 RegistryClass::RegistryClass( const char * sub_key ) :
 	IsValid( false )
 {
+#if defined( _WIN32 )
 	DWORD disposition;
 	HKEY	key;
 	assert( sizeof(HKEY) == sizeof(int) );
-	if (::RegCreateKeyEx( HKEY_LOCAL_MACHINE, sub_key,
-			0, NULL, 0, KEY_ALL_ACCESS, NULL,
-			&key, &disposition ) == ERROR_SUCCESS) {
+	if (::RegCreateKeyEx( HKEY_LOCAL_MACHINE, sub_key, 0, NULL, 0, KEY_ALL_ACCESS, NULL, &key, &disposition ) == ERROR_SUCCESS) 
+	{
 		IsValid = true;
 		Key = (int)key;
 	}
+#endif
 }
 
 RegistryClass::~RegistryClass( void )
 {
-	if ( IsValid ) {
+#if defined( _WIN32 )
+	if ( IsValid ) 
+	{
 		if (::RegCloseKey( (HKEY)Key ) != ERROR_SUCCESS) {		// Close the reg key
 		}
 		IsValid = false;
 	}
+#endif
 }
 
 int	RegistryClass::Get_Int( const char * name, int def_value )
 {
+	int data = 0;
+#if defined( _WIN32 )
 	assert( IsValid );
-	DWORD type, data = 0, data_len = sizeof( data );
-	if (( ::RegQueryValueEx( (HKEY)Key, name, NULL, &type, (LPBYTE)&data, &data_len ) == 
-		ERROR_SUCCESS ) && ( type == REG_DWORD )) {
-	} else {
+	DWORD type, data_len = sizeof( data );
+	if (( ::RegQueryValueEx( (HKEY)Key, name, NULL, &type, (LPBYTE)&data, &data_len ) == ERROR_SUCCESS ) && ( type == REG_DWORD )) 
+	{
+	} 
+	else 
 		data = def_value;
-	}
+#endif
 	return data;
 }
 
 void	RegistryClass::Set_Int( const char * name, int value )
 {
+#if defined( _WIN32 )
 	assert( IsValid );
-	if (::RegSetValueEx( (HKEY)Key, name, 0, REG_DWORD, (LPBYTE)&value, sizeof( DWORD ) ) != 
-			ERROR_SUCCESS) {
+	if (::RegSetValueEx( (HKEY)Key, name, 0, REG_DWORD, (LPBYTE)&value, sizeof( DWORD ) ) != ERROR_SUCCESS) 
+	{
 	}
+#endif
 }
 
 
 bool	RegistryClass::Get_Bool( const char * name, bool def_value )
 {
+#if defined( _WIN32 )
 	return (Get_Int( name, def_value ) != 0);
+#else
+	return 0;
+#endif
 }
 
 void	RegistryClass::Set_Bool( const char * name, bool value )
 {
+#if defined( _WIN32 )
 	Set_Int( name, value ? 1 : 0 );
+#else
+#endif 
 }
-
 
 float	RegistryClass::Get_Float( const char * name, float def_value )
 {
-	assert( IsValid );
 	float data = 0;
+#if defined( _WIN32 )
+	assert( IsValid );
 	DWORD type, data_len = sizeof( data );
 	if (( ::RegQueryValueEx( (HKEY)Key, name, NULL, &type, (LPBYTE)&data, &data_len ) == 
 		ERROR_SUCCESS ) && ( type == REG_DWORD )) {
 	} else {
 		data = def_value;
 	}
+#endif 
 	return data;
 }
 
 void	RegistryClass::Set_Float( const char * name, float value )
 {
+#if 0
 	assert( IsValid );
-	if (::RegSetValueEx( (HKEY)Key, name, 0, REG_DWORD, (LPBYTE)&value, sizeof( DWORD ) ) != 
-			ERROR_SUCCESS) {
+	if (::RegSetValueEx( (HKEY)Key, name, 0, REG_DWORD, (LPBYTE)&value, sizeof( DWORD ) ) !=  ERROR_SUCCESS) 
+	{
 	}
+#endif
 }
 
 int RegistryClass::Get_Bin_Size( const char * name )
 {
-	assert( IsValid );
-
 	unsigned long size = 0;
+#if defined( _WIN32 )
+	assert( IsValid );
 	::RegQueryValueEx( (HKEY)Key, name, NULL, NULL, NULL, &size );	
+#endif 
 	return size;
 }
 
@@ -133,10 +158,10 @@ void RegistryClass::Get_Bin( const char * name, void *buffer, int buffer_size )
 	assert( IsValid );
 	assert( buffer != NULL );
 	assert( buffer_size > 0 );
-
 	unsigned long size = buffer_size;
-	::RegQueryValueEx( (HKEY)Key, name, NULL, NULL, (LPBYTE)buffer, &size );	
-	return ;
+#if defined( _WIN32 )
+	::RegQueryValueEx( (HKEY)Key, name, NULL, NULL, (LPBYTE)buffer, &size );
+#endif
 }
 
 void	RegistryClass::Set_Bin( const char * name, const void *buffer, int buffer_size )
@@ -145,8 +170,9 @@ void	RegistryClass::Set_Bin( const char * name, const void *buffer, int buffer_s
 	assert( buffer != NULL );
 	assert( buffer_size > 0 );
 
+#if defined( _WIN32 )
 	::RegSetValueEx( (HKEY)Key, name, 0, REG_BINARY, (LPBYTE)buffer, buffer_size );	
-	return ;
+#endif
 }
 
 void	RegistryClass::Get_String( const char * name, StringClass &string, const char *default_string )
@@ -154,6 +180,8 @@ void	RegistryClass::Get_String( const char * name, StringClass &string, const ch
 	assert( IsValid );
 	string = (default_string == NULL) ? "" : default_string;
 
+
+#if defined( _WIN32 )
 	//
 	//	Get the size of the entry
 	//
@@ -170,13 +198,15 @@ void	RegistryClass::Get_String( const char * name, StringClass &string, const ch
 	}
 			
 	return ;
+#endif
 }
 
 
-char *RegistryClass::Get_String( const char * name, char *value, int value_size,
-   const char * default_string )
+char *RegistryClass::Get_String( const char * name, char *value, int value_size, const char * default_string )
 {
 	assert( IsValid );
+
+#if defined( _WIN32 )
 	DWORD type = 0;
 	if (( ::RegQueryValueEx( (HKEY)Key, name, NULL, &type, (LPBYTE)value, (DWORD*)&value_size ) == 
 			ERROR_SUCCESS ) && ( type == REG_SZ )) {
@@ -190,6 +220,8 @@ char *RegistryClass::Get_String( const char * name, char *value, int value_size,
          strcpy(value, default_string);
       }
 	}
+#endif
+
 	return value;
 }
 
@@ -197,9 +229,11 @@ void	RegistryClass::Set_String( const char * name, const char *value )
 {
 	assert( IsValid );
    int size = strlen( value ) + 1; // must include NULL
-	if (::RegSetValueEx( (HKEY)Key, name, 0, REG_SZ, (LPBYTE)value, size ) != 
+#if defined( _WIN32 )
+   if (::RegSetValueEx( (HKEY)Key, name, 0, REG_SZ, (LPBYTE)value, size ) != 
 		ERROR_SUCCESS ) {
 	}
+#endif
 }
 
 void	RegistryClass::Get_Value_List( DynamicVectorClass<StringClass> &list )
@@ -211,8 +245,9 @@ void	RegistryClass::Get_Value_List( DynamicVectorClass<StringClass> &list )
 	//
 	int index = 0;
 	unsigned long sizeof_name = sizeof (value_name);
-	while (::RegEnumValue ((HKEY)Key, index ++,
-					value_name, &sizeof_name, 0, NULL, NULL, NULL) == ERROR_SUCCESS)
+
+#if defined( _WIN32 )
+	while (::RegEnumValue ((HKEY)Key, index ++, value_name, &sizeof_name, 0, NULL, NULL, NULL) == ERROR_SUCCESS)
 	{
 		sizeof_name = sizeof (value_name);
 
@@ -223,16 +258,20 @@ void	RegistryClass::Get_Value_List( DynamicVectorClass<StringClass> &list )
 	}
 
 	return ;
+#endif
 }
 
 void	RegistryClass::Delete_Value( const char * name)
 {
+#if defined( _WIN32 )
 	::RegDeleteValue( (HKEY)Key, name );
 	return ;
+#endif
 }
 
 void	RegistryClass::Deleta_All_Values( void )
 {
+#if defined( _WIN32 )
 	//
 	//	Build a list of the values in this key
 	//
@@ -247,6 +286,7 @@ void	RegistryClass::Deleta_All_Values( void )
 	}
 
 	return ;
+#endif
 }
 
 
@@ -255,6 +295,7 @@ void	RegistryClass::Get_String( const WCHAR * name, WideStringClass &string, con
 	assert( IsValid );
 	string = (default_string == NULL) ? L"" : default_string;
 
+#if defined( _WIN32 )
 	//
 	//	Get the size of the entry
 	//
@@ -271,6 +312,7 @@ void	RegistryClass::Get_String( const WCHAR * name, WideStringClass &string, con
 	}
 			
 	return ;
+#endif
 }
 
 
@@ -284,9 +326,12 @@ void	RegistryClass::Set_String( const WCHAR * name, const WCHAR *value )
 	int size = wcslen( value ) + 1;
 	size		= size * 2;
 	
+#if defined( _WIN32 )
 	//
 	//	Set the registry key
 	//
 	::RegSetValueExW ( (HKEY)Key, name, 0, REG_SZ, (LPBYTE)value, size );
 	return ;
+
+#endif
 }

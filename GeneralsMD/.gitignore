@@ -102,4 +102,5 @@ generatedVersion.h
 *.opt
 *.plg
 
+/Build
 .vscode

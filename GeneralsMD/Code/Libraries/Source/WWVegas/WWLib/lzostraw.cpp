@@ -37,7 +37,7 @@
  *   LZOStraw::~LZOStraw -- Destructor for the LZO straw.                                      *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"lzo.h"
 #include	"lzostraw.h"
 #include	<assert.h>

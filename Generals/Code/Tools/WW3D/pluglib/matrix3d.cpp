@@ -57,9 +57,9 @@
 #include <assert.h>
 #include <stdlib.h>
 //#include <stdio.h>
-#include "vector3.h"
+#include "WWMath/vector3.h"
 #include "wwmatrix3.h"
-#include "matrix4.h"
+#include "WWMath/matrix4.h"
 #include "w3dquat.h"
 
 // some static matrices which are sometimes useful

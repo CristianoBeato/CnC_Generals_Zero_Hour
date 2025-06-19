@@ -28,7 +28,7 @@
 #ifndef __FLAT_HEIGHTMAP_H_
 #define __FLAT_HEIGHTMAP_H_
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "rendobj.h"
 #include "w3d_file.h"
 #include "dx8vertexbuffer.h"

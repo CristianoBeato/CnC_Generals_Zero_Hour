@@ -38,7 +38,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"xpipe.h"
 #include	<stddef.h>
 #include	<string.h>

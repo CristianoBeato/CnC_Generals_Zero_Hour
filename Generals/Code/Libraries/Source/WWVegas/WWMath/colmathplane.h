@@ -43,9 +43,9 @@
 #ifndef COLMATHPLANE_H
 #define COLMATHPLANE_H
 
-#include "always.h"
-#include "plane.h"
-#include "aabox.h"
+#include "WWLib/always.h"
+#include "WWMath/plane.h"
+#include "WWMath/aabox.h"
 
 /*
 ** Inline collision functions dealing with planes

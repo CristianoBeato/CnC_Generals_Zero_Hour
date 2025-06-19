@@ -34,7 +34,7 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "wwstring.h"
+#include "WWLib/wwstring.h"
 #include "win.h"
 #include "wwmemlog.h"
 #include "mutex.h"
@@ -47,7 +47,7 @@
 
 CriticalSectionClass StringClass::m_Mutex;
 
-TCHAR		StringClass::m_NullChar					= 0;
+TCHAR		StringClass::m_NullChar					= L'\0';
 TCHAR *	StringClass::m_EmptyString				= &m_NullChar;
 
 //

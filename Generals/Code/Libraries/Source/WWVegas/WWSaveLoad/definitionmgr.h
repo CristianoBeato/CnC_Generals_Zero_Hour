@@ -43,14 +43,14 @@
 #ifndef __DEFINITION_MGR_H
 #define __DEFINITION_MGR_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "saveload.h"
 #include "saveloadsubsystem.h"
 #include "saveloadids.h"
-#include "wwdebug.h"
-#include "wwstring.h"
+#include "WWDebug/wwdebug.h"
+#include "WWLib/wwstring.h"
 #include "hashtemplate.h"
-#include "vector.h"
+#include "WWLib/vector.h"
 
 
 // Forward declarations

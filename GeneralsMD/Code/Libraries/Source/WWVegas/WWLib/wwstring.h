@@ -41,7 +41,7 @@
 #ifndef __WWSTRING_H
 #define __WWSTRING_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "mutex.h"
 #include "win.h"
 #include <string.h>

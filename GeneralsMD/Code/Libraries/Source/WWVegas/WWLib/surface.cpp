@@ -34,6 +34,6 @@
  * Functions:                                                                                  * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"surface.h"
 

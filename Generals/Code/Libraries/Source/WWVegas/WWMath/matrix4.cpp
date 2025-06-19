@@ -37,7 +37,7 @@
  *   Matrix4::Multiply -- Multiply a Matrix4 * Matrix3D                                        *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "matrix4.h"
+#include "WWMath/matrix4.h"
 #include <assert.h>
 
 /***********************************************************************************************

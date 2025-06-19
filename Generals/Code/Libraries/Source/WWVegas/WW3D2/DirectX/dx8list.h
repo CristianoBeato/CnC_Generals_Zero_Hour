@@ -20,73 +20,54 @@
  ***              C O N F I D E N T I A L  ---  W E S T W O O D  S T U D I O S               ***
  ***********************************************************************************************
  *                                                                                             *
- *                 Project Name : DX8 Texture Manager                                          *
+ *                 Project Name : ww3d                                                         *
  *                                                                                             *
- *                     $Archive:: /Commando/Code/ww3d2/dx8texman.h                            $*
+ *                     $Archive:: /Commando/Code/ww3d2/dx8list.h                              $*
  *                                                                                             *
- *              Original Author:: Hector Yee                                                   *
+ *              Original Author:: Greg Hjelstrom                                               *
  *                                                                                             *
- *                      $Author:: Jani_p                                                      $*
+ *                      $Author:: Hector_y                                                    $*
  *                                                                                             *
- *                     $Modtime:: 7/26/01 5:12p                                               $*
+ *                     $Modtime:: 4/25/01 1:37p                                               $*
  *                                                                                             *
- *                    $Revision:: 3                                                           $*
+ *                    $Revision:: 4                                                           $*
  *                                                                                             *
  *---------------------------------------------------------------------------------------------*
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+
 #if defined(_MSC_VER)
 #pragma once
 #endif
 
-#ifndef DX8TEXTUREMANAGER_H
-#define DX8TEXTUREMANAGER_H
+#ifndef DX8LIST_H
+#define DX8LIST_H
 
-#include "always.h"
-#include "texture.h"
-#include "dx8wrapper.h"
-#include "ww3dformat.h"
-#include "dx8list.h"
-#include "ww3dformat.h"
+#include "WWLib/always.h"
 #include "multilist.h"
 
-class DX8TextureManagerClass;
 
-class DX8TextureTrackerClass : public MultiListObjectClass
-{
-friend DX8TextureManagerClass;
-public:
-	DX8TextureTrackerClass(unsigned int w, unsigned int h, WW3DFormat format,
-		TextureClass::MipCountType count,bool rt,
-		TextureClass *tex):
-	Width(w),
-	Height(h),
-	Format(format),
-	Mip_level_count(count),
-	RenderTarget(rt),
-	Texture(tex)	
-	{
-	}
-private:
-	unsigned int Width;
-	unsigned int Height;
-	WW3DFormat Format;
-	TextureClass::MipCountType Mip_level_count;
-	bool RenderTarget;
-	TextureClass *Texture;
-};
+/*
+** Here we're just typedefing some multi-lists so we don't have to write the
+** long template names.
+*/
+class DX8TextureCategoryClass;
+typedef MultiListClass<DX8TextureCategoryClass>			TextureCategoryList;
+typedef MultiListIterator<DX8TextureCategoryClass>		TextureCategoryListIterator;
 
-class DX8TextureManagerClass
-{
-public:
-	static void Shutdown();
-	static void Add(DX8TextureTrackerClass *track);
-	static void Remove(TextureClass *tex);
-	static void Release_Textures();
-	static void Recreate_Textures();
-private:
-	static DX8TextureTrackerList Managed_Textures;
-};
+class DX8FVFCategoryContainer;
+typedef MultiListClass<DX8FVFCategoryContainer>			FVFCategoryList;
+typedef MultiListIterator<DX8FVFCategoryContainer>		FVFCategoryListIterator;
 
-#endif // ifdef TEXTUREMANAGER
+class DX8PolygonRendererClass;
+typedef MultiListClass<DX8PolygonRendererClass>			DX8PolygonRendererList;
+typedef MultiListIterator<DX8PolygonRendererClass>		DX8PolygonRendererListIterator; 
+
+class DX8TextureTrackerClass;
+typedef MultiListClass<DX8TextureTrackerClass>			DX8TextureTrackerList;
+typedef MultiListIterator<DX8TextureTrackerClass>		DX8TextureTrackerListIterator;
+
+
+#endif //DX8LIST_H
+

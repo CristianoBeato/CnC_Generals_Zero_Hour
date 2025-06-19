@@ -40,7 +40,7 @@
  *   BlowfishEngine::~BlowfishEngine -- Destructor for the Blowfish engine.                    *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"blowfish.h"
 #include	<string.h>
 #include	<assert.h>

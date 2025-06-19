@@ -42,15 +42,15 @@
 #define COLMATH_H
 
 #ifndef ALWAYS_H
-#include "always.h"
+#include "WWLib/always.h"
 #endif
 
 #ifndef VECTOR3_H
-#include "vector3.h"
+#include "WWMath/vector3.h"
 #endif
 
 #ifndef CASTRES_H
-#include "castres.h"
+#include "WWMath/castres.h"
 #endif
 
 class AAPlaneClass;

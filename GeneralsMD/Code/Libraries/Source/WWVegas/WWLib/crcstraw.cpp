@@ -36,7 +36,7 @@
  *   CRCStraw::Result -- Returns with the CRC of all data passed through the straw.            *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"crcstraw.h"
 
 

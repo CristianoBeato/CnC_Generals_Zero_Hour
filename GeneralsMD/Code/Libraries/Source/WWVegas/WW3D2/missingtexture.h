@@ -23,7 +23,7 @@
 #ifndef DX8_MISSING_TEXTURE_H
 #define DX8_MISSING_TEXTURE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 struct IDirect3DTexture8;
 struct IDirect3DSurface8;

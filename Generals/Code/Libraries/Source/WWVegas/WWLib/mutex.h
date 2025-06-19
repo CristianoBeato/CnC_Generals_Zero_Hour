@@ -23,7 +23,7 @@
 #pragma once
 #endif
 
-#include "always.h"
+#include "WWLib/always.h"
 
 
 // Always use mutex or critical section when accessing the same data from multiple threads!

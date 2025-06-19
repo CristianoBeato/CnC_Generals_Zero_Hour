@@ -44,11 +44,11 @@
 #ifndef AABTREEBUILDER_H
 #define AABTREEBUILDER_H
 
-#include "always.h"
-#include "vector3.h"
-#include "vector3i.h"
-#include "aaplane.h"
-#include "bittype.h"
+#include "WWLib/always.h"
+#include "WWMath/vector3.h"
+#include "WWMath/Vector3i.h"
+#include "WWMath/aaplane.h"
+#include "WWLib/bittype.h"
 #include <float.h>
 
 class AABTreeClass;

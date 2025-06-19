@@ -43,7 +43,7 @@
 #ifndef DX8INDEXBUFFER_H
 #define DX8INDEXBUFFER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwdebug.h"
 #include "refcount.h"
 #include "sphere.h"

@@ -35,8 +35,8 @@
  * Functions:                                                                                  * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "hash.h"
-#include "wwdebug.h"
+#include "WWLib/hash.h"
+#include "WWDebug/wwdebug.h"
 #include "realcrc.h"
 #ifdef _UNIX
 #include "osdep.h"

@@ -39,7 +39,7 @@
 #ifndef NODEFILT_H
 #define NODEFILT_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include <Max.h>
 
 /***************************************************************

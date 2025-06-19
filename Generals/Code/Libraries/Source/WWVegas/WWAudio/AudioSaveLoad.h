@@ -43,8 +43,8 @@
 #define __AUDIO_SAVE_LOAD_H
 
 #include "saveloadsubsystem.h"
-#include "vector.h"
-#include "bittype.h"
+#include "WWLib/vector.h"
+#include "WWLib/bittype.h"
 
 
 // Singleton instances

@@ -42,8 +42,8 @@
 
 #include "shader.h"
 #include "w3d_file.h"
-#include "wwdebug.h"
-#include "Dx8Wrapper.h"
+#include "WWDebug/wwdebug.h"
+#include "WW3D2/dx8wrapper.h"
 #include "dx8caps.h"
 
 

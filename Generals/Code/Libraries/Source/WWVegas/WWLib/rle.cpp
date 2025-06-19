@@ -38,7 +38,7 @@
  *   RLEEngine::Line_Decompress -- Decompresses a line-compressed RLE data sequence.           * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"rle.h"
 #include	<assert.h>
 #include	<stdlib.h>

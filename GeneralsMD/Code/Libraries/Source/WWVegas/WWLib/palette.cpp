@@ -41,7 +41,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"palette.h"
 #include	<string.h>
 

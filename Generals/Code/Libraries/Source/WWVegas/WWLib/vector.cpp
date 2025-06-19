@@ -52,8 +52,8 @@
  *   VectorClass<T>::~VectorClass -- Default destructor for vector class.                      *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
-#include	"vector.h"
+#include	"WWLib/always.h"
+#include	"WWLib/vector.h"
 #include	<string.h>
 
 /*

@@ -45,10 +45,10 @@
 #ifndef __PARAMETER_LIST_H
 #define __PARAMETER_LIST_H
 
-#include "always.h"
-#include "vector.h"
+#include "WWLib/always.h"
+#include "WWLib/vector.h"
 #include "parameter.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 
 //////////////////////////////////////////////////////////////////////////////////
 //

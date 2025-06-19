@@ -39,7 +39,7 @@
 
 #ifndef SHAREBUF_H
 #define SHAREBUF_H
-#include "refcount.h"
+#include "WWLib/refcount.h"
 
 
 /*

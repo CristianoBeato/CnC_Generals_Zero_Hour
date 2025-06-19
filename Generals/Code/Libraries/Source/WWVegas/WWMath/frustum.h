@@ -42,8 +42,8 @@
 #ifndef FRUSTUM_H
 #define FRUSTUM_H
 
-#include "vector3.h"
-#include "plane.h"
+#include "WWMath/vector3.h"
+#include "WWMath/plane.h"
 
 
 class FrustumClass

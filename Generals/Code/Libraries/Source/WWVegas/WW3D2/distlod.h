@@ -43,7 +43,7 @@
 #define DISTLOD_H
 
 #include "proto.h"
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include "composite.h"
 #include "w3derr.h"
 

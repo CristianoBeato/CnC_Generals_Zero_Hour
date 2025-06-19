@@ -39,7 +39,7 @@
 #ifndef MESHGEOMETRY_H
 #define MESHGEOMETRY_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "refcount.h"
 #include "bittype.h"
 #include "simplevec.h"

@@ -30,7 +30,7 @@
 #include <stdlib.h>
 #include "wwmath.h"
 #include "miscutil.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 
 const double cMathUtil::PI   = 3.1415927;
 const double cMathUtil::PI_2 = 1.5707963;

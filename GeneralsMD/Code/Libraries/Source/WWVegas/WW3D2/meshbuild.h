@@ -45,7 +45,7 @@
 #ifndef MESHBUILD_H
 #define MESHBUILD_H
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include "vector2.h"
 #include "vector3.h"
 #include "bittype.h"

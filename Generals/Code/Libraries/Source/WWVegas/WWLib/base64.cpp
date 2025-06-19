@@ -36,7 +36,7 @@
  *   Base64_Encode -- Encode data into Base 64 format.                                         *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"base64.h"
 //#include	<stddef.h>
 

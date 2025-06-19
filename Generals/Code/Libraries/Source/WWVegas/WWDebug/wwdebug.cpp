@@ -42,7 +42,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include <windows.h>
 //#include "win.h" can use this if allowed to see wwlib
 #include <stdlib.h>

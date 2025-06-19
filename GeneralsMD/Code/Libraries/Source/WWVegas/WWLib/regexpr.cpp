@@ -18,7 +18,7 @@
 
 // regexpr.cpp
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "regexpr.h"
 #include "wwstring.h"
 #include <assert.h>

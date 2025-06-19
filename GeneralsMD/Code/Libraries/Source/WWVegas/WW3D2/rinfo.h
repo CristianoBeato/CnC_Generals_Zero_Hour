@@ -46,7 +46,7 @@
 #define RINFO_H
 
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "bittype.h"
 #include "ww3d.h"
 #include "wwdebug.h"

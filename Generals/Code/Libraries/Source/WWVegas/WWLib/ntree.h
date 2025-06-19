@@ -43,8 +43,8 @@
 #define __NTREE_H
 
 
-#include "refcount.h"
-#include "wwstring.h"
+#include "WWLib/refcount.h"
+#include "WWLib/wwstring.h"
 
 
 //////////////////////////////////////////////////////////////////////////

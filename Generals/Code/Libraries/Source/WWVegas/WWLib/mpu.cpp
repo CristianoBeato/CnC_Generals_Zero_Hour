@@ -35,7 +35,7 @@
  *   Get_CPU_Rate -- Fetch the rate of CPU ticks per second.                                   *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"win.h"
 #include	"mpu.h"
 #include "math.h"

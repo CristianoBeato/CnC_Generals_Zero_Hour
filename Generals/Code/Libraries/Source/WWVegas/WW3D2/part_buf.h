@@ -40,7 +40,7 @@
 #ifndef PART_BUF_H
 #define PART_BUF_H
 
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include "pointgr.h"
 #include "seglinerenderer.h"
 

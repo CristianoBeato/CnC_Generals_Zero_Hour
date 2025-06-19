@@ -45,7 +45,7 @@
 #ifndef COLTEST_H
 #define COLTEST_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "castres.h"
 #include "lineseg.h"
 #include "aabox.h"

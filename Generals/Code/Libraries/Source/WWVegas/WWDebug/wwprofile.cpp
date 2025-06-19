@@ -50,9 +50,9 @@
  *   WWProfileManager::Release_In_Order_Iterator -- Return an "in-order" iterator              *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwprofile.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include <windows.h>
 
 

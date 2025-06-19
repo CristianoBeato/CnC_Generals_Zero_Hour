@@ -45,7 +45,7 @@
 #pragma once
 #endif
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "texture.h"
 
 class StringClass;

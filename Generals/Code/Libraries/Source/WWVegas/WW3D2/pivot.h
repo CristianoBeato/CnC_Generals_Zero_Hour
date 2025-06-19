@@ -42,8 +42,8 @@
 #ifndef PIVOT_H
 #define PIVOT_H
 
-#include "always.h"
-#include "vector3.h"
+#include "WWLib/always.h"
+#include "WWMath/vector3.h"
 #include "matrix3d.h"
 #include "quat.h"
 #include "w3d_file.h"

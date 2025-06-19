@@ -43,7 +43,7 @@
 #ifndef W3D_FILE_H
 #define W3D_FILE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "bittype.h"
 #include "iostruct.h"
 #include <limits.h>

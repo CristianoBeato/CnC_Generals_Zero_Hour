@@ -43,12 +43,12 @@
 #ifndef INTTEST_H
 #define INTTEST_H
 
-#include "always.h"
-#include "aabox.h"
-#include "obbox.h"
-#include "tri.h"
-#include "colmath.h"
-#include "coltype.h"
+#include "WWLib/always.h"
+#include "WWMath/aabox.h"
+#include "WWMath/obbox.h"
+#include "WWMath/tri.h"
+#include "WWMath/colmath.h"
+#include "WW3D2/coltype.h"
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////

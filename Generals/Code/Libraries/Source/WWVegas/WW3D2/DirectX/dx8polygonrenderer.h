@@ -45,12 +45,12 @@
 #define DX8_POLYGON_RENDERER_H
 
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "meshmdl.h"
 #include "dx8list.h"
 #include "sortingrenderer.h"
 #include "mesh.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 
 class DX8PolygonRendererClass;
 class DX8TextureCategoryClass;

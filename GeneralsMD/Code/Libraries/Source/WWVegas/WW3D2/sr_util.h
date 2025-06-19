@@ -43,7 +43,7 @@
 #ifndef SR_UTIL_H
 #define SR_UTIL_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "matrix3d.h"
 #include "vector3i.h"
 

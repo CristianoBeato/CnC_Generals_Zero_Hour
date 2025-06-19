@@ -38,7 +38,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"hsv.h"
 #include	"rgb.h"
 

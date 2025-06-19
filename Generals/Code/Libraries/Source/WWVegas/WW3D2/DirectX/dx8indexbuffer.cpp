@@ -39,7 +39,7 @@
 //#define INDEX_BUFFER_LOG
 
 #include "dx8indexbuffer.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 #include "dx8caps.h"
 #include "sphere.h"
 #include "thread.h"

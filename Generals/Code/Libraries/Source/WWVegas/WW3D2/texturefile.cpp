@@ -19,7 +19,7 @@
 #include "texturefile.h"
 #include "textureloader.h"
 #include "ww3d.h"
-#include "wwstring.h"
+#include "WWLib/wwstring.h"
 #include	"rawfile.h"
 #include	"ffactory.h"
 #include "nstrdup.h"

@@ -42,8 +42,8 @@
 #ifndef PERSIST_H
 #define PERSIST_H
 
-#include "always.h"
-#include "refcount.h"
+#include "WWLib/always.h"
+#include "WWLib/refcount.h"
 #include "postloadable.h"
 
 class PersistFactoryClass;

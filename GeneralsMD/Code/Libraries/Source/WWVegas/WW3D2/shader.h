@@ -42,7 +42,7 @@
 #ifndef SHADER_H
 #define SHADER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 #if defined (SR_OS_SOLARIS)
 #undef PASS_MAX

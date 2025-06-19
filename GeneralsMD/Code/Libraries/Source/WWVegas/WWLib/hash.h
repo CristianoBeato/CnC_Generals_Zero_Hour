@@ -43,7 +43,7 @@
 #ifndef HASH_H
 #define HASH_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 class HashTableIteratorClass;
 

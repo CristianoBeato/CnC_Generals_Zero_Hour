@@ -105,7 +105,10 @@ void					WWDebug_DBWin32_Message_Handler( const char * message);
 ** WWDEBUG_SAY(("dir = %f\n",dir));
 */
 
-#include "..\..\..\..\gameengine\include\common\debug.h"
+// BEATO Begin: Update base dir path references
+//#include "..\..\..\..\gameengine\include\common\debug.h"
+#include "Common/Debug.h"
+// BEATO End
 
 #ifdef DEBUG_LOGGING
 #define WWDEBUG_SAY(x)							DEBUG_LOG(x)

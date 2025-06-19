@@ -38,7 +38,7 @@
 #ifdef NEVER
 
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"point.h"
 #include	"rect.h"
 

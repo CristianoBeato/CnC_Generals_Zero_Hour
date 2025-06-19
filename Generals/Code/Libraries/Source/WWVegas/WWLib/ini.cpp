@@ -73,7 +73,7 @@
  *   INIClass::Enumerate_Entries -- Count how many entries begin with a certain prefix followed by a range * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"b64pipe.h"
 #include	"b64straw.h"
 #include	"cstraw.h"
@@ -93,10 +93,10 @@
 // recently transferred from ini.h 
 #include "inisup.h"
 #include	"trect.h"
-#include	"wwfile.h"
+#include	"WWLib/wwfile.h"
 #include	"pk.h"
 #include	"pipe.h"
-#include	"wwstring.h"
+#include	"WWLib/wwstring.h"
 
 #if defined(__WATCOMC__)
 // Disable the "temporary object used to initialize a non-constant reference" warning.

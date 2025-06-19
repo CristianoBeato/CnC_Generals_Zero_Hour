@@ -43,7 +43,7 @@
 #define ROBJLIST_H
 
 #ifndef ALWAYS_H
-#include "always.h"
+#include "WWLib/always.h"
 #endif
 
 #ifndef MULTILIST_H
@@ -51,7 +51,7 @@
 #endif
 
 #ifndef WWDEBUG_H
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #endif
 
 class RenderObjClass;

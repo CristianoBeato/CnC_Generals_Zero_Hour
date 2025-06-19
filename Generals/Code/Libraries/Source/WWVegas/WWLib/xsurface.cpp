@@ -50,7 +50,7 @@
  *   XSurface::Put_Pixel -- Stores a pixel at the location specified.                          *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"blit.h"
 #include	"blitblit.h"
 #include	"bsurface.h"

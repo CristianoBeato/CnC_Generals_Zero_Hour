@@ -24,7 +24,7 @@
 #pragma once
 #endif
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwstring.h"
 #include "hashtemplate.h"
 #include "dllist.h"

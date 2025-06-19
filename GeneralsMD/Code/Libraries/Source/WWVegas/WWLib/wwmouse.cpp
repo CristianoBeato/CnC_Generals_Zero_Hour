@@ -59,7 +59,7 @@
  *   WWMouseClass::Process_Mouse -- Mouse processing callback routine.                         *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"_convert.h"
 #include	"_mono.h"
 #include	"blit.h"

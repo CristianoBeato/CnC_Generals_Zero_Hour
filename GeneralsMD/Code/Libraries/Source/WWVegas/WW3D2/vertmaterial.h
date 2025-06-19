@@ -42,7 +42,7 @@
 #ifndef VERTMATERIAL_H
 #define VERTMATERIAL_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 #include "refcount.h"
 #include "vector3.h"

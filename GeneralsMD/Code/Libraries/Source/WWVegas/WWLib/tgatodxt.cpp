@@ -37,7 +37,7 @@
 #pragma message ("(gth) disabling TGAtoDXTClass temporarily so I can test the WW libs merge...")
 #if 0 
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "nvdxtlib.h"
 #include "targa.h"
 #include "tgatodxt.h"

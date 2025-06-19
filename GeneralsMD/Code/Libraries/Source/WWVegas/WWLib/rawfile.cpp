@@ -52,7 +52,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"rawfile.h"
 #include	<direct.h>
 //#include	<share.h>

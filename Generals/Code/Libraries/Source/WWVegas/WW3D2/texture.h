@@ -42,12 +42,12 @@
 #ifndef TEXTURE_H
 #define TEXTURE_H
 
-#include "always.h"
-#include "refcount.h"
-#include "chunkio.h"
+#include "WWLib/always.h"
+#include "WWLib/refcount.h"
+#include "WWLib/chunkio.h"
 #include "surfaceclass.h"
 #include "ww3dformat.h"
-#include "wwstring.h"
+#include "WWLib/wwstring.h"
 
 class DX8Wrapper;
 struct IDirect3DTexture8;

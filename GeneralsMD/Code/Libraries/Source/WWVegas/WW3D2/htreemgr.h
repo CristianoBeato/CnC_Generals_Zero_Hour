@@ -43,7 +43,7 @@
 #ifndef HTREEMGR_H
 #define HTREEMGR_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "bittype.h"
 #include "hashtemplate.h"
 

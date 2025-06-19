@@ -35,16 +35,16 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include "colmath.h"
+#include "WWMath/colmath.h"
 #include "colmathplane.h"
-#include "aaplane.h"
-#include "plane.h"
-#include "lineseg.h"
-#include "tri.h"
+#include "WWMath/aaplane.h"
+#include "WWMath/plane.h"
+#include "WWMath/lineseg.h"
+#include "WWMath/tri.h"
 #include "sphere.h"
-#include "aabox.h"
-#include "obbox.h"
-#include "wwdebug.h"
+#include "WWMath/aabox.h"
+#include "WWMath/obbox.h"
+#include "WWDebug/wwdebug.h"
 
 
 

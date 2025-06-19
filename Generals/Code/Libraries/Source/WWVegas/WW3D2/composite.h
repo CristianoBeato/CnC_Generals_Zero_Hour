@@ -42,7 +42,7 @@
 #ifndef COMPOSITE_H
 #define COMPOSITE_H
 
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 
 /*
 ** CompositeRenderObjClass

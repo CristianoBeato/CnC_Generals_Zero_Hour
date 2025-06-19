@@ -43,7 +43,7 @@
 #ifndef ASSETMGR_H
 #define ASSETMGR_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "vector.h"
 #include "htreemgr.h"
 #include "hanimmgr.h"

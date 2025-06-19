@@ -47,10 +47,10 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include "colmath.h"
-#include "aabox.h"
-#include "tri.h" 
-#include "wwdebug.h"
+#include "WWMath/colmath.h"
+#include "WWMath/aabox.h"
+#include "WWMath/tri.h" 
+#include "WWDebug/wwdebug.h"
 
 
 /*

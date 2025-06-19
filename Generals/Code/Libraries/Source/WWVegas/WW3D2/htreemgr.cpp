@@ -47,7 +47,7 @@
 #include "htreemgr.h"
 #include <string.h>
 #include "htree.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "wwmemlog.h"
 #include "w3dexclusionlist.h"
 

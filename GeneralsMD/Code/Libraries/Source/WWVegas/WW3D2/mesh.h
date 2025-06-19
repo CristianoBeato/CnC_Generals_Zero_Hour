@@ -43,7 +43,7 @@
 #ifndef MESH_H
 #define MESH_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "rendobj.h"
 #include "bittype.h"
 #include "w3derr.h"

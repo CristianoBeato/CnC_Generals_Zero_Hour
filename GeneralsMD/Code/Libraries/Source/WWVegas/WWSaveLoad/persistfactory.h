@@ -45,7 +45,7 @@
 #ifndef PERSISTFACTORY_H
 #define PERSISTFACTORY_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "bittype.h"
 #include "chunkio.h"
 #include "wwdebug.h"

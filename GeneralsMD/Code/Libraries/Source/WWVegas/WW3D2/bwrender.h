@@ -44,7 +44,7 @@
 #define BWRENDER_H
 
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "vector2.h"
 #include "vector3.h"
 #include "vector3i.h"

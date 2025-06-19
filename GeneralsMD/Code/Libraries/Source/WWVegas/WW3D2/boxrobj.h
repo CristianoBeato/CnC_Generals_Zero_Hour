@@ -41,7 +41,7 @@
 #ifndef BOXROBJ_H
 #define BOXROBJ_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "rendobj.h"
 #include "w3d_file.h"
 #include "shader.h"

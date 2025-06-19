@@ -23,8 +23,8 @@
 #pragma once
 #endif
 
-#include "always.h"
-#include "wwstring.h"
+#include "WWLib/always.h"
+#include "WWLib/wwstring.h"
 
 // ----------------------------------------------------------------------------
 

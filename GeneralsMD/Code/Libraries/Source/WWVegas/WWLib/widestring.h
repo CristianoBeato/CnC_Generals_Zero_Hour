@@ -43,7 +43,7 @@
 
 #include <string.h>
 #include <stdarg.h>
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwdebug.h"
 #include "win.h"
 #include "wwstring.h"

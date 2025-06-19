@@ -43,13 +43,13 @@
 #ifndef DECALMSH_H
 #define DECALMSH_H
 
-#include "always.h"
-#include "bittype.h"
-#include "simplevec.h"
-#include "vector.h"
-#include "vector2.h"
-#include "vector3.h"
-#include "vector3i.h"
+#include "WWLib/always.h"
+#include "WWLib/bittype.h"
+#include "WWLib/simplevec.h"
+#include "WWLib/vector.h"
+#include "WWMath/vector2.h"
+#include "WWMath/vector3.h"
+#include "WWMath/Vector3i.h"
 #include "vector4.h"
 #include "shader.h"
 #include "vertmaterial.h"

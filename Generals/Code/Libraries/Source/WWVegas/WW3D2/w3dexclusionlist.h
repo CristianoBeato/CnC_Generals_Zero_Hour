@@ -42,9 +42,9 @@
 #ifndef W3DEXCLUSIONLIST_H
 #define W3DEXCLUSIONLIST_H
 
-#include "always.h"
-#include "vector.h"
-#include "wwstring.h"
+#include "WWLib/always.h"
+#include "WWLib/vector.h"
+#include "WWLib/wwstring.h"
 #include "hashtemplate.h"
 
 class PrototypeClass;

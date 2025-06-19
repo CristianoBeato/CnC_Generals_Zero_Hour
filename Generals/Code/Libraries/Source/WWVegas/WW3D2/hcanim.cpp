@@ -53,9 +53,9 @@
 #include "assetmgr.h"
 #include "htree.h"
 #include "motchan.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "w3d_file.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include <string.h>
 #include <nstrdup.h>
 

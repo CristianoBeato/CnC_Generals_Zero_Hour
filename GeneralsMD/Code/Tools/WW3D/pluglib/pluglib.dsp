@@ -112,7 +112,7 @@ LIB32=link.exe -lib
 
 SOURCE=.\chunkio.cpp
 DEP_CPP_CHUNK=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bittype.h"\
 	".\bool.h"\
 	".\borlandc.h"\
@@ -155,7 +155,7 @@ DEP_CPP_EULER=\
 
 SOURCE=.\HSV.CPP
 DEP_CPP_HSV_C=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\hsv.h"\
@@ -177,7 +177,7 @@ DEP_CPP_HSV_C=\
 
 SOURCE=.\JShell.CPP
 DEP_CPP_JSHEL=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\visualc.h"\
@@ -197,7 +197,7 @@ DEP_CPP_JSHEL=\
 
 SOURCE=.\matrix3d.cpp
 DEP_CPP_MATRI=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\matrix3d.h"\
@@ -228,7 +228,7 @@ NODEP_CPP_MATRI=\
 
 SOURCE=.\matrix4.cpp
 DEP_CPP_MATRIX=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\matrix3d.h"\
@@ -258,7 +258,7 @@ NODEP_CPP_MATRIX=\
 
 SOURCE=.\nodefilt.cpp
 DEP_CPP_NODEF=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\nodefilt.h"\
@@ -279,7 +279,7 @@ DEP_CPP_NODEF=\
 
 SOURCE=.\nodelist.cpp
 DEP_CPP_NODEL=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\nodefilt.h"\
@@ -301,7 +301,7 @@ DEP_CPP_NODEL=\
 
 SOURCE=.\PALETTE.CPP
 DEP_CPP_PALET=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\palette.h"\
@@ -323,7 +323,7 @@ DEP_CPP_PALET=\
 
 SOURCE=.\RAWFILE.CPP
 DEP_CPP_RAWFI=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\rawfile.h"\
@@ -365,7 +365,7 @@ DEP_CPP_REALC=\
 
 SOURCE=.\RGB.CPP
 DEP_CPP_RGB_C=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\hsv.h"\
@@ -388,7 +388,7 @@ DEP_CPP_RGB_C=\
 
 SOURCE=.\Vector.CPP
 DEP_CPP_VECTO=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\noinit.h"\
@@ -410,7 +410,7 @@ DEP_CPP_VECTO=\
 
 SOURCE=.\w3dquat.cpp
 DEP_CPP_W3DQU=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\matrix3d.h"\
@@ -441,7 +441,7 @@ NODEP_CPP_W3DQU=\
 
 SOURCE=.\wwmath.cpp
 DEP_CPP_WWMAT=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\visualc.h"\
@@ -462,7 +462,7 @@ DEP_CPP_WWMAT=\
 
 SOURCE=.\WWmatrix3.cpp
 DEP_CPP_WWMATR=\
-	".\always.h"\
+	".\WWLib/always.h"\
 	".\bool.h"\
 	".\borlandc.h"\
 	".\matrix3d.h"\
@@ -499,7 +499,7 @@ SOURCE=.\aaplane.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\always.h
+SOURCE=.\WWLib/always.h
 # End Source File
 # Begin Source File
 

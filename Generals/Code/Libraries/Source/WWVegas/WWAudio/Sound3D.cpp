@@ -42,7 +42,7 @@
 #include "utils.h"
 #include "soundchunkids.h"
 #include "persistfactory.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "sound3dhandle.h"
 
 

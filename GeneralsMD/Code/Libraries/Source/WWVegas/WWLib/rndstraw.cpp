@@ -44,7 +44,7 @@
  *   RandomStraw::~RandomStraw -- Destructor for random straw class.                           *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"rndstraw.h"
 #include	"sha.h"
 #include	<limits.h>

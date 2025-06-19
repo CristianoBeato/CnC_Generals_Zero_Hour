@@ -57,7 +57,7 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include	<assert.h>
 #include	<stdlib.h>
 #include <string.h>

@@ -39,15 +39,15 @@
 
 //#define CREATE_DX8_MULTI_THREADED
 
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 #include "dx8fvf.h"
 #include "dx8vertexbuffer.h"
 #include "dx8indexbuffer.h"
 #include "dx8renderer.h"
 #include "ww3d.h"
 #include "camera.h"
-#include "wwstring.h"
-#include "matrix4.h"
+#include "WWLib/wwstring.h"
+#include "WWMath/matrix4.h"
 #include "vertmaterial.h"
 #include "rddesc.h"
 #include "lightenvironment.h"

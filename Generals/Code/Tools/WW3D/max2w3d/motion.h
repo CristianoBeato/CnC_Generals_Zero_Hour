@@ -41,7 +41,7 @@
 
 
 #ifndef ALWAYS_H
-#include "always.h"
+#include "WWLib/always.h"
 #endif
 
 #include <Max.h>
@@ -55,11 +55,11 @@
 #endif
 
 #ifndef CHUNKIO_H
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #endif
 
 #ifndef VECTOR_H
-#include "vector.h"
+#include "WWLib/vector.h"
 #endif
 
 #ifndef LOGDLG_H

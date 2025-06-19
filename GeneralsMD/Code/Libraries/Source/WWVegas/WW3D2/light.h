@@ -42,7 +42,7 @@
 #ifndef LIGHT_H
 #define LIGHT_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "rendobj.h"
 #include "w3derr.h"
 

@@ -38,7 +38,7 @@
  *   LineSegClass::Find_Intersection -- Finds the closest points on the two lines				  * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "lineseg.h"
+#include "WWMath/lineseg.h"
 //#include <stdlib.h>
 
 #include "matrix3d.h"

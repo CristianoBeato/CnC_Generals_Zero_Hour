@@ -40,7 +40,7 @@
  *   PKStraw::Plain_Key_Length -- Returns the number of bytes to encrypt key.                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"blwstraw.h"
 #include	"pkstraw.h"
 #include	"rndstraw.h"

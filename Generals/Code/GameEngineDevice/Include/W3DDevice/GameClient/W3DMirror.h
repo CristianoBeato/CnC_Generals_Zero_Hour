@@ -28,8 +28,8 @@
 #ifndef __W3DMirror_H_
 #define __W3DMirror_H_
 
-#include "always.h"
-#include "rendobj.h"
+#include "WWLib/always.h"
+#include "WW3D2/rendobj.h"
 #include "w3d_file.h"
 #include "dx8vertexbuffer.h"
 #include "dx8indexbuffer.h"

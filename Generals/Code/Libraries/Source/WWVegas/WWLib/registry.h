@@ -41,11 +41,11 @@
 #define REGISTRY_H
 
 #ifndef ALWAYS_H
-#include "always.h"
+#include "WWLib/always.h"
 #endif
 
-#include "vector.h"
-#include "wwstring.h"
+#include "WWLib/vector.h"
+#include "WWLib/wwstring.h"
 #include "widestring.h"
 
 /*

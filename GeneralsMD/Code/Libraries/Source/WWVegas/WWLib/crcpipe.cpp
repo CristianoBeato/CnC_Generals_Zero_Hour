@@ -36,7 +36,7 @@
  *   CRCPipe::Put -- Retrieves the data bytes specified and calculates CRC on it.              *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"crcpipe.h"
 
 

@@ -53,7 +53,7 @@
 //
 //-----------------------------------------------------------------------------
 
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 #include "assetmgr.h"
 #include "Lib/BaseType.h"
 #include "Common/File.h"

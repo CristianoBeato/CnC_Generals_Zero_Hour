@@ -41,11 +41,11 @@
 #define AGGREGATE_DEF_H
 
 #include "proto.h"
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include "w3d_file.h"
 #include "w3derr.h"
-#include "vector.h"
-#include "bittype.h"
+#include "WWLib/Vector.H"
+#include "WWLib/bittype.h"
 #include <string.h>
 
 #ifdef _UNIX

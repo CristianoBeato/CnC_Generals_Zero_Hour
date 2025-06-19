@@ -46,13 +46,13 @@
 #pragma warning (pop)
 
 //#include <malloc.h>
-#include "vector3.h"
+#include "WWMath/vector3.h"
 #include "matrix3d.h"
-#include "refcount.h"
+#include "WWLib/refcount.h"
 #include "rawfile.h"
 #include "soundsceneobj.h"
-#include "vector.h"
-#include "wwstring.h"
+#include "WWLib/vector.h"
+#include "WWLib/wwstring.h"
 #include "definition.h"
 
 

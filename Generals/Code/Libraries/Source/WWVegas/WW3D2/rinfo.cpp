@@ -35,7 +35,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include "rinfo.h"
+#include "WW3D2/rinfo.h"
 #include "camera.h"
 #include "matpass.h"
 

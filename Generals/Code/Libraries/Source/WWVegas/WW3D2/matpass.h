@@ -44,7 +44,7 @@
 #define MATPASS_H
 
 #ifndef REFCOUNT_H
-#include "refcount.h"
+#include "WWLib/refcount.h"
 #endif
 
 #ifndef SHADER_H
@@ -52,7 +52,7 @@
 #endif
 
 #ifndef WWDEBUG_H
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #endif
 
 

@@ -42,8 +42,8 @@
 #define __PRIM_ANIM_H
 
 
-#include "simplevec.h"
-#include "chunkio.h"
+#include "WWLib/simplevec.h"
+#include "WWLib/chunkio.h"
 
 
 // Forward declarations

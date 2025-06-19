@@ -41,7 +41,7 @@
 #ifndef RCFILE_H
 #define RCFILE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwfile.h"
 #include "win.h"
 

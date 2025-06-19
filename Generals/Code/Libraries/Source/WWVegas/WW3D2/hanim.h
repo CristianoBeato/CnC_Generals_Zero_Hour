@@ -43,11 +43,11 @@
 #ifndef HANIM_H
 #define HANIM_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "quat.h"
-#include "refcount.h"
+#include "WWLib/refcount.h"
 #include "w3d_file.h"
-#include "hash.h"
+#include "WWLib/hash.h"
 #include "mempool.h"
 #include <refcount.h>
 #include <slist.h>

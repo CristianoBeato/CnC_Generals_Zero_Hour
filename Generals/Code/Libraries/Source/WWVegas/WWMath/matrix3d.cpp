@@ -58,9 +58,9 @@
 #include <assert.h>
 #include <stdlib.h>
 //#include <stdio.h>
-#include "vector3.h"
+#include "WWMath/vector3.h"
 #include "matrix3.h"
-#include "matrix4.h"
+#include "WWMath/matrix4.h"
 #include "quat.h"
 #include "D3dx8math.h"
 

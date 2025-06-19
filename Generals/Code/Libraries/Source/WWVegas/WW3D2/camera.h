@@ -47,14 +47,14 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include "always.h"
-#include "rendobj.h"
-#include "plane.h"
-#include "frustum.h"
-#include "obbox.h"
-#include "vector2.h"
-#include "matrix4.h"
-#include "colmath.h"
+#include "WWLib/always.h"
+#include "WW3D2/rendobj.h"
+#include "WWMath/plane.h"
+#include "WWMath/frustum.h"
+#include "WWMath/obbox.h"
+#include "WWMath/vector2.h"
+#include "WWMath/matrix4.h"
+#include "WWMath/colmath.h"
 
 class RenderInfoClass;
 

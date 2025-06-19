@@ -40,7 +40,7 @@
 #include <assert.h>
 #include <string.h>
 #include "w3d_file.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "snappts.h"
 
 

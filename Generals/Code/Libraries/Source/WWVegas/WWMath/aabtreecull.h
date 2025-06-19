@@ -43,10 +43,10 @@
 #define AABTREECULL_H
 
 #include "cullsys.h"
-#include "aaplane.h"
+#include "WWMath/aaplane.h"
 #include "wwmath.h"
 #include "mempool.h"
-#include "simplevec.h"
+#include "WWLib/simplevec.h"
 #include <math.h>
 #include <float.h>
 

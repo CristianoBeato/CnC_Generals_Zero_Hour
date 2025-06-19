@@ -23,7 +23,7 @@
 #ifndef BITMAPHANDLER_H
 #define BITMAPHANDLER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "ww3dformat.h"
 
 void Bitmap_Assert(bool condition);

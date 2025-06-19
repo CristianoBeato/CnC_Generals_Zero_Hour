@@ -47,7 +47,7 @@
 #include "osdep/osdep.h"
 #endif
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "vector.h"
 
 class RefCountClass;

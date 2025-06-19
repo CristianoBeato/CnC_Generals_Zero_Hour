@@ -23,7 +23,7 @@
 #ifndef DAZZLE_H
 #define DAZZLE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "vector3.h"
 #include "matrix3d.h"
 #include "rendobj.h"

@@ -39,7 +39,7 @@
 #ifndef W3DDLG_H
 #define W3DDLG_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include <Max.h>
 #include "w3dutil.h"
 

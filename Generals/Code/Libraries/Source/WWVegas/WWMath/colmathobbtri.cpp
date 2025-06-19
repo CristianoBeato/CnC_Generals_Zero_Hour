@@ -51,10 +51,10 @@
  *   CollisionMath::Intersection_Test -- Intersection check for an OBBox and a triangle        *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "colmath.h"
-#include "obbox.h"
-#include "tri.h"
-#include "wwdebug.h"
+#include "WWMath/colmath.h"
+#include "WWMath/obbox.h"
+#include "WWMath/tri.h"
+#include "WWDebug/wwdebug.h"
 
 
 /*

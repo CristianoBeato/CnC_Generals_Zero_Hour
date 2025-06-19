@@ -39,7 +39,7 @@
 #ifndef SHDSUBMESH_H
 #define SHDSUBMESH_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "meshgeometry.h"
 #include "shdinterface.h"
 #include "dx8wrapper.h"

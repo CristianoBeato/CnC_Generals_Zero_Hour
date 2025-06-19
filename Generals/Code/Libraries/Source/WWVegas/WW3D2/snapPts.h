@@ -41,9 +41,9 @@
 #ifndef SNAPPTS_H
 #define SNAPPTS_H
 
-#include "refcount.h"
-#include "vector.h"
-#include "vector3.h"
+#include "WWLib/refcount.h"
+#include "WWLib/vector.h"
+#include "WWMath/vector3.h"
 #include "w3derr.h"
 
 

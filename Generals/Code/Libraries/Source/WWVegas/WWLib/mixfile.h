@@ -38,7 +38,7 @@
 #define	MIXFILE_H
 
 #ifndef	ALWAYS_H
-	#include "always.h"
+	#include "WWLib/always.h"
 #endif
 
 #ifndef	FFACTORY_H
@@ -46,10 +46,10 @@
 #endif
 
 #ifndef	WWSTRING_H
-	#include "wwstring.h"
+	#include "WWLib/wwstring.h"
 #endif
 
-#include "vector.h"
+#include "WWLib/vector.h"
 
 class FileClass;
 

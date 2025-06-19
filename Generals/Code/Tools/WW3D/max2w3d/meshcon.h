@@ -41,11 +41,11 @@
 
 
 #ifndef ALWAYS_H
-#include "always.h"
+#include "WWLib/always.h"
 #endif
 
 #ifndef CHUNKIO_H
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #endif
 
 #ifndef NODELIST_H
@@ -61,7 +61,7 @@
 #endif
 
 #ifndef VECTOR_H
-#include "vector.h"
+#include "WWLib/vector.h"
 #endif
 
 

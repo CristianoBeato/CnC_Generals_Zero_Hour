@@ -43,9 +43,9 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 #include "sr_util.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "camera.h"
-#include "matrix4.h"
+#include "WWMath/matrix4.h"
 
 #ifdef WW3D_DX8
 

@@ -42,7 +42,7 @@
 #ifndef PERSIST_H
 #define PERSIST_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "refcount.h"
 #include "postloadable.h"
 

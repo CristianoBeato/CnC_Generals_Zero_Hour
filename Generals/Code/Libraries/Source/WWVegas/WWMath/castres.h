@@ -41,9 +41,9 @@
 #ifndef CASTRES_H
 #define CASTRES_H
 
-#include "always.h"
-#include "vector3.h"
-#include "bittype.h"
+#include "WWLib/always.h"
+#include "WWMath/vector3.h"
+#include "WWLib/bittype.h"
 
 
 /**

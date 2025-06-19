@@ -35,7 +35,7 @@
  *   FrustumClass::Init -- Initialize a frustum object                                         *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "frustum.h"
+#include "WWMath/frustum.h"
 
 
 /***********************************************************************************************

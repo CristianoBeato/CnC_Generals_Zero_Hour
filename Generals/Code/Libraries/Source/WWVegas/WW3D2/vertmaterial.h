@@ -42,15 +42,15 @@
 #ifndef VERTMATERIAL_H
 #define VERTMATERIAL_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
-#include "refcount.h"
-#include "vector3.h"
+#include "WWLib/refcount.h"
+#include "WWMath/vector3.h"
 #include "w3d_file.h"
 #include "meshbuild.h"
 #include "w3derr.h"
 #include "mapper.h"
-#include "wwstring.h"
+#include "WWLib/wwstring.h"
 
 #include <string.h>
 

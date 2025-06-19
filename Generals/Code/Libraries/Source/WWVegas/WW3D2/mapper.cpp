@@ -35,13 +35,13 @@
 #include "mapper.h"
 #include "ww3d.h"
 #include "ini.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "w3derr.h"
 #include "meshmatdesc.h"
-#include "dx8wrapper.h"
-#include "wwdebug.h"
+#include "WW3D2/dx8wrapper.h"
+#include "WWDebug/wwdebug.h"
 #include "matinfo.h"
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include "mesh.h"
 
 

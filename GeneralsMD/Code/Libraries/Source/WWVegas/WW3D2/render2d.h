@@ -42,7 +42,7 @@
 #ifndef RENDER2D_H
 #define RENDER2D_H
 
-#include "always.h"
+#include "WWLib/always.h"
 //#include "simplevec.h"
 #include "vector.h"
 #include "vector2.h"

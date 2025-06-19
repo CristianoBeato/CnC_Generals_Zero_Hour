@@ -43,9 +43,9 @@
 #ifndef ODE_H
 #define ODE_H
 
-#include "always.h"
-#include "vector.h"
-#include "wwdebug.h"
+#include "WWLib/always.h"
+#include "WWLib/vector.h"
+#include "WWDebug/wwdebug.h"
 
 
 /*

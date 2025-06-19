@@ -61,9 +61,9 @@
 #ifndef Matrix3_H
 #define Matrix3_H
 
-#include "always.h"
-#include "vector3.h"
-#include "wwdebug.h"
+#include "WWLib/always.h"
+#include "WWMath/vector3.h"
+#include "WWDebug/wwdebug.h"
 #ifdef _UNIX
 #include "osdep.h"
 #endif

@@ -41,7 +41,7 @@
 #define _CDCNTRL
 
 
-//#include	"always.h"
+//#include	"WWLib/always.h"
 //#include	<winmin.h>
 #define  STRICT
 #include <windows.h>

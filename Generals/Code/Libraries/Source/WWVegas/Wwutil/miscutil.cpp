@@ -29,7 +29,7 @@
 #include <time.h>
 
 #include "rawfile.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "win.h"
 #include "mmsys.h"
 #include "ffactory.h"

@@ -38,7 +38,7 @@
 #ifndef HIERSAVE_H
 #define HIERSAVE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 #include <Max.h>
 #include <stdio.h>

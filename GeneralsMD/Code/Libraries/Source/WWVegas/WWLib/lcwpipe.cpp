@@ -39,7 +39,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"lcw.h"
 #include	"lcwpipe.h"
 #include	<assert.h>

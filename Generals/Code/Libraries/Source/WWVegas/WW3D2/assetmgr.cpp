@@ -75,11 +75,11 @@
 #include "assetmgr.h"
 #include <assert.h>
 
-#include "bittype.h"
-#include "chunkio.h"
+#include "WWLib/bittype.h"
+#include "WWLib/chunkio.h"
 #include "realcrc.h"
 
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 
 #include "htreemgr.h"
 #include "hanimmgr.h"
@@ -99,10 +99,10 @@
 #include "hlod.h"
 #include "agg_def.h"
 #include "texfcach.h"
-#include "wwstring.h"
+#include "WWLib/wwstring.h"
 #include "wwmemlog.h"
 #include "dazzle.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 #include "dx8renderer.h"
 #include "metalmap.h"
 #include "w3dexclusionlist.h"

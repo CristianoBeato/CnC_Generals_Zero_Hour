@@ -43,7 +43,7 @@
  *   Random3Class::operator -- Random number generator function.                               * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"random.h"
 
 // Timing tests for random these random number generators in seconds for

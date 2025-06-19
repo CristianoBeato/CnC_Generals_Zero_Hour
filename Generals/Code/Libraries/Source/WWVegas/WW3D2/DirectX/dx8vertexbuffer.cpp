@@ -39,7 +39,7 @@
 //#define VERTEX_BUFFER_LOG
 
 #include "dx8vertexbuffer.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 #include "dx8fvf.h"
 #include "dx8caps.h"
 #include "thread.h"

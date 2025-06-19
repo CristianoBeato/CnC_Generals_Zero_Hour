@@ -23,7 +23,7 @@
 #ifndef SORTING_RENDERER_H
 #define SORTING_RENDERER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 class SortingNodeStruct;
 class SphereClass;

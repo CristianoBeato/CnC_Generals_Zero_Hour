@@ -41,7 +41,7 @@
 #include <wwdebug.h>
 #include "surfaceclass.h"
 #include "texture.h"
-#include "vector2i.h"
+#include "WWMath/vector2i.h"
 
 static	SurfaceClass	*_surface;
 

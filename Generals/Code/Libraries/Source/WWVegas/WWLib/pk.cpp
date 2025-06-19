@@ -42,7 +42,7 @@
  *   PKey::PKey -- Construct a key using encoded strings.                                      *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"pk.h"
 #include	"rndstraw.h"
 #include	<string.h>

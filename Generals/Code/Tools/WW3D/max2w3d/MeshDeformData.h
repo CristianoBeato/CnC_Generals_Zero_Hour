@@ -38,7 +38,7 @@
 #define __MESH_DEFORM_DATA_H
 
 #include <Max.h>
-#include "Vector.H"
+#include "WWLib/vector.h"
 #include "MeshDeformSet.H"
 
 

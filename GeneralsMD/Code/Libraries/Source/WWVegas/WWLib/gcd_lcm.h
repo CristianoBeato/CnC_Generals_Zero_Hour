@@ -39,7 +39,7 @@
 
 #ifndef GCD_LCM_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 // The greatest common divisor (GCD) is the greatest integer which is a
 // divisor of given positive integers.

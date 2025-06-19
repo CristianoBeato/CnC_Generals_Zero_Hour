@@ -35,7 +35,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include "colmath.h"
+#include "WWMath/colmath.h"
 
 const float CollisionMath::COINCIDENCE_EPSILON = 0.000001f;
 CollisionMath::ColmathStatsStruct CollisionMath::Stats;

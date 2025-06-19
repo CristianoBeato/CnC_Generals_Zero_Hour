@@ -36,7 +36,7 @@
  *   BlowStraw::Key -- Submit a key to the Blowfish straw.                                     *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"blwstraw.h"
 #include	<string.h>
 #include	<assert.h>

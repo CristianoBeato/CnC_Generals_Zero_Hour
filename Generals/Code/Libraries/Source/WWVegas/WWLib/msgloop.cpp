@@ -39,8 +39,8 @@
  *   Windows_Message_Handler -- Handles windows message.                                       * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
-#include	"vector.h"
+#include	"WWLib/always.h"
+#include	"WWLib/vector.h"
 #include	"win.h"
 
 

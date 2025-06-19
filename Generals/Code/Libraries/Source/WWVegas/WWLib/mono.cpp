@@ -59,7 +59,7 @@
  *   MonoClass::Set_Default_Attribute -- Set the default attribute for this window.            * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"data.h"
 #include	"mono.h"
 #include	"monodrvr.h"

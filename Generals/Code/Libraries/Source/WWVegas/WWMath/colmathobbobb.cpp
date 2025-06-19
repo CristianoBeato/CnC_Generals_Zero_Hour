@@ -53,10 +53,10 @@
  *   CollisionMath::Collide -- collide an AAB with an OBB                                      *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "colmath.h"
-#include "obbox.h"
-#include "aabox.h"
-#include "wwdebug.h"
+#include "WWMath/colmath.h"
+#include "WWMath/obbox.h"
+#include "WWMath/aabox.h"
+#include "WWDebug/wwdebug.h"
 
 
 /*

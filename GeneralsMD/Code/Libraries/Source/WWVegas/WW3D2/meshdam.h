@@ -43,7 +43,7 @@
 #ifndef MESHDAM_H
 #define MESHDAM_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "vector3.h"
 #include "bittype.h"
 #include "w3derr.h"

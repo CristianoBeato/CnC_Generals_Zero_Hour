@@ -36,7 +36,7 @@
 
 
 #include "cardinalspline.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "persistfactory.h"
 #include "wwmathids.h"
 #include "wwhack.h"

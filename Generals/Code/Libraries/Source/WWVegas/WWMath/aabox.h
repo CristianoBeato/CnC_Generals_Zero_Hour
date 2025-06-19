@@ -59,10 +59,10 @@
 #ifndef AABOX_H
 #define AABOX_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "matrix3d.h"
-#include "lineseg.h"
-#include "colmath.h"
+#include "WWMath/lineseg.h"
+#include "WWMath/colmath.h"
 
 class AABoxClass;
 class MinMaxAABoxClass;

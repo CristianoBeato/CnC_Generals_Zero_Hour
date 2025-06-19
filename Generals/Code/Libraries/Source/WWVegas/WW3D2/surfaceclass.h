@@ -44,7 +44,7 @@
 #define SURFACECLASS_H
 
 #include "ww3dformat.h"
-#include "refcount.h"
+#include "WWLib/refcount.h"
 
 struct IDirect3DSurface8;
 class Vector2i;

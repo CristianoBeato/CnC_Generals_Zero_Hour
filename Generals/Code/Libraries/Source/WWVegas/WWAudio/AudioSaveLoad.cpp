@@ -34,13 +34,13 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "audiosaveload.h"
 #include "persist.h"
 #include "persistfactory.h"
 #include "definition.h"
 #include "soundchunkids.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "SoundScene.h"
 #include "wwmemlog.h"
 

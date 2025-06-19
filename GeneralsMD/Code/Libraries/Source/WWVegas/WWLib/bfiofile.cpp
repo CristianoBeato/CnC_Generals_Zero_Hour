@@ -50,7 +50,7 @@
  *   BufferIOFileClass::~BufferIOFileClass -- Destructor for the file object.                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"bfiofile.h"
 #include	<string.h>
 

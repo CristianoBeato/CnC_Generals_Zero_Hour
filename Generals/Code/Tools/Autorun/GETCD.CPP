@@ -32,7 +32,7 @@
 
 #include	<windows.h>
 #include	<string.h>
-//#include	"always.h"
+//#include	"WWLib/always.h"
 #include	"getcd.h"
 //#include	"timer.h"
 #include	"wnd_file.h"

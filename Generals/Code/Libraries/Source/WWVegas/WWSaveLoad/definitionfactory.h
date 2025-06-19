@@ -41,8 +41,8 @@
 #ifndef __DEFINITION_FACTORY_H
 #define __DEFINITION_FACTORY_H
 
-#include "always.h"
-#include "bittype.h"
+#include "WWLib/always.h"
+#include "WWLib/bittype.h"
 #include "definitionclassids.h"
 
 // Forward declarations

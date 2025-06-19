@@ -43,7 +43,7 @@
 #ifndef HRAWANIM_H
 #define HRAWANIM_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "hanim.h"
  
 class MotionChannelClass;

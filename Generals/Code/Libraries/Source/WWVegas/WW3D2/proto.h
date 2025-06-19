@@ -42,9 +42,9 @@
 #ifndef PROTO_H
 #define PROTO_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include <stdlib.h>
-#include "w3d_file.h"
+#include "WW3D2/w3d_file.h"
 
 class RenderObjClass;
 class ChunkLoadClass;

@@ -28,12 +28,12 @@
 #ifndef __HEIGHTMAP_H_
 #define __HEIGHTMAP_H_
 
-#include "always.h"
-#include "rendobj.h"
+#include "WWLib/always.h"
+#include "WW3D2/rendobj.h"
 #include "w3d_file.h"
 #include "dx8vertexbuffer.h"
 #include "dx8indexbuffer.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 #include "shader.h"
 #include "vertmaterial.h"
 #include "Lib/BaseType.h"

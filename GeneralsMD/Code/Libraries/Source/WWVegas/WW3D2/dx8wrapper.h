@@ -46,7 +46,7 @@
 #ifndef DX8_WRAPPER_H
 #define DX8_WRAPPER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "dllist.h"
 #include "d3d8.h"
 #include "matrix4.h"

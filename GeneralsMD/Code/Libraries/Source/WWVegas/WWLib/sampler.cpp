@@ -45,7 +45,7 @@
 // Use Stratified Sampling if you want good results in low dimensions
 // Use QMC if you want low discrepancy and you want reproduceablility
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "sampler.h"
 #include "random.h"
 #include <math.h>

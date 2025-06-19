@@ -39,10 +39,10 @@
 #ifndef W3D_FILE_H
 #define W3D_FILE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 #ifndef BITTYPE_H
-#include "bittype.h"
+#include "WWLib/bittype.h"
 #endif
 
 

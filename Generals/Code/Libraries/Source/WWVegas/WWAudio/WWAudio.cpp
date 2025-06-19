@@ -35,10 +35,10 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include "always.h"
+#include "WWLib/always.h"
 #include <Windows.H>
 #include "WWAudio.H"
-#include "WWDebug.H"
+#include "WWDebug/wwdebug.h"
 #include "Utils.H"
 #include "RealCRC.H"
 #include "SoundBuffer.H"

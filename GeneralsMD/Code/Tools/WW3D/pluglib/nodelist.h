@@ -39,7 +39,7 @@
 #ifndef NODELIST_H
 #define NODELIST_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include <Max.h>
 
 #ifndef NODEFILT_H

@@ -23,10 +23,10 @@
 #pragma once
 #endif
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "classid.h"
-#include "wwdebug.h"
-#include "wwstring.h"
+#include "WWDebug/wwdebug.h"
+#include "WWLib/wwstring.h"
 
 #ifdef WW3D_DX8
 

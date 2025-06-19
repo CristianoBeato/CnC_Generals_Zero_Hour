@@ -90,14 +90,14 @@
 
 #include "boxrobj.h"
 #include "w3d_util.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "vertmaterial.h"
 #include "ww3d.h"
-#include "chunkio.h"
-#include "rinfo.h"
+#include "WWLib/chunkio.h"
+#include "WW3D2/rinfo.h"
 #include "coltest.h"
 #include "inttest.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 #include "dx8indexbuffer.h"
 #include "dx8vertexbuffer.h"
 #include "dx8fvf.h"
@@ -1351,20 +1351,18 @@ const char * BoxPrototypeClass::Get_Name(void) const
 
 int BoxPrototypeClass::Get_Class_ID(void) const
 {
-	if (Definition.Attributes & W3D_BOX_ATTRIBUTE_ORIENTED) {
+	if (Definition.Attributes & W3D_BOX_ATTRIBUTE_ORIENTED) 
 		return RenderObjClass::CLASSID_OBBOX;
-	} else {
+	else 
 		return RenderObjClass::CLASSID_AABOX;
-	}
 }
 	
 RenderObjClass * BoxPrototypeClass::Create(void)
 {
-	if (Definition.Attributes & W3D_BOX_ATTRIBUTE_ORIENTED) {
+	if (Definition.Attributes & W3D_BOX_ATTRIBUTE_ORIENTED) 
 		return NEW_REF( OBBoxRenderObjClass, (Definition) );
-	} else {
+	else 
 		return NEW_REF( AABoxRenderObjClass, (Definition) );
-	}
 }
 
 /*

@@ -43,9 +43,9 @@
 #include "meshgeometry.h"
 #include "meshmatdesc.h"
 #include "matinfo.h"
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include "polyinfo.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 
 class	ShaderClass;
 class	IntersectionClass;

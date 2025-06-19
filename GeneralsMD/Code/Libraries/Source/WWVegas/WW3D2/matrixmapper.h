@@ -41,7 +41,7 @@
 #ifndef MATRIXMAPPER_H
 #define MATRIXMAPPER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "bittype.h"
 #include "matrix4.h"
 #include "mapper.h"

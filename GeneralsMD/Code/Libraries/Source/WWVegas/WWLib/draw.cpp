@@ -36,7 +36,7 @@
  *   Draw_Shape -- Draw a shape to the surface.                                                * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"blit.h"
 #include	"blitblit.h"
 #include	"blitter.h"

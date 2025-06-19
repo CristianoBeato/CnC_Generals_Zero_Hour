@@ -32,10 +32,10 @@
 
 
 #include "Threads.h"
-#include "refcount.h"
+#include "WWLib/refcount.h"
 #include "Utils.h"
 #include <Process.h>
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////

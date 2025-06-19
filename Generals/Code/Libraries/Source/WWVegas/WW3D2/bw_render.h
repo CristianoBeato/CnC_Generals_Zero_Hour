@@ -43,10 +43,10 @@
 #ifndef BW_RENDER_H__
 #define BW_RENDER_H__
 
-#include "always.h"
-#include "vector2.h"
-#include "vector3.h"
-#include "vector3i.h"
+#include "WWLib/always.h"
+#include "WWMath/vector2.h"
+#include "WWMath/vector3.h"
+#include "WWMath/Vector3i.h"
 
 class BW_Render
 {

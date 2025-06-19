@@ -43,7 +43,7 @@
 #ifndef DECALMSH_H
 #define DECALMSH_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "bittype.h"
 #include "simplevec.h"
 #include "vector.h"

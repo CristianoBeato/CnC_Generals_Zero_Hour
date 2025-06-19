@@ -40,7 +40,7 @@
 #ifndef SHDDEF_H
 #define SHDDEF_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "editable.h"
 #include "refcount.h"
 

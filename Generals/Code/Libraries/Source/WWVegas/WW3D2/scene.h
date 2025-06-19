@@ -42,11 +42,11 @@
 #ifndef SCENE_H
 #define SCENE_H
 
-#include "always.h"
-#include "refcount.h"
-#include "vector3.h"
+#include "WWLib/always.h"
+#include "WWLib/refcount.h"
+#include "WWMath/vector3.h"
 #include "robjlist.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 
 class	RenderObjClass;
 class	RenderInfoClass;

@@ -75,13 +75,13 @@
 #include "vertmaterial.h"
 #include "shader.h"
 #include "texture.h"
-#include "rendobj.h"
-#include "rinfo.h"
+#include "WW3D2/rendobj.h"
+#include "WW3D2/rinfo.h"
 #include "camera.h"
 #include "matpass.h"
 #include "bwrender.h"
 #include "assetmgr.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 
 
 // DEBUG DEBUG

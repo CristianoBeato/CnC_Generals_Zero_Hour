@@ -39,7 +39,7 @@
 #include "texture.h"
 #include "wwprofile.h"
 #include "wwmemlog.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 
 #ifdef _INTERNAL
 // for occasional debugging...

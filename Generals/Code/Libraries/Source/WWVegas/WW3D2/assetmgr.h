@@ -43,14 +43,14 @@
 #ifndef ASSETMGR_H
 #define ASSETMGR_H
 
-#include "always.h"
-#include "vector.h"
-#include "htreemgr.h"
-#include "hanimmgr.h"
-#include "slist.h"
-#include "texture.h"
-#include "hashtemplate.h"
-#include "simplevec.h"
+#include "WWLib/always.h"
+#include "WWLib/Vector.H"
+#include "WW3D2/htreemgr.h"
+#include "WW3D2/hanimmgr.h"
+#include "WWLib/SLIST.H"
+#include "WW3D2/texture.h"
+#include "WWLib/hashtemplate.h"
+#include "WWLib/simplevec.h"
 
 class	HAnimClass;
 class	HTreeClass;

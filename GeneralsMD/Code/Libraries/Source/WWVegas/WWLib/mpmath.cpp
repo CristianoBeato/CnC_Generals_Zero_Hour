@@ -82,7 +82,7 @@
  *   XMP_Unsigned_Mult_Int -- Multiply an MP number by a simple integer.                       *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"mpmath.h"
 #include	"win.h"
 #include	<assert.h>

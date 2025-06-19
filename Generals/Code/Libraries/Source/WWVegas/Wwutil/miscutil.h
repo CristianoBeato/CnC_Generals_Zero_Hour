@@ -32,11 +32,11 @@
 #define MISCUTIL_H
 
 #ifndef	ALWAYS_H
-	#include "always.h"
+	#include "WWLib/always.h"
 #endif
 
-#include	"bittype.h"
-#include	"wwstring.h"
+#include	"WWLib/bittype.h"
+#include	"WWLib/wwstring.h"
 
 const float MISCUTIL_EPSILON = 0.0001f;
 

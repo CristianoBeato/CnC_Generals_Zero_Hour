@@ -44,7 +44,7 @@
 #ifndef DX8TEXTUREMANAGER_H
 #define DX8TEXTUREMANAGER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "texture.h"
 #include "dx8wrapper.h"
 #include "ww3dformat.h"

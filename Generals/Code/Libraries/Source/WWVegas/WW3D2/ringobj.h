@@ -41,15 +41,15 @@
 #ifndef RINGOBJ_H
 #define RINGOBJ_H
 
-#include "always.h"
-#include "rendobj.h"
+#include "WWLib/always.h"
+#include "WW3D2/rendobj.h"
 #include "w3d_file.h"
 #include "shader.h"
 #include "proto.h"
-#include "obbox.h"
+#include "WWMath/obbox.h"
 #include "quat.h"
-#include "vector3.h"
-#include "vector2.h"
+#include "WWMath/vector3.h"
+#include "WWMath/vector2.h"
 #include "prim_anim.h"
 
 class VertexMaterialClass;

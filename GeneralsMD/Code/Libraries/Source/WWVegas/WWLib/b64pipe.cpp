@@ -36,7 +36,7 @@
  *   Base64Pipe::Put -- Processes a block of data through the pipe.                            *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"b64pipe.h"
 #include	"base64.h"
 #include	<string.h>

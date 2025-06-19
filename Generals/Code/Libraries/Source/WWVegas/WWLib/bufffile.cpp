@@ -34,9 +34,9 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"bufffile.h"
-#include	"wwdebug.h"
+#include	"WWDebug/wwdebug.h"
 #include	<string.h>
 
 int		BufferedFileClass::_DesiredBufferSize	=	1024;	

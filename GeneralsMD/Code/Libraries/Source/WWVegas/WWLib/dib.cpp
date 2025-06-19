@@ -37,7 +37,7 @@
  *   DIB8C::Clear -- clears the DIB                                                            * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "dib.h"
 #include <math.h>
 

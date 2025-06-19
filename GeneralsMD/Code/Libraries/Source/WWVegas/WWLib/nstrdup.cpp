@@ -36,7 +36,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "string.h"
 #include "nstrdup.h"
 //#include "../app/main/gnew.h"

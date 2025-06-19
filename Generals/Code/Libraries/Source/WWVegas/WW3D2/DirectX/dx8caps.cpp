@@ -36,9 +36,9 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "dx8caps.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 #include "formconv.h"
 
 D3DCAPS8 DX8Caps::hwVPCaps;

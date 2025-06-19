@@ -43,7 +43,7 @@
 #define NULL_H
 
 #ifndef RENDOBJ_H
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #endif
 
 #include "proto.h"

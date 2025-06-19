@@ -45,10 +45,10 @@
 #ifndef PERSISTFACTORY_H
 #define PERSISTFACTORY_H
 
-#include "always.h"
-#include "bittype.h"
-#include "chunkio.h"
-#include "wwdebug.h"
+#include "WWLib/always.h"
+#include "WWLib/bittype.h"
+#include "WWLib/chunkio.h"
+#include "WWDebug/wwdebug.h"
 #include "saveload.h"
 
 class PersistClass;

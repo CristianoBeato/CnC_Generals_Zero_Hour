@@ -38,7 +38,7 @@
 #ifndef HLODSAVE_H
 #define HLODSAVE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 #include <Max.h>
 #include <stdio.h>

@@ -39,7 +39,7 @@
 #define POINT_H
 
 #include <math.h>
-//#include "always.h"
+//#include "WWLib/always.h"
 //#include "cctypes.h"
 
 //#ifdef __cplusplus

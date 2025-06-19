@@ -39,13 +39,13 @@
 
 #include "vertmaterial.h"
 #include "realcrc.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "w3d_util.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "w3derr.h"
 #include "ini.h"
 #include "xstraw.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 
 #include <stdio.h>
 #include <string.h>

@@ -39,7 +39,7 @@
 #include "wwhack.h"
 #include "lookuptable.h"
 #include <stdlib.h>
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "wwprofile.h"
 
 // TODO: convert to use loouptablemanager...

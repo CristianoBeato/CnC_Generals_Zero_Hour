@@ -22,10 +22,10 @@
 //																																						//
 ////////////////////////////////////////////////////////////////////////////////
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "hanim.h"
 #include "proto.h"
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include "LightEnvironment.h"
 #include "w3d_file.h"
 #include "dx8vertexbuffer.h"

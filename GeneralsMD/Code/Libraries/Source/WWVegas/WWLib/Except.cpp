@@ -49,7 +49,7 @@
 
 #ifdef _MSC_VER
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include <windows.h>
 #include	"assert.h"
 #include "cpudetect.h"

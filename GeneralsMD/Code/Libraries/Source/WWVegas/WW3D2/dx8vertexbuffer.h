@@ -44,7 +44,7 @@
 #ifndef DX8VERTEXBUFFER_H
 #define DX8VERTEXBUFFER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwdebug.h"
 #include "refcount.h"
 #include "dx8fvf.h"

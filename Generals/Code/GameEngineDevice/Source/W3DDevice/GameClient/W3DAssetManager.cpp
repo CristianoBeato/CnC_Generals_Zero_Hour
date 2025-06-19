@@ -43,10 +43,10 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include <always.h>
+#include <WWLib/always.h>
 #include "W3DDevice/GameClient/W3DAssetManager.h"
 #include "proto.h"
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include <vector3.h>
 #include "mesh.h"
 #include "hlod.h"
@@ -54,7 +54,7 @@
 #include "meshmdl.h"
 #include "part_emt.h"
 #include "vertmaterial.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 #include "texture.h"
 #include "surfaceclass.h"
 #include "textureloader.h"

@@ -37,7 +37,7 @@
 #pragma once
 #ifndef _SYSTIMER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include <windows.h>
 #include "mmsys.h"
 

@@ -39,7 +39,7 @@
 #ifndef SHDDEFFACTORY_H
 #define SHDDEFFACTORY_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "bittype.h"
 
 class ShdDefClass;

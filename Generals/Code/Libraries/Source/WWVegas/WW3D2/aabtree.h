@@ -41,17 +41,17 @@
 #ifndef AABTREE_H
 #define AABTREE_H
 
-#include "always.h"
-#include "refcount.h"
-#include "simplevec.h"
-#include "vector3.h"
-#include "vector3i.h"
-#include "aaplane.h"
-#include "bittype.h"
-#include "colmath.h"
-#include "wwdebug.h"
+#include "WWLib/always.h"
+#include "WWLib/refcount.h"
+#include "WWLib/simplevec.h"
+#include "WWMath/vector3.h"
+#include "WWMath/Vector3i.h"
+#include "WWMath/aaplane.h"
+#include "WWLib/bittype.h"
+#include "WWMath/colmath.h"
+#include "WWDebug/wwdebug.h"
 #include "aabtreebuilder.h"
-#include "obbox.h"
+#include "WWMath/obbox.h"
 #include <tri.h>
 #include <float.h>
 

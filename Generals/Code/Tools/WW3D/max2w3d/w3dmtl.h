@@ -41,9 +41,9 @@
 #ifndef W3DMTL_H
 #define W3DMTL_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "w3d_file.h"
-#include "vector.h"
+#include "WWLib/vector.h"
 
 class GameMtl;
 class Mtl;

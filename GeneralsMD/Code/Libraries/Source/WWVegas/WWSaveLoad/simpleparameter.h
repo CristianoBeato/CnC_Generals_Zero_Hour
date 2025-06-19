@@ -45,7 +45,7 @@
 #ifndef __SIMPLE_PARAMETER_H
 #define __SIMPLE_PARAMETER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "parameter.h"
 #include "vector2.h"
 #include "vector3.h"

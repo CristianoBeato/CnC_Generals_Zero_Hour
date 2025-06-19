@@ -41,9 +41,9 @@
 #ifndef SEGLINE_H
 #define SEGLINE_H
 
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include "shader.h"
-#include "simplevec.h"
+#include "WWLib/simplevec.h"
 #include "seglinerenderer.h"
 
 

@@ -42,7 +42,7 @@
 #ifndef HASH_TEMPLATE_H
 #define HASH_TEMPLATE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwstring.h"
 
 // Class for providing hash values

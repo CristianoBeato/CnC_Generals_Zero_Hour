@@ -43,7 +43,7 @@
 #ifndef BW_RENDER_H__
 #define BW_RENDER_H__
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "vector2.h"
 #include "vector3.h"
 #include "vector3i.h"

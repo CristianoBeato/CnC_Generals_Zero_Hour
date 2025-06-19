@@ -23,7 +23,7 @@
 #ifndef WW3D2_STRIP_OPTIMIZER_H__
 #define WW3D2_STRIP_OPTIMIZER_H__
 
-#include "always.h"
+#include "WWLib/always.h"
 
 
 // strip data =

@@ -37,7 +37,7 @@
 
 #include "soundbuffer.h"
 #include "rawfile.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "utils.h"
 #include "ffactory.h"
 #include "win.h"

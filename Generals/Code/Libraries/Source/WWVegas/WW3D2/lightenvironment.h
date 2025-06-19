@@ -43,8 +43,8 @@
 #ifndef LIGHTENVIRONMENT_H
 #define LIGHTENVIRONMENT_H
 
-#include "always.h"
-#include "vector3.h"
+#include "WWLib/always.h"
+#include "WWMath/vector3.h"
 
 
 class Matrix3D;

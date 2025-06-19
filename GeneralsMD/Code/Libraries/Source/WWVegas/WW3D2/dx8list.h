@@ -45,7 +45,7 @@
 #ifndef DX8LIST_H
 #define DX8LIST_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "multilist.h"
 
 

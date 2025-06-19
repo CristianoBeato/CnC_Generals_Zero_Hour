@@ -41,8 +41,8 @@
 #ifndef __SOUNDROBJ_H
 #define __SOUNDROBJ_H
 
-#include "rendobj.h"
-#include "wwstring.h"
+#include "WW3D2/rendobj.h"
+#include "WWLib/wwstring.h"
 #include "proto.h"
 #include "w3d_file.h"
 #include "w3derr.h"

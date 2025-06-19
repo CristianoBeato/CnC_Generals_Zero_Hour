@@ -40,7 +40,7 @@
 #ifndef FONT3D_H
 #define FONT3D_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "refcount.h"
 #include "vector4.h"
 #include "widestring.h"

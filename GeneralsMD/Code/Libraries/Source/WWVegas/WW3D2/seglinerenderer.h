@@ -39,7 +39,7 @@
 #ifndef SEGLINERENDERER_H
 #define SEGLINERENDERER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "shader.h"
 #include "texture.h"
 #include "matrix3d.h"

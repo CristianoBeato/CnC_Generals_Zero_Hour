@@ -41,16 +41,17 @@
 #ifndef __WWSTRING_H
 #define __WWSTRING_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "mutex.h"
-#include <string.h>
-#include <stdarg.h>
-#include <tchar.h>
-#include <wwdebug.h>
+#include <cstring>
+#include <cstdarg>
+//#include "tchar.h"
+#include "WWDebug/wwdebug.h"
 #ifdef _UNIX
 #include "osdep.h"
 #endif
 
+typedef wchar_t TCHAR; 
 
 
 //////////////////////////////////////////////////////////////////////

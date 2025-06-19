@@ -43,7 +43,7 @@
  *   Wait_Blit -- waits for the DirectDraw blitter to become idle                              *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"misc.h"
 #include	"dsurface.h"
 #include	"data.h"

@@ -39,11 +39,11 @@
 #ifndef PROJECTOR_H
 #define PROJECTOR_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "matrix3d.h"
-#include "matrix4.h"
-#include "aabox.h"
-#include "obbox.h"
+#include "WWMath/matrix4.h"
+#include "WWMath/aabox.h"
+#include "WWMath/obbox.h"
 
 
 class MatrixMapperClass;

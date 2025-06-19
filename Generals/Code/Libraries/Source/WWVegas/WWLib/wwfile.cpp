@@ -37,7 +37,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <memory.h>
-#include "wwfile.h"
+#include "WWLib/wwfile.h"
 
 #pragma warning(disable : 4514)
 

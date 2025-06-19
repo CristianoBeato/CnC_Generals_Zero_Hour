@@ -23,7 +23,7 @@
 #ifndef WW3D_ASSET_STATUS_H
 #define WW3D_ASSET_STATUS_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "hashtemplate.h"
 
 class AssetStatusClass

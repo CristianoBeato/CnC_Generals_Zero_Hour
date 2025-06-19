@@ -22,7 +22,7 @@
 #include "stdafx.h"
 #include "worldbuilder.h"
 #include "Lib\BaseType.h"
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include "common/GlobalData.h"
 #include "ShadowOptions.h"
 #include "W3DDevice/GameClient/W3DShadow.h"

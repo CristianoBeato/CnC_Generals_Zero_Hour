@@ -42,10 +42,10 @@
 #ifndef QUAT_H
 #define QUAT_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwmath.h"
 #include "wwmatrix3.h"
-#include "vector3.h"
+#include "WWMath/vector3.h"
 
 
 class Quaternion

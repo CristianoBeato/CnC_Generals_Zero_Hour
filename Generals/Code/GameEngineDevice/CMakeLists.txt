@@ -1,6 +1,7 @@
 ##############################################
 ##	Beato Command & Conquer Generals(tm)    ##
 ##############################################
+## Game Device 
 set( SDL3DEVICE_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/Source/SDL3Device/Common/SDL3BIGFile.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Include/SDL3Device/Common/SDL3BIGFile.h
@@ -196,9 +197,9 @@ set( ENGINE_DEVICES_SOURCES_ALL
     ${W3D_DEVICE_SOURCES}
     )
 
-include_directories( ${CMAKE_SOURCE_DIR}/Libraries/Include )
 add_library( GameEngineDevice STATIC ${ENGINE_DEVICES_SOURCES_ALL} )
-target_include_directories( GameEngineDevice PUBLIC ${CMAKE_SOURCE_DIR}/Libraries/Include )
+add_dependencies( GameEngineDevice WWVegas )
+#target_include_directories( GameEngineDevice PUBLIC ${CMAKE_SOURCE_DIR}/Libraries/Include )
 target_precompile_headers( GameEngineDevice 
     PUBLIC 
         ${CMAKE_SOURCE_DIR}/GameEngine/Include/Precompiled/PreRTS.h

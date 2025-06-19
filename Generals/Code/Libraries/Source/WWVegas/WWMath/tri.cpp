@@ -36,8 +36,8 @@
  *   TriClass::Contains_Point -- performs 2D point-in-triangle test.                           *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "tri.h"
-#include "vector2.h"
+#include "WWMath/tri.h"
+#include "WWMath/vector2.h"
 
 
 struct FDPRec 

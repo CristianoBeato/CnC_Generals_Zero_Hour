@@ -493,7 +493,7 @@ SOURCE=.\_mono.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\always.h
+SOURCE=.\WWLib/always.h
 # End Source File
 # Begin Source File
 

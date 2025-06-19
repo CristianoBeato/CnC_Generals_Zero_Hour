@@ -43,7 +43,7 @@
 #ifndef WWLIB_CPU_DETECT_H__
 #define WWLIB_CPU_DETECT_H__
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwstring.h"
 
 #ifdef WIN32

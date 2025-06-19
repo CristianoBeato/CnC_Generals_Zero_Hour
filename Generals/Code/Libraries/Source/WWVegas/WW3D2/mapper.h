@@ -41,12 +41,12 @@
 #ifndef VERTEXMAPPER_H
 #define VERTEXMAPPER_H
 
-#include "refcount.h"
+#include "WWLib/refcount.h"
 #include "w3d_file.h"
 #include "w3derr.h"
-#include "wwdebug.h"
-#include "vector2.h"
-#include "vector3.h"
+#include "WWDebug/wwdebug.h"
+#include "WWMath/vector2.h"
+#include "WWMath/vector3.h"
 #include "ww3d.h"
 
 class INIClass;

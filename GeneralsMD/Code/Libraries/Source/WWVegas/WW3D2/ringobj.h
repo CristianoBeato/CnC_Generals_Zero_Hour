@@ -41,7 +41,7 @@
 #ifndef RINGOBJ_H
 #define RINGOBJ_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "rendobj.h"
 #include "w3d_file.h"
 #include "shader.h"

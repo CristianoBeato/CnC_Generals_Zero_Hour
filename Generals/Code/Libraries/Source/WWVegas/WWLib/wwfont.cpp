@@ -45,7 +45,7 @@
  *   Set_Font_Data -- Allow font data to be set after construction.                            * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"_convert.h"
 #include	"wwfont.h"
 //#include	<stdlib.h>

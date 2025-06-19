@@ -44,7 +44,7 @@
 #ifndef AABTREEBUILDER_H
 #define AABTREEBUILDER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "vector3.h"
 #include "vector3i.h"
 #include "aaplane.h"

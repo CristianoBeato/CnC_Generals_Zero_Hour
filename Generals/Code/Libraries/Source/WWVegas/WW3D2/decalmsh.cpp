@@ -52,16 +52,16 @@
 
 #include "decalmsh.h"
 #include "decalsys.h"
-#include "rinfo.h"
+#include "WW3D2/rinfo.h"
 #include "mesh.h"
 #include "meshmdl.h"
-#include "plane.h"
+#include "WWMath/plane.h"
 #include "statistics.h"
 #include "dx8vertexbuffer.h"
 #include "dx8indexbuffer.h"
-#include "simplevec.h"
+#include "WWLib/simplevec.h"
 #include "texture.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 
 #define DISABLE_CLIPPING	0
 

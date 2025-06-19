@@ -47,7 +47,7 @@
 //#include	"pipe.h"
 //#include	"pk.h"
 //#include	"straw.h"
-//#include	"wwfile.h"
+//#include	"WWLib/wwfile.h"
 
 class PKey;
 class FileClass;

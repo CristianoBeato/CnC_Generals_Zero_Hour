@@ -81,10 +81,10 @@
 #include "osdep.h"
 #endif
 
-#include "always.h"
+#include "WWLib/always.h"
 #include <assert.h>
-#include "vector2.h"
-#include "vector3.h"
+#include "WWMath/vector2.h"
+#include "WWMath/vector3.h"
 #include "vector4.h"
 
 class Matrix3;

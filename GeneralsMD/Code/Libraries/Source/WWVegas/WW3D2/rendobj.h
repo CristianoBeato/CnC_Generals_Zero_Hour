@@ -46,7 +46,7 @@
 #ifndef RENDOBJ_H
 #define RENDOBJ_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "refcount.h"
 #include "sphere.h"
 #include "coltype.h"

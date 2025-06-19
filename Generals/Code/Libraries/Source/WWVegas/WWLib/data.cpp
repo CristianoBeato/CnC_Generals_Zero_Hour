@@ -37,7 +37,7 @@
  *   Hires_Load -- Allocates memory for, and loads, a resolution dependant file.               *
  *   Fetch_String -- Fetches a string resource.                                                *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"data.h"
 
 

@@ -40,8 +40,8 @@
 #ifndef V3_RND_H
 #define V3_RND_H
 
-#include "always.h"
-#include "vector3.h"
+#include "WWLib/always.h"
+#include "WWMath/vector3.h"
 #include "random.h"
 #include <limits.h>
 

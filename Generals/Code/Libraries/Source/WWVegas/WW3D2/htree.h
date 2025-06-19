@@ -42,13 +42,13 @@
 #ifndef HTREE_H
 #define HTREE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "pivot.h"
 #include "quat.h"
 #include "matrix3d.h"
-#include "vector3.h"
+#include "WWMath/vector3.h"
 #include "w3d_file.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 
 class HAnimClass;
 class HAnimComboClass;

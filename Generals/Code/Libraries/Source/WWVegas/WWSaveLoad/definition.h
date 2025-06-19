@@ -41,12 +41,12 @@
 #ifndef __DEFINITION_H
 #define __DEFINITION_H
 
-#include "always.h"
+#include "WWLib/always.h"
 // SKB Remove because of G conflicts with CLASSID_?? 
 // #include "definitionclassids.h"
 #include "definitionmgr.h"
 #include "editable.h"
-#include "wwstring.h"
+#include "WWLib/wwstring.h"
 
 // Forward declarations
 class ChunkSaveClass;

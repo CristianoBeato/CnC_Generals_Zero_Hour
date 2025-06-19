@@ -37,7 +37,7 @@
  *   BlowPipe::Put -- Submit a block of data for encrypt/decrypt.                              *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"blowpipe.h"
 #include	<string.h>
 #include	<assert.h>

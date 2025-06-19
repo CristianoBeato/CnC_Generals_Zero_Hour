@@ -42,10 +42,10 @@
 #ifndef CULLSYS_H
 #define CULLSYS_H
 
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "stdlib.h"
-#include "refcount.h"
-#include "aabox.h"
+#include "WWLib/refcount.h"
+#include "WWMath/aabox.h"
 
 class CullableClass;
 class CullSystemClass;

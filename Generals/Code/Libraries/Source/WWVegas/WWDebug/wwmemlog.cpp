@@ -40,8 +40,8 @@
 
 
 #include "wwmemlog.h"
-#include "wwdebug.h"
-#include "vector.h"
+#include "WWDebug/wwdebug.h"
+#include "WWLib/vector.h"
 #include <windows.h>
 
 #if (STEVES_NEW_CATCHER || PARAM_EDITING_ON)

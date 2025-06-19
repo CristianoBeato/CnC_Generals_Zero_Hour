@@ -44,7 +44,7 @@
 #ifndef __PARAMETER_TYPES_H
 #define __PARAMETER_TYPES_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 //////////////////////////////////////////////////////////////////////////////////
 //

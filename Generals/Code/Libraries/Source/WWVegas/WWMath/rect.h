@@ -42,7 +42,7 @@
 #ifndef RECT_H
 #define RECT_H
 
-#include "vector2.h"
+#include "WWMath/vector2.h"
 
 class RectClass
 {

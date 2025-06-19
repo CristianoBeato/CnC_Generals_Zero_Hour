@@ -28,7 +28,7 @@
 #ifndef __W3D_DEBUG_ICONS_H_
 #define __W3D_DEBUG_ICONS_H_
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "rendobj.h"
 #include "vertmaterial.h"
 #include "Lib/BaseType.h"

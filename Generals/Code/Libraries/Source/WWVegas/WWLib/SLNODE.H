@@ -39,7 +39,7 @@
 #define __SLNODE_H__
 
 #ifndef ALWAYS_H
-#include "always.h"
+#include "WWLib/always.h"
 #endif
 
 #include "mempool.h"

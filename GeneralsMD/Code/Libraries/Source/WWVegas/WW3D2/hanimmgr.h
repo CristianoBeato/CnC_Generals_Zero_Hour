@@ -43,7 +43,7 @@
 #ifndef HANIMMGR_H
 #define HANIMMGR_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "hash.h"
 #include "wwstring.h"
 #include "vector.h"

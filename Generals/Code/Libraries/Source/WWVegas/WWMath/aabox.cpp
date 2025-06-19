@@ -37,8 +37,8 @@
  *   AABoxClass::Contains -- Test whether this box contains the given box                      *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "aabox.h"
-#include "colmath.h"
+#include "WWMath/aabox.h"
+#include "WWMath/colmath.h"
 #include "colmathinlines.h"
 #include <float.h>
 

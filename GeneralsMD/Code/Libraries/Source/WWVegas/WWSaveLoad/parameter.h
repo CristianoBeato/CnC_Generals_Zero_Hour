@@ -44,7 +44,7 @@
 #ifndef __PARAMETER_H
 #define __PARAMETER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include <string.h>
 #include <stdlib.h>
 #include "parametertypes.h"

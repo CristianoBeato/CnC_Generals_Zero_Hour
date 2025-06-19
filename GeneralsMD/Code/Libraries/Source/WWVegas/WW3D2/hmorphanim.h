@@ -43,7 +43,7 @@
 #ifndef HMORPHANIM_H
 #define HMORPHANIM_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "hanim.h"
 #include "simplevec.h"
 

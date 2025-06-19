@@ -42,10 +42,10 @@
 #define RENDER2DSENTENCE_H
 
 #include "render2d.h"
-#include "refcount.h"
-#include "vector.h"
-#include "vector2i.h"
-#include "wwstring.h"
+#include "WWLib/refcount.h"
+#include "WWLib/vector.h"
+#include "WWMath/vector2i.h"
+#include "WWLib/wwstring.h"
 #include "win.h"
 
 /*

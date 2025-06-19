@@ -42,7 +42,7 @@
 
 #include	"buff.h"
 #include	"straw.h"
-#include	"wwfile.h"
+#include	"WWLib/wwfile.h"
 #include	<stddef.h>
 
 /*

@@ -40,7 +40,7 @@
 #ifndef RENDEROBJECTRECYCLER_H
 #define RENDEROBJECTRECYCLER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "robjlist.h"
 
 class RenderObjClass;

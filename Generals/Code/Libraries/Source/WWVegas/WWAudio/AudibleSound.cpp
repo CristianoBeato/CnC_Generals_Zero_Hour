@@ -38,7 +38,7 @@
 #include "audiblesound.h"
 #include "wwaudio.h"
 #include "ww3d.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "soundbuffer.h"
 #include "utils.h"
 #include "soundscene.h"

@@ -34,7 +34,7 @@
  * Functions:                                                                                  * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 		   
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"_mono.h"
 
 

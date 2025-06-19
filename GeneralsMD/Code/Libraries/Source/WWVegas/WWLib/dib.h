@@ -37,7 +37,7 @@
 #ifndef DIB_H
 #define DIB_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "bsurface.h"
 #include "palette.h"
 #include "win.h"

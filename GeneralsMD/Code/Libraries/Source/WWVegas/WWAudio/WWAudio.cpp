@@ -35,7 +35,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include "always.h"
+#include "WWLib/always.h"
 #include <Windows.H>
 #include "WWAudio.H"
 #include "WWDebug.H"

@@ -47,7 +47,7 @@
 #endif
 
 #ifndef VECTOR_H
-#include "vector.h"
+#include "WWLib/vector.h"
 #endif
 
 #ifndef SNAPPTS_H

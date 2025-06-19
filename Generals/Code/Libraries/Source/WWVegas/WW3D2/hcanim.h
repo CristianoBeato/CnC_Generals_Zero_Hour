@@ -43,12 +43,12 @@
 #ifndef HCANIM_H
 #define HCANIM_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "quat.h"
-#include "refcount.h"
+#include "WWLib/refcount.h"
 #include "w3d_file.h"
 #include "slist.h"
-#include "vector.h"
+#include "WWLib/vector.h"
 #include "hanim.h"
 
 struct NodeCompressedMotionStruct;

@@ -42,9 +42,9 @@
 #ifndef MATINFO_H
 #define MATINFO_H
 
-#include "always.h"
-#include "wwdebug.h"
-#include "vector.h"
+#include "WWLib/always.h"
+#include "WWDebug/wwdebug.h"
+#include "WWLib/vector.h"
 #include "vertmaterial.h"
 #include "texture.h"
 #include "shader.h"

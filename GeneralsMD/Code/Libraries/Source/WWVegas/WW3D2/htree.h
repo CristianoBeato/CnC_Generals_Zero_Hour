@@ -42,7 +42,7 @@
 #ifndef HTREE_H
 #define HTREE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "pivot.h"
 #include "quat.h"
 #include "matrix3d.h"

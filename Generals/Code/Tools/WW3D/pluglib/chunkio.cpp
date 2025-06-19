@@ -62,7 +62,7 @@
  *   ChunkLoadClass::Read -- read an IOQuaternionStruct                                        *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include <string.h>
 #include <assert.h>
 

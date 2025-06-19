@@ -43,7 +43,7 @@
 #ifndef __DEFINITION_MGR_H
 #define __DEFINITION_MGR_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "saveload.h"
 #include "saveloadsubsystem.h"
 #include "saveloadids.h"

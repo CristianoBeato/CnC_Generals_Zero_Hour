@@ -39,9 +39,9 @@
 #include "definitionfactory.h"
 #include "definitionfactorymgr.h"
 #include "definitionclassids.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "persistfactory.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "wwmemlog.h"
 #include "twiddler.h"
 #include <string.h>

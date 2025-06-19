@@ -37,10 +37,10 @@
  *   Read_Line -- Reads a text line from the straw object specified.                           * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"readline.h"
 #include	"trim.h"
-#include	"wwfile.h"
+#include	"WWLib/wwfile.h"
 #include	"xstraw.h"
 //#include	<ctype.h>
 #include	<string.h>

@@ -23,8 +23,8 @@
 #pragma once
 #endif
 
-#include "WWLib/always.h" //"always.h"
-#include "WWLib/wwstring.h" // "wwstring.h"
+#include "WWLib/always.h" //"WWLib/always.h"
+#include "WWLib/wwstring.h" // "WWLib/wwstring.h"
 
 class TextureClass;
 class StringClass;

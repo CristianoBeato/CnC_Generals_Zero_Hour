@@ -41,8 +41,8 @@
 #ifndef __AUDIO_EVENTS_H
 #define __AUDIO_EVENTS_H
 
-#include "simplevec.h"
-#include "bittype.h"
+#include "WWLib/simplevec.h"
+#include "WWLib/bittype.h"
 
 
 /////////////////////////////////////////////////////////////////////////////////

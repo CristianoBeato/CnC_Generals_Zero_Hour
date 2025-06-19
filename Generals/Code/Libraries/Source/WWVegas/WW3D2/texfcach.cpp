@@ -53,9 +53,9 @@
 #include "mutex.h"
 #include "thread.h"
 #include <assert.h>
-#include "wwdebug.h"
-#include "simplevec.h"
-#include "wwstring.h"
+#include "WWDebug/wwdebug.h"
+#include "WWLib/simplevec.h"
+#include "WWLib/wwstring.h"
 #include "textureloader.h"
 #include "texture.h"
 #include "ffactory.h"

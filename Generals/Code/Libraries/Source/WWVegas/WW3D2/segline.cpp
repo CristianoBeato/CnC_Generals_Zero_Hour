@@ -36,16 +36,16 @@
 
 #include "segline.h"
 #include "ww3d.h"
-#include "rinfo.h"
+#include "WW3D2/rinfo.h"
 #include "predlod.h"
 #include "v3_rnd.h"
 #include "texture.h"
 #include "coltest.h"
 #include "w3d_file.h"
 #include "texture.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 #include "vp.h"
-#include "vector3i.h"
+#include "WWMath/Vector3i.h"
 #include "sortingrenderer.h"
 
 static SegLineRendererClass _LineRenderer;

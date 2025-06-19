@@ -42,14 +42,14 @@
 #ifndef RENDER2D_H
 #define RENDER2D_H
 
-#include "always.h"
-#include "simplevec.h"
-#include "vector2.h"
+#include "WWLib/always.h"
+#include "WWLib/simplevec.h"
+#include "WWMath/vector2.h"
 
 #include "shader.h"
 #include "widestring.h"
 #include "rect.h"
-#include "bittype.h"
+#include "WWLib/bittype.h"
 
 class	Font3DInstanceClass;
 class TextureClass;

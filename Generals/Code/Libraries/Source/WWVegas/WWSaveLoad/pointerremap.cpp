@@ -36,8 +36,8 @@
 
 
 #include "pointerremap.h"
-#include "refcount.h"
-#include "wwdebug.h"
+#include "WWLib/refcount.h"
+#include "WWDebug/wwdebug.h"
 
 
 const int POINTER_TABLES_GROWTH_STEP = 4096;

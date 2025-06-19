@@ -54,7 +54,7 @@
 #ifndef INTERSEC_H
 #define INTERSEC_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "matrix3d.h"
 #include "layer.h"
 #include "sphere.h"

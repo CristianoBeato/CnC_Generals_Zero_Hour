@@ -41,9 +41,9 @@
 #ifndef LINE3D_H
 #define LINE3D_H
 
-#include "always.h"
-#include "rendobj.h"
-#include "vector3.h"
+#include "WWLib/always.h"
+#include "WW3D2/rendobj.h"
+#include "WWMath/vector3.h"
 #include "vector4.h"
 #include "shader.h"
 

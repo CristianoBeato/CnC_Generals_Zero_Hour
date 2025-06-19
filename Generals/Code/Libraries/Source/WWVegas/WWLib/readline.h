@@ -41,7 +41,7 @@
 #define READLINE_H
 
 #include	"straw.h"
-#include	"wwfile.h"
+#include	"WWLib/wwfile.h"
 #include <wchar.h>
 
 int Read_Line(FileClass & file, char * buffer, int len, bool & eof);

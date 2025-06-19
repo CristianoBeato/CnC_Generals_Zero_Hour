@@ -44,7 +44,7 @@
 #ifndef DX8_RENDERER_DEBUGGER_H
 #define DX8_RENDERER_DEBUGGER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 class StringClass;
 class MeshClass;

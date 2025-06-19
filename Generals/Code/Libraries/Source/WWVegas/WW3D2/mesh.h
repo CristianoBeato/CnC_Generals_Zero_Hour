@@ -43,9 +43,9 @@
 #ifndef MESH_H
 #define MESH_H
 
-#include "always.h"
-#include "rendobj.h"
-#include "bittype.h"
+#include "WWLib/always.h"
+#include "WW3D2/rendobj.h"
+#include "WWLib/bittype.h"
 #include "w3derr.h"
 #include "LightEnvironment.h"	//added for 'Generals'
 

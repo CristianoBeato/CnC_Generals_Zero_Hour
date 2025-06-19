@@ -45,7 +45,7 @@
 #ifndef ANIMOBJ_H
 #define ANIMOBJ_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "composite.h"
 #include "htree.h"
 #include "hanim.h"

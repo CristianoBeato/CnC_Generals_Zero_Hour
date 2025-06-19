@@ -39,7 +39,7 @@
 #include "soundcullobj.h"
 #include "logicalsound.h"
 #include "logicallistener.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "persistfactory.h"
 #include "wwprofile.h"
 #include "threads.h"

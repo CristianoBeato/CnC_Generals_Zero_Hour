@@ -42,10 +42,10 @@
 #ifndef TRI_H
 #define TRI_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "vector4.h"
-#include "vector3.h"
-#include "vector2.h"
+#include "WWMath/vector3.h"
+#include "WWMath/vector2.h"
 #include <assert.h>
 
 

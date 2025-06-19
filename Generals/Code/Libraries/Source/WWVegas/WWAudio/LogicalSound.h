@@ -38,8 +38,8 @@
 #define __LOGICAL_SOUND_H
 
 #include "SoundSceneObj.H"
-#include "BitType.H"
-#include "Vector3.H"
+#include "WWLib/bittype.h"
+#include "WWMath/vector3.h"
 #include "Matrix3D.H"
 
 /////////////////////////////////////////////////////////////////////////////////

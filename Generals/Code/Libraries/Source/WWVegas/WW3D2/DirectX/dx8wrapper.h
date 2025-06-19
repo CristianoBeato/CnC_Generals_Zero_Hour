@@ -43,16 +43,19 @@
 #ifndef DX8_WRAPPER_H
 #define DX8_WRAPPER_H
 
-#include "always.h"
-#include "dllist.h"
+#if USE_DX
 #include "d3d8.h"
-#include "matrix4.h"
+#endif
+
+#include "WWLib/always.h"
+#include "dllist.h"
+#include "WWMath/matrix4.h"
 #include "statistics.h"
-#include "wwstring.h"
+#include "WWLib/wwstring.h"
 #include "lightenvironment.h"
 #include "shader.h"
 #include "vector4.h"
-#include "cpudetect.h"
+#include "WWLib/cpudetect.h"
 
 #include "texture.h"
 #include "dx8vertexbuffer.h"
@@ -61,7 +64,8 @@
 
 const unsigned MAX_TEXTURE_STAGES=2;
 
-enum {
+enum 
+{
 	BUFFER_TYPE_DX8,
 	BUFFER_TYPE_SORTING,
 	BUFFER_TYPE_DYNAMIC_DX8,
@@ -826,8 +830,10 @@ not_changed:
 
 WWINLINE void DX8Wrapper::Clamp_Color(Vector4& color)
 {
-	if (!CPUDetectClass::Has_CMOV_Instruction()) {
-		for (int i=0;i<4;++i) {
+	if (!CPUDetectClass::Has_CMOV_Instruction()) 
+	{
+		for (int i=0;i<4;++i) 
+		{
 			float f=(color[i]<0.0f) ? 0.0f : color[i];
 			color[i]=(f>1.0f) ? 1.0f : f;
 		}

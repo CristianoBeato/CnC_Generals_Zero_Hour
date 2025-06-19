@@ -79,7 +79,7 @@
 
 
 #include "ww3d.h"
-#include "rinfo.h"
+#include "WW3D2/rinfo.h"
 #include "assetmgr.h"
 #include "boxrobj.h"
 #include "predlod.h"
@@ -90,7 +90,7 @@
 #include "segline.h"
 #include "shader.h"
 #include "vertmaterial.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "wwprofile.h"
 #include "wwmemlog.h"
 #include "shattersystem.h"
@@ -105,13 +105,13 @@
 #include "render2d.h"
 #include "bound.h"
 #include "rddesc.h"
-#include "vector3i.h"
+#include "WWMath/Vector3i.h"
 #include <cstdio>
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 #include "targa.h"
 #include "sortingrenderer.h"
 #include "thread.h"
-#include "cpudetect.h"
+#include "WWLib/cpudetect.h"
 #include "dx8texman.h"
 #include "formconv.h"
 

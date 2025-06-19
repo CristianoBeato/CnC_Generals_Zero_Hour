@@ -43,7 +43,7 @@
 
 
 #ifndef BITTYPE_H
-#include "bittype.h"
+#include "WWLib/bittype.h"
 #endif
 
 #ifndef NODELIST_H

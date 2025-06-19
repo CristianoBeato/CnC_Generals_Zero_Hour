@@ -40,7 +40,7 @@
 #ifndef TEXTDRAW_H
 #define TEXTDRAW_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "dynamesh.h"
 
 // sgc : wwlib and wwmath contain different rect.h files...

@@ -84,7 +84,7 @@
  *   INIClass::Enumerate_Entries -- Count how many entries begin with a certain prefix followed by a range *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"b64pipe.h"
 #include	"b64straw.h"
 #include	"cstraw.h"

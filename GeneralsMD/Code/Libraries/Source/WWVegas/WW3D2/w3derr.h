@@ -42,7 +42,7 @@
 #ifndef W3DERR_H
 #define W3DERR_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 /*
 ** These are the error codes which should be returned by all WW3D functions that can fail

@@ -22,7 +22,7 @@
  *                                                                                             *
  *                 Project Name : Command & Conquer                                            *
  *                                                                                             *
- *                     $Archive:: /Commando/Code/wwlib/always.h                               $*
+ *                     $Archive:: /Commando/Code/wwlib/WWLib/always.h                               $*
  *                                                                                             *
  *                      $Author:: Steve_t                                                     $*
  *                                                                                             *

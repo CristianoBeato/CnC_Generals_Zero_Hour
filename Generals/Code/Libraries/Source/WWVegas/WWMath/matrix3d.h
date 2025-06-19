@@ -88,8 +88,8 @@
 
 #include "WWLib/always.h"
 #include <assert.h>
-#include "vector2.h"
-#include "vector3.h"
+#include "WWMath/vector2.h"
+#include "WWMath/vector3.h"
 #include "vector4.h"
 #ifdef _UNIX
 #include "osdep.h"

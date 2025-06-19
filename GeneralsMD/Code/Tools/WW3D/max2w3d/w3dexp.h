@@ -38,7 +38,7 @@
 #ifndef W3DEXP_H
 #define W3DEXP_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include <Max.h>
 #include "dllmain.h"
 #include "hiersave.h"

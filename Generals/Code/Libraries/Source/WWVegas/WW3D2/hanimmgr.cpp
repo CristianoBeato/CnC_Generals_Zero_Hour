@@ -52,7 +52,7 @@
 #include "hrawanim.h"
 #include "hcanim.h"
 #include "hmorphanim.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "wwmemlog.h"
 #include "w3dexclusionlist.h"
 

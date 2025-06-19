@@ -46,7 +46,7 @@
 #ifndef WW3DFORMAT_H
 #define WW3DFORMAT_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwstring.h"
 
 class Vector4;

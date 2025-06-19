@@ -39,7 +39,7 @@
  *   First_False_Bit -- Find the first false bit in the bit array.                             *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 
 
 /***********************************************************************************************

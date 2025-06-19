@@ -37,7 +37,7 @@
  *   FileStraw::~FileStraw -- The destructor for the file straw.                               *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"xstraw.h"
 #include	<stddef.h>
 #include	<string.h>

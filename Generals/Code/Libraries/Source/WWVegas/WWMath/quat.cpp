@@ -51,7 +51,7 @@
 
 #include "quat.h"
 #include "matrix3d.h"
-#include "matrix4.h"
+#include "WWMath/matrix4.h"
 #include "wwmath.h"
 
 #include <stdio.h>

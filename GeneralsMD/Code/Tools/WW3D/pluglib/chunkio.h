@@ -42,7 +42,7 @@
 #define CHUNKIO_H
 
 #ifndef ALWAYS_H
-#include "always.h"
+#include "WWLib/always.h"
 #endif
 
 #ifndef BITTYPE_H

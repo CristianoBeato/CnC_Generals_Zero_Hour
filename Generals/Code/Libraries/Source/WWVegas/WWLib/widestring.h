@@ -43,10 +43,10 @@
 
 #include <string.h>
 #include <stdarg.h>
-#include "always.h"
-#include "wwdebug.h"
+#include "WWLib/always.h"
+#include "WWDebug/wwdebug.h"
 #include "win.h"
-#include "wwstring.h"
+#include "WWLib/wwstring.h"
 #include <wchar.h>
 #ifdef _UNIX
 #include "osdep.h"

@@ -44,12 +44,12 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#include "obbox.h"
+#include "WWMath/obbox.h"
 #include "matrix3.h"
-#include "vector3.h"
-#include "aabox.h"
-#include "tri.h"
-#include "plane.h"
+#include "WWMath/vector3.h"
+#include "WWMath/aabox.h"
+#include "WWMath/tri.h"
+#include "WWMath/plane.h"
 #include "quat.h"
 #include <assert.h>
 //#include <stdlib.h>

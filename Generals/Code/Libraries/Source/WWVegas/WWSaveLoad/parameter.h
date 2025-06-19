@@ -42,14 +42,14 @@
 #ifndef __PARAMETER_H
 #define __PARAMETER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include <string.h>
 #include <stdlib.h>
 #include "parametertypes.h"
-#include "vector.h"
-#include "wwstring.h"
-#include "bittype.h"
-#include "obbox.h"
+#include "WWLib/vector.h"
+#include "WWLib/wwstring.h"
+#include "WWLib/bittype.h"
+#include "WWMath/obbox.h"
 
 
 //////////////////////////////////////////////////////////////////////////////////

@@ -44,7 +44,7 @@
 **	definition.
 */
 #include <new.h>
-#include "always.h"
+#include "WWLib/always.h"
 #include	"bool.h"
 #include	<stdio.h>
 #include	<stdlib.h>

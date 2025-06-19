@@ -28,7 +28,7 @@
 #ifndef __W3DSHADOW_H_
 #define __W3DSHADOW_H_
 
-#include "matrix4.h"
+#include "WWMath/matrix4.h"
 #include "GameClient/Shadow.h"
 
 class Drawable;	//forward reference

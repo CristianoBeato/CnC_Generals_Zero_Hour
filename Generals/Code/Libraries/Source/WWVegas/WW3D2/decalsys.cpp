@@ -47,7 +47,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 #include "decalsys.h"
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include "mesh.h"
 #include "decalmsh.h"
 #include "matrixmapper.h"

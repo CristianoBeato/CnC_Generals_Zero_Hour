@@ -41,15 +41,15 @@
 #ifndef __WWAUDIO_H
 #define __WWAUDIO_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #pragma warning (push, 3)
 #include "Mss.H"
 #pragma warning (pop)
 
-#include "Vector.H"
+#include "WWLib/vector.h"
 #include "SoundBuffer.H"
 #include "AudioEvents.H"
-#include "wwstring.h"
+#include "WWLib/wwstring.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Forward declaration

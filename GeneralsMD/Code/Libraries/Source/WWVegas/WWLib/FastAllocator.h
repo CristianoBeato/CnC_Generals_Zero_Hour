@@ -42,7 +42,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Include files
 //
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwdebug.h"
 #include "mutex.h"
 #include <malloc.h>

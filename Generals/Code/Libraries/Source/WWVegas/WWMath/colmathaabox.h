@@ -45,10 +45,10 @@
 #ifndef COLMATHAABOX_H
 #define COLMATHAABOX_H
 
-#include "always.h"
-#include "aabox.h"
-#include "vector3.h"
-#include "lineseg.h"
+#include "WWLib/always.h"
+#include "WWMath/aabox.h"
+#include "WWMath/vector3.h"
+#include "WWMath/lineseg.h"
 
 
 /***********************************************************************************************

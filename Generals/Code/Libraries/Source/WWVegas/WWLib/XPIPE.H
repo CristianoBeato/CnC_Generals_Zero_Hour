@@ -42,7 +42,7 @@
 
 #include	"buff.h"
 #include	"pipe.h"
-#include	"wwfile.h"
+#include	"WWLib/wwfile.h"
 
 /*
 **	This is a simple store-into-buffer pipe terminator. Use it as the final link in a pipe process

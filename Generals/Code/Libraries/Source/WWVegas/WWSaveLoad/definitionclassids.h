@@ -42,8 +42,8 @@
 #ifndef __DEFINITION_CLASS_ID_H
 #define __DEFINITION_CLASS_ID_H
 
-#include "always.h"
-#include "bittype.h"
+#include "WWLib/always.h"
+#include "WWLib/bittype.h"
 
 //////////////////////////////////////////////////////////////////////////////////
 //

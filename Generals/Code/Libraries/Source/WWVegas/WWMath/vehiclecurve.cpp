@@ -35,7 +35,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 #include "vehiclecurve.h"
-#include "vector3.h"
+#include "WWMath/vector3.h"
 #include "matrix3d.h"
 #include "persistfactory.h"
 #include "wwmathids.h"

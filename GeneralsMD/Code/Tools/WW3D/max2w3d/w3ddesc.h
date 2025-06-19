@@ -38,7 +38,7 @@
 #ifndef W3DDESC_H
 #define W3DDESC_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include <Max.h>
 
 /*****************************************************************************

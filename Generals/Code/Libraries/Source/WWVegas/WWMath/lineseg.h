@@ -42,9 +42,9 @@
 #ifndef LINESEG_H
 #define LINESEG_H
 
-#include "always.h"
-#include "vector3.h"
-#include "castres.h"
+#include "WWLib/always.h"
+#include "WWMath/vector3.h"
+#include "WWMath/castres.h"
 
 class TriClass;
 class AABoxClass;

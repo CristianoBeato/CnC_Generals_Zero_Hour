@@ -50,7 +50,7 @@
  *   DSurface::~DSurface -- Destructor for a direct draw surface object.                       *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"dsurface.h"
 #include	<assert.h>
 

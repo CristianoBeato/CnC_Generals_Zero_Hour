@@ -130,9 +130,9 @@
 #include "assetmgr.h"
 #include "hmdldef.h"
 #include "w3derr.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "predlod.h"
-#include "rinfo.h"
+#include "WW3D2/rinfo.h"
 #include <string.h>
 #include <win.h>
 #include "sphere.h"

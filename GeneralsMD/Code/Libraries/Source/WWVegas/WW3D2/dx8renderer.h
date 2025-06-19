@@ -45,7 +45,7 @@
 #ifndef DX8_RENDERER_H
 #define DX8_RENDERER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwstring.h"
 #include "simplevec.h"
 #include "refcount.h"

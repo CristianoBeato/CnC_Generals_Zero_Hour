@@ -81,14 +81,14 @@
 #include "vertmaterial.h"
 #include "shader.h"
 #include "texture.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "w3derr.h"
 #include "w3d_file.h"
 #include "w3d_util.h"
 #include "assetmgr.h"
-#include "simplevec.h"
+#include "WWLib/simplevec.h"
 #include "realcrc.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 
 #include <stdio.h>
 

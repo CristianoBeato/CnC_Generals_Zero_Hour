@@ -40,7 +40,7 @@
 #ifndef PART_EMT_H
 #define PART_EMT_H
 
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include "random.h"
 #include "part_buf.h"
 #include "quat.h"

@@ -57,10 +57,10 @@
 
 #include "cullsys.h"
 #include "mempool.h"
-#include "frustum.h"
-#include "aabox.h"
-#include "lineseg.h"
-#include "obbox.h"
+#include "WWMath/frustum.h"
+#include "WWMath/aabox.h"
+#include "WWMath/lineseg.h"
+#include "WWMath/obbox.h"
 #include <string.h>
 
 class ChunkLoadClass;

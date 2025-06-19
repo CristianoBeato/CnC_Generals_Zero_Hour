@@ -16,9 +16,9 @@
 **	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "cpudetect.h"
-#include "wwstring.h"
-#include "wwdebug.h"
+#include "WWLib/cpudetect.h"
+#include "WWLib/wwstring.h"
+#include "WWDebug/wwdebug.h"
 #include "thread.h"
 #include "mpu.h"
 #pragma warning (disable : 4201)	// Nonstandard extension - nameless struct
@@ -1068,7 +1068,7 @@ void CPUDetectClass::Init_Processor_Log()
 	}
 
 	if (CPUDetectClass::Get_L1_Instruction_Trace_Cache_Size()) {
-		SYSLOG(("L1 Instruction Trace Cache: %d way set associative, %dk µOPs\r\n",
+		SYSLOG(("L1 Instruction Trace Cache: %d way set associative, %dk ï¿½OPs\r\n",
 			CPUDetectClass::Get_L1_Instruction_Cache_Set_Associative(),
 			CPUDetectClass::Get_L1_Instruction_Cache_Size()/1024));
 	}

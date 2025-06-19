@@ -26,7 +26,7 @@
 #include "osdep.h"
 #endif
 
-#include "always.h"
+#include "WWLib/always.h"
 
 
 // ****************************************************************************

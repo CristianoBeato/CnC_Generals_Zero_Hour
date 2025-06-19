@@ -44,9 +44,9 @@
 
 #include "rawfile.h"	// have to include this before Max.h
 #include <Max.h>
-#include "bittype.h"
+#include "WWLib/bittype.h"
 #include "w3d_file.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "progress.h"
 #include "nodelist.h"
 #include "util.h"

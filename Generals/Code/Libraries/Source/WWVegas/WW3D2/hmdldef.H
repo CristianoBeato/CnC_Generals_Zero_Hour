@@ -42,7 +42,7 @@
 #ifndef HMDLDEF_H
 #define HMDLDEF_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "w3d_file.h"
 
 class FileClass;

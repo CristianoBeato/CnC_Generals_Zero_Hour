@@ -55,9 +55,9 @@
 
 
 #include "gridcull.h"
-#include "chunkio.h"
-#include "iostruct.h"
-#include "colmath.h"
+#include "WWLib/chunkio.h"
+#include "WWLib/iostruct.h"
+#include "WWMath/colmath.h"
 #include "colmathinlines.h"
 
 

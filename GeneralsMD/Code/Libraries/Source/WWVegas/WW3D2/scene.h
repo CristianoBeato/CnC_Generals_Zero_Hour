@@ -42,7 +42,7 @@
 #ifndef SCENE_H
 #define SCENE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "refcount.h"
 #include "vector3.h"
 #include "robjlist.h"

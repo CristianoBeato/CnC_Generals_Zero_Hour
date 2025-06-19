@@ -38,7 +38,7 @@
 #ifndef PROGRESS_H
 #define PROGRESS_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 class Progress_Meter_Class
 {

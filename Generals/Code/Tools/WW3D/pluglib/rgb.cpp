@@ -37,7 +37,7 @@
  *   RGBClass::operator HSVClass -- Conversion operator for RGB to HSV object.                 *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"hsv.h"
 #include	"palette.h"
 #include	"rgb.h"

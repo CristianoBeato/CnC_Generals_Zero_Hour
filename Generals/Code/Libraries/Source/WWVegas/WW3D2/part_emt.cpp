@@ -35,7 +35,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 #include "part_emt.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "ww3d.h"
 #include "assetmgr.h"
 #include "part_ldr.h"

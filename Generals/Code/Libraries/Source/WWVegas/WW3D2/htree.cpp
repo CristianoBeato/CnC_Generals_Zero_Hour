@@ -57,7 +57,7 @@
 #include <string.h>
 #include <assert.h>
 #include "wwmath.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "w3d_file.h"
 #include "wwmemlog.h"
 #include "hrawanim.h"

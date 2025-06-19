@@ -39,8 +39,8 @@
 #include "saveloadsubsystem.h"
 #include "persist.h"
 #include "persistfactory.h"
-#include "chunkio.h"
-#include "wwdebug.h"
+#include "WWLib/chunkio.h"
+#include "WWDebug/wwdebug.h"
 #include "saveloadstatus.h"
 #include "wwhack.h"
 

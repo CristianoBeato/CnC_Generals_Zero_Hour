@@ -39,7 +39,7 @@
 #define PLANE_H
 
 #ifndef VECTOR3_H
-#include "vector3.h"
+#include "WWMath/vector3.h"
 #endif
 
 /*

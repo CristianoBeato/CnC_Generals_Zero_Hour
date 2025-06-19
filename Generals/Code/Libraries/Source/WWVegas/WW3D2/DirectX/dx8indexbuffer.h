@@ -43,10 +43,10 @@
 #ifndef DX8INDEXBUFFER_H
 #define DX8INDEXBUFFER_H
 
-#include "always.h"
-#include "wwdebug.h"
-#include "refcount.h"
-#include "sphere.h"
+#include "WWLib/always.h"
+#include "WWDebug/wwdebug.h"
+#include "WWLib/refcount.h"
+#include "WWMath/sphere.h"
 
 class DX8Wrapper;
 class SortingRendererClass;
@@ -113,7 +113,7 @@ protected:
 // Created
 class DynamicIBAccessClass : public W3DMPO
 {
-	W3DMPO_GLUE(DynamicIBAccessClass)
+	W3DMPO_GLUE( DynamicIBAccessClass )
 
 	friend DX8Wrapper;
 	friend SortingRendererClass;

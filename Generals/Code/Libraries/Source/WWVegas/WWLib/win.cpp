@@ -16,9 +16,9 @@
 **	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "win.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 
 HINSTANCE	ProgramInstance;
 HWND			MainWindow;

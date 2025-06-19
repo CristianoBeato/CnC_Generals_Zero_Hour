@@ -48,9 +48,9 @@
 // To this "pure predictive" LOD we have added distance (actually screensize)
 // clamping to control quality degradation.
 
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include "float.h"
-#include "vector.h"
+#include "WWLib/vector.h"
 
 class LODHeapNode;
 

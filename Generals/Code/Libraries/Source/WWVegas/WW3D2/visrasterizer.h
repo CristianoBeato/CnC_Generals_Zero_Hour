@@ -43,14 +43,14 @@
 #ifndef VISRASTERIZER_H
 #define VISRASTERIZER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "matrix3d.h"
-#include "matrix4.h"
-#include "vector3i.h"
-#include "vector3.h"
-#include "simplevec.h"
-#include "bittype.h"
-#include "plane.h"
+#include "WWMath/matrix4.h"
+#include "WWMath/Vector3i.h"
+#include "WWMath/vector3.h"
+#include "WWLib/simplevec.h"
+#include "WWLib/bittype.h"
+#include "WWMath/plane.h"
 
 
 class CameraClass;

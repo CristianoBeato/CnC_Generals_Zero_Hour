@@ -43,14 +43,14 @@
 #define RINFO_H
 
 
-#include "always.h"
-#include "bittype.h"
+#include "WWLib/always.h"
+#include "WWLib/bittype.h"
 #include "ww3d.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "shader.h"
-#include "vector.h"
+#include "WWLib/vector.h"
 #include "matrix3d.h"
-#include "matrix4.h"
+#include "WWMath/matrix4.h"
 
 
 class MaterialPassClass;

@@ -35,7 +35,7 @@
  *   CacheStraw::Get -- Fetch data from the data source.                                       *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"cstraw.h"
 #include	<string.h>
 

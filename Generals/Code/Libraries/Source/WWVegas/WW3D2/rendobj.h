@@ -42,10 +42,10 @@
 #ifndef RENDOBJ_H
 #define RENDOBJ_H
 
-#include "WWLib/always.h" // "always.h"
+#include "WWLib/always.h" // "WWLib/always.h"
 #include "WWLib/refcount.h"
 #include "WWMath/sphere.h" // sphere.h
-#include "coltype.h"
+#include "WW3D2/coltype.h"
 #include "WWMath/aabox.h" // aabox.h"
 #include "WWSaveLoad/persist.h" //"persist.h"
 #include "WWLib/multilist.h" //"multilist.h"

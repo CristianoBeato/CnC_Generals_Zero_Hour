@@ -37,7 +37,7 @@
 #ifndef RAMFILE_H
 #define RAMFILE_H
 
-#include	"wwfile.h"
+#include	"WWLib/wwfile.h"
 
 
 class RAMFileClass : public FileClass

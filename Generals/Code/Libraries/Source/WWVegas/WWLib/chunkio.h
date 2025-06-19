@@ -42,19 +42,19 @@
 #define CHUNKIO_H
 
 #ifndef ALWAYS_H
-#include "always.h"
+#include "WWLib/always.h"
 #endif
 
 #ifndef BITTYPE_H
-#include "bittype.h"
+#include "WWLib/bittype.h"
 #endif
 
 #ifndef WWFILE_H
-#include "wwfile.h"
+#include "WWLib/wwfile.h"
 #endif
 
 #ifndef IOSTRUCT_H
-#include "iostruct.h"
+#include "WWLib/iostruct.h"
 #endif
 
 

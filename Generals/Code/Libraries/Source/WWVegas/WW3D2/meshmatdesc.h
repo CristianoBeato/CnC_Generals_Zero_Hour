@@ -39,10 +39,10 @@
 #ifndef MESHMATDESC_H
 #define MESHMATDESC_H
 
-#include "always.h"
-#include "vector2.h"
-#include "vector3.h"
-#include "vector3i.h"
+#include "WWLib/always.h"
+#include "WWMath/vector2.h"
+#include "WWMath/vector3.h"
+#include "WWMath/Vector3i.h"
 #include "vector4.h"
 #include "sharebuf.h"
 #include "shader.h"

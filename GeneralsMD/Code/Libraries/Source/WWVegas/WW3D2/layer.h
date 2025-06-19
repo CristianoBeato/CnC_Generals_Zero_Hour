@@ -42,7 +42,7 @@
 #ifndef LAYER_H
 #define LAYER_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "listnode.h"
 #include "vector3.h"
 

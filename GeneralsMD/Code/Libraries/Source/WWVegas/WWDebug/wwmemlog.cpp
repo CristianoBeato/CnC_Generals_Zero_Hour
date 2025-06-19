@@ -38,7 +38,7 @@
  *   WWMemoryLogClass::Release_Memory -- frees memory                                          *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwmemlog.h"
 #include "wwdebug.h"
 #include "vector.h"

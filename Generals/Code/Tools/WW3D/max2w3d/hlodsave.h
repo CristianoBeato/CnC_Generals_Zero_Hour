@@ -38,14 +38,14 @@
 #ifndef HLODSAVE_H
 #define HLODSAVE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 #include <Max.h>
 #include <stdio.h>
 
 #include "w3d_file.h"
 #include "progress.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 #include "meshcon.h"
 
 

@@ -43,7 +43,7 @@
 #include	"buff.h"
 #include	"iff.h"
 #include	"win.h"
-#include	"wwfile.h"
+#include	"WWLib/wwfile.h"
 
 #define TXT_NONE	0
 

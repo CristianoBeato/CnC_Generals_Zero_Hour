@@ -34,7 +34,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 #include	"rndstrng.h"
-#include	"wwstring.h"
+#include	"WWLib/wwstring.h"
 
 /*
 **

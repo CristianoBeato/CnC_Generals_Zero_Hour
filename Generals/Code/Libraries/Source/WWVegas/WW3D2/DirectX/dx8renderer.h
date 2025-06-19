@@ -44,14 +44,14 @@
 #ifndef DX8_RENDERER_H
 #define DX8_RENDERER_H
 
-#include "always.h"
-#include "wwstring.h"
-#include "simplevec.h"
-#include "refcount.h"
-#include "vector.h"
+#include "WWLib/always.h"
+#include "WWLib/wwstring.h"
+#include "WWLib/simplevec.h"
+#include "WWLib/refcount.h"
+#include "WWLib/vector.h"
 #include "dx8list.h"
 #include "shader.h"
-#include "dx8wrapper.h"
+#include "WW3D2/dx8wrapper.h"
 
 class IndexBufferClass;
 class VertexBufferClass;

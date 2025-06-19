@@ -43,7 +43,7 @@
 #pragma once
 #endif
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "wwdebug.h"
 #include <windows.h>
 

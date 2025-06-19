@@ -40,7 +40,7 @@
 #ifndef RNDSTRNG_H
 #define RNDSTRNG_H
 
-#include	"vector.h"
+#include	"WWLib/vector.h"
 #include	"random.h"
 
 class	StringClass;

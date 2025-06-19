@@ -50,7 +50,7 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "rendobj.h"
 #include "plane.h"
 #include "frustum.h"

@@ -35,7 +35,7 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 #include "v3_rnd.h"
-#include "vector2.h"
+#include "WWMath/vector2.h"
 
 const float Vector3Randomizer::OOIntMax = 1.0f / (float)INT_MAX;
 const float Vector3Randomizer::OOUIntMax = 1.0f / (float)UINT_MAX;

@@ -18,7 +18,7 @@
 
 #include "stripoptimizer.h"
 #include "hashtemplate.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 
 template <class T> inline void swap (T& a, T& b)
 {

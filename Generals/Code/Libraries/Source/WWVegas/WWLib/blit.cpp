@@ -41,7 +41,7 @@
  *   To_Buffer -- Copies a graphic region into a linear RAM buffer.                            * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"blit.h"
 #include	"bsurface.h"
 //#include	"rle.h"

@@ -56,11 +56,16 @@ include_directories( ${SDL3_INCLUDE_DIR} )
 ###########################
 
 # base directories 
-include_directories( ${CMAKE_SOURCE_DIR}/Libraries/Include 
+include_directories( 
+					${CMAKE_SOURCE_DIR}/Libraries/Include 
 					 ${CMAKE_SOURCE_DIR}/Libraries/Source/WWVegas
 					 ${CMAKE_SOURCE_DIR}/GameEngine/Include 
 					 ${CMAKE_SOURCE_DIR}/GameEngineDevice/Include )
 
+# Game Engine common lib ( Westwood studio common libs )
+add_subdirectory( Libraries/Source/WWVegas )
+
+# Game engine portable device lib
 add_subdirectory( GameEngineDevice )
 
 set( BEATO_CEC_SOURCES 
@@ -74,13 +79,14 @@ set( ENGINE_SOURCES_ALL
 	${BEATO_CEC_SOURCES}
 	)
 
-set( ENGINE_LIBS_ALL )
-
-
+set( ENGINE_LIBS_ALL 
+	WWVegas 
+	GameEngineDevice
+	)
 
 add_executable( bCeC_Generals WIN32 ${ENGINE_SOURCES_ALL} )
 set_target_properties( bCeC_Generals PROPERTIES COMPILE_DEFINITIONS "_MBCS;_DEBUG")
-add_dependencies( bCeC_Generals GameEngineDevice )
+add_dependencies( bCeC_Generals WWVegas GameEngineDevice )
 target_link_libraries( bCeC_Generals ${ENGINE_LIBS_ALL} )
 
 #target_precompile_headers( bCeC_Generals

@@ -42,8 +42,8 @@
 #ifndef HASH_TEMPLATE_H
 #define HASH_TEMPLATE_H
 
-#include "always.h"
-#include "wwstring.h"
+#include "WWLib/always.h"
+#include "WWLib/wwstring.h"
 
 // Class for providing hash values
 

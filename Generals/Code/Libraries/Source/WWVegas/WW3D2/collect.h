@@ -41,12 +41,12 @@
 #ifndef COLLECT_H
 #define COLLECT_H
 
-#include "rendobj.h"
+#include "WW3D2/rendobj.h"
 #include "composite.h"
-#include "vector.h"
+#include "WWLib/vector.h"
 #include "proto.h"
 #include "w3d_file.h"
-#include "wwstring.h"
+#include "WWLib/wwstring.h"
 #include "proxy.h"
 
 class CollectionDefClass;

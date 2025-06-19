@@ -20,7 +20,7 @@
 #ifndef __DRAW_OBJECT_H_
 #define __DRAW_OBJECT_H_
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "rendobj.h"
 #include "w3d_file.h"
 #include "dx8vertexbuffer.h"

@@ -43,7 +43,7 @@
 #ifndef INTTEST_H
 #define INTTEST_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "aabox.h"
 #include "obbox.h"
 #include "tri.h"

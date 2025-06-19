@@ -50,10 +50,10 @@
 #ifndef MEMPOOL_H
 #define MEMPOOL_H
 
-#include "bittype.h"
-#include "wwdebug.h"
-#include <stdlib.h>
-#include <stddef.h>
+#include "WWLib/bittype.h"
+#include "WWDebug/wwdebug.h"
+#include <cstdlib>
+#include <cstddef>
 
 
 

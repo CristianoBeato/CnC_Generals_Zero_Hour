@@ -47,7 +47,7 @@
 #ifndef TEXTURE_H
 #define TEXTURE_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "refcount.h"
 #include "chunkio.h"
 #include "surfaceclass.h"

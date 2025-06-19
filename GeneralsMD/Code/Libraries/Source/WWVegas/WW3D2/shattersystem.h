@@ -43,7 +43,7 @@
 #ifndef SHATTERSYSTEM_H
 #define SHATTERSYSTEM_H
 
-#include "always.h"
+#include "WWLib/always.h"
 
 
 class MeshClass;

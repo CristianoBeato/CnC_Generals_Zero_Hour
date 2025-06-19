@@ -22,7 +22,7 @@
 //																																						//
 ////////////////////////////////////////////////////////////////////////////////
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "hanim.h"
 #include "proto.h"
 #include "rendobj.h"

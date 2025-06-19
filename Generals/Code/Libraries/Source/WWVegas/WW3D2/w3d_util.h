@@ -42,7 +42,7 @@
 #ifndef W3D_UTIL_H
 #define W3D_UTIL_H
 
-#include "always.h"
+#include "WWLib/always.h"
 #include "w3d_file.h"
 
 class Vector3;

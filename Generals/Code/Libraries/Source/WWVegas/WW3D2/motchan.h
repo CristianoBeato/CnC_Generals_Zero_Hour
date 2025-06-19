@@ -43,8 +43,8 @@
 #ifndef MOTCHAN_H
 #define MOTCHAN_H
 
-#include "always.h"
-#include "bittype.h"
+#include "WWLib/always.h"
+#include "WWLib/bittype.h"
 #include "w3d_file.h"
 #include "quat.h"
 

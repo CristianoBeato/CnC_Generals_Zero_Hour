@@ -35,13 +35,13 @@
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 #include "mixfile.h"
-#include "wwdebug.h"
+#include "WWDebug/wwdebug.h"
 #include "ffactory.h"
-#include "wwfile.h"
+#include "WWLib/wwfile.h"
 #include "realcrc.h"
 #include "rawfile.h"
 #include "win.h"
-#include "bittype.h"
+#include "WWLib/bittype.h"
 
 /*
 **

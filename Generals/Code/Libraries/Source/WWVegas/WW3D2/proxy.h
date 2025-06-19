@@ -41,7 +41,7 @@
 #ifndef __PROXY_H
 #define __PROXY_H
 
-#include "wwstring.h"
+#include "WWLib/wwstring.h"
 #include "matrix3d.h"
 
 

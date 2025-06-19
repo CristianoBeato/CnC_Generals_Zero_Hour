@@ -64,15 +64,15 @@
 
 #include "aabtree.h"
 #include "aabtreebuilder.h"
-#include "wwdebug.h"
-#include "tri.h"
+#include "WWDebug/wwdebug.h"
+#include "WWMath/tri.h"
 #include "meshgeometry.h"
 #include "camera.h"
 #include "coltest.h"
 #include "inttest.h"
 #include "colmathinlines.h"
 #include "w3d_file.h"
-#include "chunkio.h"
+#include "WWLib/chunkio.h"
 
 
 

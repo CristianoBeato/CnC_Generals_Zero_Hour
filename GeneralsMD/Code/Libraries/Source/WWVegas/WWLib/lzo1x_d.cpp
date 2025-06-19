@@ -60,7 +60,7 @@
    markus.oberhumer@jk.uni-linz.ac.at
  */
 
-#include	"always.h"
+#include	"WWLib/always.h"
 #include	"lzo1x.h"
 #include	<assert.h>
 

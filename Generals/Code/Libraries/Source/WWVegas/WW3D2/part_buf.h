@@ -41,7 +41,7 @@
 #define PART_BUF_H
 
 #include "WW3D2/rendobj.h"
-#include "pointgr.h"
+#include "WW3D2/pointgr.h"
 #include "seglinerenderer.h"
 
 class ParticleEmitterClass;

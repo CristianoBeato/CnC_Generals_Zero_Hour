@@ -36,6 +36,9 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+// BEATO Begin:
+#ifdef ENABLE_USE_DX8
+
 //#define ENABLE_CATEGORY_LOG
 //#define ENABLE_STRIPING
 
@@ -2180,9 +2183,5 @@ void DX8MeshRendererClass::Invalidate( bool shutdown)
 	texture_category_container_lists_rigid.Delete_All();
 }
 
-
-
-
-
-
-
+#endif // ENABLE_USE_DX8
+// BEATO End

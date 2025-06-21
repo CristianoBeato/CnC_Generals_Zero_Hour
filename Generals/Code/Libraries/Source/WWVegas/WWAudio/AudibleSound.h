@@ -41,20 +41,21 @@
 #ifndef __SOUNDOBJ_H
 #define __SOUNDOBJ_H
 
+#if 0
 #pragma warning (push, 3)
 #include "mss.h"
 #pragma warning (pop)
+#endif
 
 //#include <malloc.h>
 #include "WWMath/vector3.h"
-#include "matrix3d.h"
+#include "WWMath/matrix3d.h"
 #include "WWLib/refcount.h"
-#include "rawfile.h"
-#include "soundsceneobj.h"
+#include "WWLib/rawfile.h"
+#include "SoundSceneObj.h"
 #include "WWLib/vector.h"
 #include "WWLib/wwstring.h"
-#include "definition.h"
-
+#include "WWSaveLoad/definition.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Forward declarations

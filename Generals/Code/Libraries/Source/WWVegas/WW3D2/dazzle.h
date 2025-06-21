@@ -25,7 +25,7 @@
 
 #include "WWLib/always.h"
 #include "WWMath/vector3.h"
-#include "matrix3d.h"
+#include "WWMath/matrix3d.h"
 #include "WW3D2/rendobj.h"
 #include "WWLib/wwstring.h"
 #include "proto.h"

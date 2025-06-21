@@ -44,9 +44,9 @@
 
 #include "WWMath/vector2.h"
 #include "WWMath/vector3.h"
-#include "vector4.h"
+#include "WWMath/vector4.h"
 #include "WWMath/Vector3i.h"
-#include "sharebuf.h"
+#include "WWLib/sharebuf.h"
 #include "shader.h"
 #include "WWDebug/wwdebug.h"
 #include "vertmaterial.h"
@@ -57,7 +57,10 @@
 #include "WW3D2/rinfo.h"
 #include "meshgeometry.h"
 #include "meshmatdesc.h"
+
+#ifdef ENABLE_USE_DX8
 #include "dx8list.h"
+#endif //ENABLE_USE_DX8
 
 class TextureClass;
 class RenderInfoClass;

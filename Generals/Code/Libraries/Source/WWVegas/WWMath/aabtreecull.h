@@ -45,10 +45,8 @@
 #include "cullsys.h"
 #include "WWMath/aaplane.h"
 #include "wwmath.h"
-#include "mempool.h"
+#include "WWLib/mempool.h"
 #include "WWLib/simplevec.h"
-#include <math.h>
-#include <float.h>
 
 class AABTreeNodeClass;
 class ChunkLoadClass;

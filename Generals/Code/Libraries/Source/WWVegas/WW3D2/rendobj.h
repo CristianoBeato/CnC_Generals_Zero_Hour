@@ -50,7 +50,6 @@
 #include "WWSaveLoad/persist.h" //"persist.h"
 #include "WWLib/multilist.h" //"multilist.h"
 #include "WW3D2/robjlist.h" //"robjlist.h"
-#include <float.h>
 
 class	Vector3;
 class Matrix3D;

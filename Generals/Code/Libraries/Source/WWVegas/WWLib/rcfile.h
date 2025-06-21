@@ -43,7 +43,7 @@
 
 #include "WWLib/always.h"
 #include "WWLib/wwfile.h"
-#include "win.h"
+#include "plat.h"
 
 /*
 ** ResourceFileClass

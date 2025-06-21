@@ -39,6 +39,7 @@
 
 #ifndef WIN_H
 #define WIN_H
+#ifdef _WIN32
 
 /*
 **	This header file includes the Windows headers. If there are any special pragmas that need
@@ -87,5 +88,5 @@ void __cdecl Print_Win32Error(unsigned long win32Error);
 #else // _WINDOWS
 //#include <unistd.h>	// file does not exist
 #endif // _WINDOWS
-
+#endif //_WIN32
 #endif // WIN_H

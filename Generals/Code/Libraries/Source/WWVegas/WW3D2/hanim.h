@@ -44,14 +44,14 @@
 #define HANIM_H
 
 #include "WWLib/always.h"
-#include "quat.h"
+#include "WWMath/quat.h"
 #include "WWLib/refcount.h"
 #include "w3d_file.h"
 #include "WWLib/hash.h"
-#include "mempool.h"
-#include <refcount.h>
-#include <slist.h>
-#include <vector.h>
+#include "WWLib/mempool.h"
+#include "WWLib/refcount.h"
+#include "WWLib/slist.h"
+#include "WWLib/vector.h"
 
 struct NodeMotionStruct;
 class MotionChannelClass;

@@ -52,8 +52,7 @@
 #include "WWDebug/wwdebug.h"
 #include "aabtreebuilder.h"
 #include "WWMath/obbox.h"
-#include <tri.h>
-#include <float.h>
+#include "WWMath/tri.h"
 
 
 class MeshClass;

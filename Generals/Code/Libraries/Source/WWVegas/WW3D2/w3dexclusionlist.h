@@ -45,7 +45,7 @@
 #include "WWLib/always.h"
 #include "WWLib/vector.h"
 #include "WWLib/wwstring.h"
-#include "hashtemplate.h"
+#include "WWLib/hashtemplate.h"
 
 class PrototypeClass;
 class HTreeClass;

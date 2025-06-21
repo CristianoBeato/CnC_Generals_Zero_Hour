@@ -53,7 +53,6 @@
 
 #include "WWLib/always.h"
 #include "wwmath.h"
-#include <cmath>
 
 /*
 ** Vector4 - 4 dimensional vectors

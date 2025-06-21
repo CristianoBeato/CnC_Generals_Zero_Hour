@@ -37,7 +37,9 @@
 #ifndef __WWCOMUTIL_H__
 #define __WWCOMUTIL_H__
 
+#ifdef _WIN32
 #include <oaidl.h>
+#endif _WIN32
 
 //! Invoke PropertyGet on IDispatch interface.
 HRESULT STDMETHODCALLTYPE Dispatch_GetProperty(IDispatch* object,

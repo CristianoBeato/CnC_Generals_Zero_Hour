@@ -44,13 +44,13 @@
 #define SR_UTIL_H
 
 #include "WWLib/always.h"
-#include "matrix3d.h"
+#include "WWMath/matrix3d.h"
 #include "WWMath/Vector3i.h"
 
-#include <srVector3i.hpp>
-#include <srVector3.hpp>
-#include <srVector2.hpp>
-#include <srMatrix4x3.hpp>
+//#include <srVector3i.hpp>
+//#include <srVector3.hpp>
+//#include <srVector2.hpp>
+//#include <srMatrix4x3.hpp>
 
 class srNode;
 class srMeshModel;

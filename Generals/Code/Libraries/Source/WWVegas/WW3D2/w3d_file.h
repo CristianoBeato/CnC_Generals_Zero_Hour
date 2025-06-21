@@ -46,7 +46,7 @@
 #include "WWLib/always.h"
 #include "WWLib/bittype.h"
 #include "WWLib/iostruct.h"
-#include <limits>
+#include <limits.h>
 
 /********************************************************************************
 

@@ -40,7 +40,7 @@
 #ifndef MONO_H
 #define MONO_H
 
-#include	"win.h"
+#include	"plat.h"
 
 class MonoClass {
 	public:

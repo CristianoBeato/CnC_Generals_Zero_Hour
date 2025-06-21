@@ -42,14 +42,14 @@
 #ifndef __SOUNDSCENE_H
 #define __SOUNDSCENE_H
 
-#include "aabtreecull.h"
-#include "gridcull.h"
-#include "listener.h"
+#include "WWMath/aabtreecull.h"
+#include "WWMath/gridcull.h"
+#include "WWAudio/Listener.h"
 #include "WWLib/vector.h"
-#include "priorityvector.h"
-#include "soundcullobj.h"
-#include "logicallistener.h"
-#include "multilist.h"
+#include "PriorityVector.h"
+#include "SoundCullObj.h"
+#include "LogicalListener.h"
+#include "WWLib/multilist.h"
 
 // Forward declarations
 class RenderObjClass;

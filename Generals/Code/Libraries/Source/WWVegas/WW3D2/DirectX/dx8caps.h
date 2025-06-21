@@ -36,6 +36,8 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+#ifdef ENABLE_USE_DX8
+
 #if _MSC_VER >= 1000
 #pragma once
 #endif // _MSC_VER >= 1000
@@ -45,6 +47,7 @@
 
 #include "WWLib/always.h"
 #include "ww3dformat.h"
+
 #include <d3d8.h>
 
 class DX8Caps
@@ -103,3 +106,5 @@ private:
 };
 
 #endif
+
+#endif //ENABLE_USE_DX8

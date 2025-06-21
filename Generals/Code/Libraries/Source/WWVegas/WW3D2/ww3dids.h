@@ -43,7 +43,7 @@
 #ifndef WW3DIDS_H
 #define WW3DIDS_H
 
-#include "saveloadids.h"
+#include "WWSaveLoad/saveloadids.h"
 
 /*
 ** These are the chunk-id's used by all persistant objects in WW3D.  The persistant object

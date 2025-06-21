@@ -37,9 +37,8 @@
 #ifndef __WWAUDIO_THREADS_H
 #define __WWAUDIO_THREADS_H
 
-#include "Windows.H"
 #include "WWLib/vector.h"
-#include "mutex.h"
+#include "WWLib/mutex.h"
 
 // Forward declarations
 class RefCountClass;
@@ -70,26 +69,25 @@ class WWAudioThreadsClass
 		//
 		//	Delayed release mechanism
 		//
-		static HANDLE		Create_Delayed_Release_Thread (LPVOID param = NULL);
-		static void			End_Delayed_Release_Thread (DWORD timeout = 20000);
-		static void			Add_Delayed_Release_Object (RefCountClass *object, DWORD delay = 2000);
-		static void			Flush_Delayed_Release_Objects (void);
+		static HANDLE		Create_Delayed_Release_Thread( void* param = nullptr );
+		static void			End_Delayed_Release_Thread( uint32_t timeout = 20000 );
+		static void			Add_Delayed_Release_Object( RefCountClass *object, uint32_t delay = 2000 );
+		static void			Flush_Delayed_Release_Objects( void );
 
 	private:
 
 		//////////////////////////////////////////////////////////////////////
 		//	Private methods
 		//////////////////////////////////////////////////////////////////////
-		static void	__cdecl Delayed_Release_Thread_Proc (LPVOID param);
+		static void	__cdecl Delayed_Release_Thread_Proc( void* param );
 
 		//////////////////////////////////////////////////////////////////////
 		//	Private data types
 		//////////////////////////////////////////////////////////////////////
 		typedef struct _DELAYED_RELEASE_INFO
 		{
-			RefCountClass *	object;
-			DWORD					time;
-
+			uint32_t		time = 0;
+			RefCountClass *	object = nullptr;
 			_DELAYED_RELEASE_INFO *next;
 
 		} DELAYED_RELEASE_INFO;
@@ -101,11 +99,11 @@ class WWAudioThreadsClass
 		//////////////////////////////////////////////////////////////////////
 		static HANDLE						m_hDelayedReleaseThread;
 		static HANDLE						m_hDelayedReleaseEvent;
-		//static RELEASE_LIST		m_ReleaseList;
-		static CriticalSectionClass	m_CriticalSection;
+		//static RELEASE_LIST			m_ReleaseList;
+		static CriticalSectionClass		m_CriticalSection;
 		static DELAYED_RELEASE_INFO *	m_ReleaseListHead;
-		static CriticalSectionClass	m_ListMutex;
-		static bool							m_IsShuttingDown;
+		static CriticalSectionClass		m_ListMutex;
+		static bool						m_IsShuttingDown;
 };
 
 #endif //__WWAUDIO_THREADS_H

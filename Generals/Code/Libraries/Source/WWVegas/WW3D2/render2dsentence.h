@@ -46,7 +46,7 @@
 #include "WWLib/vector.h"
 #include "WWMath/vector2i.h"
 #include "WWLib/wwstring.h"
-#include "win.h"
+#include "WWLib/plat.h"
 
 /*
 ** FontCharsClass

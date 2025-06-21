@@ -43,8 +43,7 @@
 
 #include "WWLib/always.h"
 
-#include <assert.h>
-#include <tagblock.h>
+#include "WWLib/TagBlock.h"
 
 #ifdef WW3D_DX8
 

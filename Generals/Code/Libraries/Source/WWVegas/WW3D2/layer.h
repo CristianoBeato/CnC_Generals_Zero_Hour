@@ -43,7 +43,7 @@
 #define LAYER_H
 
 #include "WWLib/always.h"
-#include "WWLib/LISTNODE.H"
+#include "WWLib/listnode.h"
 #include "WWMath/vector3.h"
 
 class SceneClass;

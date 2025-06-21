@@ -40,7 +40,7 @@
 #include "WWLib/always.h"
 #include "bsurface.h"
 #include "palette.h"
-#include "win.h"
+#include "plat.h"
 
 
 class DIB8Class

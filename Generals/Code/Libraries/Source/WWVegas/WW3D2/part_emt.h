@@ -41,12 +41,12 @@
 #define PART_EMT_H
 
 #include "WW3D2/rendobj.h"
-#include "random.h"
 #include "part_buf.h"
-#include "quat.h"
+#include "WWMath/quat.h"
 #include "w3d_file.h"
 #include "w3derr.h"
-#include "v3_rnd.h"
+#include "WWMath/v3_rnd.h"
+#include "WWLib/random.h"
 
 // Forward declarations
 class ParticleEmitterDefClass;

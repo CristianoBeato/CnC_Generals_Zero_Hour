@@ -36,6 +36,8 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+// BEATO Begin:
+#ifdef ENABLE_USE_DX8
 
 #if defined(_MSC_VER)
 #pragma once
@@ -159,3 +161,5 @@ inline void DX8PolygonRendererClass::Render_Sorted(/*const Matrix3D & tm,*/int b
 }
 
 #endif
+
+// BEATO End

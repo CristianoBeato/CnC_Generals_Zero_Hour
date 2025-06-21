@@ -40,6 +40,8 @@
 #ifndef ALWAYS_H
 #define ALWAYS_H
 
+#include <SDL3/SDL_stdinc.h>
+
 #include <assert.h>
 
 // Disable warning about exception handling not being enabled. It's used as part of STL - in a part of STL we don't use.
@@ -49,6 +51,18 @@
 ** Define for debug memory allocation to include __FILE__ and __LINE__ for every memory allocation.
 ** This helps find leaks.
 */
+
+// BEATO Begin:
+/* By default SDL uses the C calling convention */
+#ifndef WWCALL
+#if defined(SDL_PLATFORM_WINDOWS) && !defined(__GNUC__)
+#define WWCALL __cdecl
+#else
+#define WWCALL
+#endif
+#endif // WWCALL
+// BEATO End
+
 //#define STEVES_NEW_CATCHER
 #ifdef _DEBUG
 #ifdef _MSC_VER
@@ -75,24 +89,24 @@
 
 	#define _OPERATOR_NEW_DEFINED_
 
-	extern void * __cdecl operator new		(size_t size);
-	extern void __cdecl operator delete		(void *p);
+	extern void * WWCALL operator new		(size_t size);
+	extern void WWCALL operator delete		(void *p);
 
-	extern void * __cdecl operator new[]	(size_t size);
-	extern void __cdecl operator delete[]	(void *p);
+	extern void * WWCALL operator new[]	(size_t size);
+	extern void WWCALL operator delete[]	(void *p);
 
 	// additional overloads to account for VC/MFC funky versions
-	extern void* __cdecl operator new			(size_t nSize, const char *, int);
-	extern void __cdecl operator delete		(void *, const char *, int);
+	extern void* WWCALL operator new			(size_t nSize, const char *, int);
+	extern void WWCALL operator delete		(void *, const char *, int);
 
-	extern void* __cdecl operator new[]		(size_t nSize, const char *, int);
-	extern void __cdecl operator delete[]	(void *, const char *, int);
+	extern void* WWCALL operator new[]		(size_t nSize, const char *, int);
+	extern void WWCALL operator delete[]	(void *, const char *, int);
 
 	// additional overloads for 'placement new'
-	//inline void* __cdecl operator new							(size_t s, void *p) { return p; }
-	//inline void __cdecl operator delete						(void *, void *p)		{ }
-	inline void* __cdecl operator new[]						(size_t s, void *p) { return p; }
-	inline void __cdecl operator delete[]					(void *, void *p)		{ }
+	//inline void* WWCALL operator new							(size_t s, void *p) { return p; }
+	//inline void WWCALL operator delete						(void *, void *p)		{ }
+	inline void* WWCALL operator new[]						(size_t s, void *p) { return p; }
+	inline void WWCALL operator delete[]					(void *, void *p)		{ }
 
 #endif
 

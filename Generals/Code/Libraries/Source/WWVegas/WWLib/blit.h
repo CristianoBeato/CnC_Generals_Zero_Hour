@@ -40,7 +40,7 @@
 #include	"blitter.h"
 #include	"buff.h"
 #include	"trect.h"
-#include	"surface.h"
+#include	"Surface.h"
 
 bool Bit_Blit(Surface & dest, Rect const & destrect, Surface const & source, Rect const & sourcerect, Blitter const & blitter);
 bool RLE_Blit(Surface & dest, Rect const & destrect, Surface const & source, Rect const & sourcerect, RLEBlitter const & blitter);

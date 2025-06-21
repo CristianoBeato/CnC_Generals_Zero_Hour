@@ -38,16 +38,19 @@
 #ifndef _SYSTIMER_H
 
 #include "WWLib/always.h"
-#include <windows.h>
 #include "mmsys.h"
+
+#ifdef _WIN32
+#include <windows.h>
+#endif _WIN32
 
 #define TIMEGETTIME SystemTime.Get
 
-/*
-** Class that just wraps around timeGetTime()
-**
-**
-*/
+//
+// Class that just wraps around timeGetTime()
+//
+//
+//
 class SysTimeClass
 {
 
@@ -56,34 +59,34 @@ class SysTimeClass
 		SysTimeClass(void);	//default constructor
 		~SysTimeClass();	//default destructor
 
-		/*
-		** Get. Use everywhere you would use timeGetTime
-		*/
-		WWINLINE unsigned long Get(void);
-		WWINLINE unsigned long operator () (void) {return(Get());}
-		WWINLINE operator unsigned long(void) {return(Get());}
+		//
+		// Get. Use everywhere you would use timeGetTime
+		//
+		WWINLINE uint64_t Get(void);
+		WWINLINE uint64_t operator () (void) { return( Get() ); }
+		WWINLINE operator uint64_t(void) { return( Get()); }
 
-		/*
-		** Use periodically (like every few days!) to make sure the timer doesn't wrap.
-		*/
+		//
+		// Use periodically (like every few days!) to make sure the timer doesn't wrap.
+		//
 		void Reset(void);
 
-		/*
-		** See if the timer is about to wrap.
-		*/
+		//
+		// See if the timer is about to wrap.
+		//
 		bool Is_Getting_Late(void);
 
 	private:
 
-		/*
-		** Time we were first called.
-		*/
-		unsigned long StartTime;
+		//
+		// Time we were first called.
+		//
+		uint64_t StartTime;
 
-		/*
-		** Time to add after timer wraps.
-		*/
-		unsigned long WrapAdd;
+		//
+		// Time to add after timer wraps.
+		//
+		uint64_t WrapAdd;
 
 };
 
@@ -104,7 +107,7 @@ extern SysTimeClass SystemTime;
  * HISTORY:                                                                                    *
  *   10/25/2001 1:38PM ST : Created                                                            *
  *=============================================================================================*/
-WWINLINE unsigned long SysTimeClass::Get(void)
+WWINLINE uint64_t SysTimeClass::Get(void)
 {
 	/*
 	** This has to be static here since we don't know if we will get called in a global constructor of another object before our
@@ -112,12 +115,13 @@ WWINLINE unsigned long SysTimeClass::Get(void)
 	*/
 	static bool is_init = false;
 
-	if (!is_init) {
+	if (!is_init) 
+	{
 		Reset();
 		is_init = true;
 	}
 
-	unsigned long time = timeGetTime();
+	uint64_t time = timeGetTime();
 	if (time > StartTime) {
 		return(time - StartTime);
 	}

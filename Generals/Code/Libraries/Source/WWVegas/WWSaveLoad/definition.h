@@ -44,8 +44,8 @@
 #include "WWLib/always.h"
 // SKB Remove because of G conflicts with CLASSID_?? 
 // #include "definitionclassids.h"
-#include "definitionmgr.h"
-#include "editable.h"
+#include "WWSaveLoad/definitionmgr.h"
+#include "WWSaveLoad/editable.h"
 #include "WWLib/wwstring.h"
 
 // Forward declarations

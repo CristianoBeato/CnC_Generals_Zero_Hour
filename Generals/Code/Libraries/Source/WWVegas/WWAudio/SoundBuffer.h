@@ -42,16 +42,16 @@
 #ifndef __SOUNDBUFFER_H
 #define __SOUNDBUFFER_H
 
+#if 0
 #pragma warning (push, 3)
 #include "Mss.H"
 #pragma warning (pop)
+#endif
 
 #include "WWLib/refcount.h"
 
-
 // Forward declarations
 class FileClass;
-
 
 /////////////////////////////////////////////////////////////////////////////////
 //

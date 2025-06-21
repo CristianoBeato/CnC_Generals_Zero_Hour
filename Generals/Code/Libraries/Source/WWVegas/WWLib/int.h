@@ -42,9 +42,6 @@
 
 #include	"mpmath.h"
 #include	"straw.h"
-#include	<assert.h>
-#include	<limits.h>
-#include	<memory.h>
 
 #ifdef __BORLANDC__
 #pragma warn -inl

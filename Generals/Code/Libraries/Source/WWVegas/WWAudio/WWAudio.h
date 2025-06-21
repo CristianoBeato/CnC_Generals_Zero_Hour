@@ -42,13 +42,16 @@
 #define __WWAUDIO_H
 
 #include "WWLib/always.h"
+
+#if 0
 #pragma warning (push, 3)
-#include "Mss.H"
+#include "MSS/Mss.H"
 #pragma warning (pop)
+#endif
 
 #include "WWLib/vector.h"
-#include "SoundBuffer.H"
-#include "AudioEvents.H"
+#include "SoundBuffer.h"
+#include "AudioEvents.h"
 #include "WWLib/wwstring.h"
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -386,7 +389,7 @@ public:
 	// Note:  The cache sizes are in kilo-bytes.  The default
 	// is currently set to 1MB.
 	//
-	bool					Set_Cache_Size (int kbytes = DEF_CACHE_SIZE)	{ m_MaxCacheSize = (kbytes * 1024); }
+	bool				Set_Cache_Size (int kbytes = DEF_CACHE_SIZE)	{ m_MaxCacheSize = (kbytes * 1024); }
 	int					Get_Cache_Size (void) const						{ return m_MaxCacheSize / 1024; }
 	int					Get_Current_Cache_Size (void) const				{ return m_CurrentCacheSize; }
 

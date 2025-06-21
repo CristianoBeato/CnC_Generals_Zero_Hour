@@ -49,6 +49,9 @@
 // Note: It does NOT addref to textures because it is called in the texture
 // destructor
 
+// BEATO Begin:
+#ifdef ENABLE_USE_DX8
+
 #include "dx8texman.h"
 
 DX8TextureTrackerList DX8TextureManagerClass::Managed_Textures;
@@ -194,3 +197,6 @@ void DX8TextureManagerClass::Recreate_Textures()
 		it.Next();
 	}
 }
+
+#endif //ENABLE_USE_DX8
+// BEATO End

@@ -51,8 +51,24 @@
 #include "osdep.h"
 #endif
 
-typedef wchar_t TCHAR; 
 
+#if _UNICODE
+typedef wchar_t TCHAR;
+
+#define _tcslen sizeof
+#define _tcsclen wcslen
+#define _tcscmp wcscmp
+#define _tcsicmp wcscasecmp
+
+#else
+typedef char TCHAR; 
+
+#define _tcslen sizeof
+#define _tcsclen strlen
+#define _tcscmp strcmp
+#define _tcsicmp strcasecmp
+
+#endif
 
 //////////////////////////////////////////////////////////////////////
 //
@@ -118,8 +134,8 @@ public:
 	bool			Is_Empty (void) const;
 
 	void			Erase (int start_index, int char_count);
-	int _cdecl  Format (const TCHAR *format, ...);
-	int _cdecl  Format_Args (const TCHAR *format, const va_list & arg_list );
+	int WWCALL  Format (const TCHAR *format, ...);
+	int WWCALL  Format_Args (const TCHAR *format, const va_list & arg_list );
 
 	TCHAR *		Get_Buffer (int new_length);
 	TCHAR *		Peek_Buffer (void);

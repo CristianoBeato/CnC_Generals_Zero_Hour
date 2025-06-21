@@ -56,12 +56,11 @@
 #endif
 
 #include "cullsys.h"
-#include "mempool.h"
+#include "WWLib/mempool.h"
 #include "WWMath/frustum.h"
 #include "WWMath/aabox.h"
 #include "WWMath/lineseg.h"
 #include "WWMath/obbox.h"
-#include <string.h>
 
 class ChunkLoadClass;
 class ChunkSaveClass;

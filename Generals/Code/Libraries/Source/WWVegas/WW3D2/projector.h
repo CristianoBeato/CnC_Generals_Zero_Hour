@@ -40,7 +40,7 @@
 #define PROJECTOR_H
 
 #include "WWLib/always.h"
-#include "matrix3d.h"
+#include "WWMath/matrix3d.h"
 #include "WWMath/matrix4.h"
 #include "WWMath/aabox.h"
 #include "WWMath/obbox.h"

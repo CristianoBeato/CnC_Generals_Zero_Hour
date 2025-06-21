@@ -38,8 +38,11 @@
 
 #include "WWLib/always.h"
 #include "dx8caps.h"
-#include "WW3D2/dx8wrapper.h"
-#include "formconv.h"
+#include "dx8wrapper.h"
+#include "WW3D2/formconv.h"
+
+// BEATO Begin
+#ifdef ENABLE_USE_DX8
 
 D3DCAPS8 DX8Caps::hwVPCaps;
 D3DCAPS8 DX8Caps::swVPCaps;
@@ -197,3 +200,6 @@ void DX8Caps::Vendor_Specific_Hacks(const D3DADAPTER_IDENTIFIER8& adapter_id)
 //	SupportDXTC=false;
 
 }
+
+#endif // ENABLE_USE_DX8
+// BEATO End

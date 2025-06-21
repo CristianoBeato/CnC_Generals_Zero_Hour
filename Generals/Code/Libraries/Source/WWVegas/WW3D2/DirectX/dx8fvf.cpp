@@ -16,8 +16,14 @@
 **	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+
+
 #include "dx8fvf.h"
 #include "WWLib/wwstring.h"
+
+// BEATO Begin:
+#ifdef ENABLE_USE_DX8
+
 #include <D3dx8core.h>
 
 static unsigned Get_FVF_Vertex_Size(unsigned FVF)
@@ -75,3 +81,7 @@ void FVFInfoClass::Get_FVF_Name(StringClass& fvfname) const
 	default: fvfname="Unknown!";
 	}
 }
+
+
+#endif // ENABLE_USE_DX8
+// BEATO End

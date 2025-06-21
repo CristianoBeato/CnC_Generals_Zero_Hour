@@ -44,12 +44,12 @@
 #define __DEFINITION_MGR_H
 
 #include "WWLib/always.h"
-#include "saveload.h"
+#include "WWSaveLoad/saveload.h"
 #include "saveloadsubsystem.h"
 #include "saveloadids.h"
 #include "WWDebug/wwdebug.h"
 #include "WWLib/wwstring.h"
-#include "hashtemplate.h"
+#include "WWLib/hashtemplate.h"
 #include "WWLib/vector.h"
 
 

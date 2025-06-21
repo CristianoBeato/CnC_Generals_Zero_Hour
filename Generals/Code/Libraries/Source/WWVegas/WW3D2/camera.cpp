@@ -71,8 +71,16 @@
 #include "camera.h"
 #include "ww3d.h"
 #include "WWMath/matrix4.h"
-#include "WW3D2/dx8wrapper.h"
 
+// BEATO Begin:
+#if ENABLE_USE_DX8
+#include "WW3D2/DirectX/dx8wrapper.h"
+#endif
+
+#if ENABLE_USE_OPENGL
+#include "WW3D2/OpenGL/OpenGLwrapper.h"
+#endif 
+// BEATO End
 
 /***********************************************************************************************
  * CameraClass::CameraClass -- constructor                                                     *
@@ -323,13 +331,15 @@ void CameraClass::Set_View_Plane(const Vector2 & vmin,const Vector2 & vmax)
  *=============================================================================================*/
 void CameraClass::Set_View_Plane(float hfov,float vfov)
 {
-
-	float width_half = tan(hfov/2.0);
+	float width_half = tan( hfov / 2.0 );
 	float height_half = 0.0f;
 	
-	if (vfov == -1) {									
+	if (vfov == -1) 
+	{									
 		height_half = (1.0f / AspectRatio) * width_half;		// use the aspect ratio
-	} else {
+	} 
+	else 
+	{
 		height_half = tan(vfov/2.0);
 		AspectRatio = width_half / height_half;					// or, initialize the aspect ratio
 	}
@@ -404,7 +414,8 @@ CameraClass::ProjectionResType CameraClass::Project(Vector3 & dest,const Vector3
 	Vector3 cam_point;
 	Matrix3D::Transform_Vector(CameraInvTransform,ws_point,&cam_point);
 
-	if (cam_point.Z > -ZNear) {
+	if (cam_point.Z > -ZNear) 
+	{
 		dest.Set(0,0,0);
 		return OUTSIDE_NEAR_CLIP;
 	}
@@ -415,11 +426,13 @@ CameraClass::ProjectionResType CameraClass::Project(Vector3 & dest,const Vector3
 	dest.Y = view_point.Y * oow;
 	dest.Z = view_point.Z * oow;
 
-	if (dest.Z > 1.0f) {
+	if (dest.Z > 1.0f) 
+	{
 		return OUTSIDE_FAR_CLIP;
 	}
 
-	if ((dest.X < -1.0f) || (dest.X > 1.0f) || (dest.Y < -1.0f) || (dest.Y > 1.0f)) {
+	if ((dest.X < -1.0f) || (dest.X > 1.0f) || (dest.Y < -1.0f) || (dest.Y > 1.0f)) 
+	{
 		return OUTSIDE_FRUSTUM;
 	}	
 
@@ -447,7 +460,8 @@ CameraClass::Project_Camera_Space_Point(Vector3 & dest,const Vector3 & cam_point
 {
 	Update_Frustum();
 
-	if ( cam_point.Z > -ZNear + WWMATH_EPSILON) {
+	if ( cam_point.Z > -ZNear + WWMATH_EPSILON) 
+	{
 		dest.Set(0,0,0);
 		return OUTSIDE_NEAR_CLIP;
 	}
@@ -458,11 +472,13 @@ CameraClass::Project_Camera_Space_Point(Vector3 & dest,const Vector3 & cam_point
 	dest.Y = view_point.Y * oow;
 	dest.Z = view_point.Z * oow;
 
-	if (dest.Z > 1.0f) {
+	if (dest.Z > 1.0f) 
+	{
 		return OUTSIDE_FAR_CLIP;
 	}
 
-	if ((dest.X < -1.0f) || (dest.X > 1.0f) || (dest.Y < -1.0f) || (dest.Y > 1.0f)) {
+	if ((dest.X < -1.0f) || (dest.X > 1.0f) || (dest.Y < -1.0f) || (dest.Y > 1.0f)) 
+	{
 		return OUTSIDE_FRUSTUM;
 	}	
 
@@ -717,10 +733,12 @@ void CameraClass::Apply(void)
 {
 	Update_Frustum();
 
-	int width,height,bits;
-	bool windowed;
+	int width = 0, height = 0,bits = 0;
+	bool windowed = false;
 	WW3D::Get_Render_Target_Resolution(width,height,bits,windowed);
-	
+
+	// BEATO Begin	
+#if ENABLE_USE_DX8
 	D3DVIEWPORT8 vp;
 	vp.X = (DWORD)(Viewport.Min.X * (float)width);
 	vp.Y = (DWORD)(Viewport.Min.Y * (float)height);
@@ -734,6 +752,28 @@ void CameraClass::Apply(void)
 	Get_D3D_Projection_Matrix(&d3dprojection);
 	DX8Wrapper::Set_Transform(D3DTS_PROJECTION,d3dprojection);
 	DX8Wrapper::Set_Transform(D3DTS_VIEW,CameraInvTransform);
+
+#else ENABLE_USE_OPENGL
+
+	SDL_GPUViewport vp;
+	vp.x = Viewport.Min.X * static_cast<float>( width );
+	vp.y = Viewport.Min.Y * static_cast<float>( height );
+	vp.w = static_cast<float>( ( Viewport.Max.X - Viewport.Min.X ) * static_cast<float>( width ) );
+	vp.h = static_cast<float>( ( Viewport.Max.Y - Viewport.Min.Y ) * static_cast<float>( height ) );
+	vp.min_depth = ZBufferMin;
+	vp.max_depth = ZBufferMax;
+	SDL3Wrapper::Set_Viewport( &vp );
+
+	Matrix4 projection;
+	Get_D3D_Projection_Matrix(&projection);
+	SDL3Wrapper::Set_Transform( SDL_MATRIX_PROJECTION, projection);
+	SDL3Wrapper::Set_Transform( SDL_MATRIX_VIEW, CameraInvTransform);
+
+#endif
+
+
+
+// BEATO End
 }
 
 void CameraClass::Set_Clip_Planes(float znear,float zfar)						
@@ -774,9 +814,9 @@ void CameraClass::Get_Projection_Matrix(Matrix4 * set_tm)
 	*set_tm = ProjectionTransform;
 }
 
-void CameraClass::Get_D3D_Projection_Matrix(Matrix4 * set_tm)
+void CameraClass::Get_D3D_Projection_Matrix( Matrix4 * set_tm )
 {
-	WWASSERT(set_tm != NULL);
+	WWASSERT(set_tm != nullptr );
 	Update_Frustum();
 	*set_tm = ProjectionTransform;
 
@@ -785,10 +825,13 @@ void CameraClass::Get_D3D_Projection_Matrix(Matrix4 * set_tm)
 	** move the z-range to 0<z<1 rather than -1<z<1
 	*/
 	float oozdiff = 1.0 / (ZFar - ZNear);
-	if (Projection == PERSPECTIVE) {
+	if (Projection == PERSPECTIVE) 
+	{
 		(*set_tm)[2][2] = -(ZFar) * oozdiff;
 		(*set_tm)[2][3] = -(ZFar*ZNear) * oozdiff;
-	} else {
+	} 
+	else 
+	{
 		(*set_tm)[2][2] = -oozdiff;
 		(*set_tm)[2][3] = -ZNear * oozdiff;
 	}

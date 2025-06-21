@@ -46,7 +46,7 @@
 #include "WWLib/always.h"
 #include "pointerremap.h"
 #include "WWLib/bittype.h"
-#include "slist.h"
+#include "WWLib/slist.h"
 
 class RefCountClass;
 class SaveLoadSubSystemClass;

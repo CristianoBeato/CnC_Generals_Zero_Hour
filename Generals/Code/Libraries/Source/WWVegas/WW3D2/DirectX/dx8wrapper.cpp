@@ -37,6 +37,8 @@
  *   DX8Wrapper::_Update_Texture -- Copies a texture from system memory to video memory        *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+// BEATO BEgin:
+#ifdef ENABLE_USE_DX8
 //#define CREATE_DX8_MULTI_THREADED
 
 #include "WW3D2/dx8wrapper.h"
@@ -2653,3 +2655,6 @@ WW3DFormat	DX8Wrapper::getBackBufferFormat( void )
 {
 	return D3DFormat_To_WW3DFormat( _PresentParameters.BackBufferFormat );
 }
+
+#endif // ENABLE_USE_DX8
+// BEATO End

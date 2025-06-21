@@ -30,6 +30,9 @@
 // $Header: $ 
 //******************************************************************************************
 
+// BEATO Begin
+#ifdef ENABLE_USE_DX8
+
 #include "dx8webbrowser.h"
 #include "ww3d.h"
 #include "WW3D2/dx8wrapper.h"
@@ -240,3 +243,6 @@ void	DX8WebBrowser::Navigate(const char* browsername, const char* url)
 }
 
 #endif
+
+#endif //ENABLE_USE_DX8
+// BEATO End

@@ -36,6 +36,9 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+// BEATO Begin:
+#ifdef ENABLE_USE_DX8
+
 //#define VERTEX_BUFFER_LOG
 
 #include "dx8vertexbuffer.h"
@@ -894,3 +897,5 @@ unsigned short DynamicVBAccessClass::Get_Default_Vertex_Count(void)
 	return _DynamicDX8VertexBufferSize;
 }
 
+#endif // ENABLE_USE_DX8
+// BEATO End

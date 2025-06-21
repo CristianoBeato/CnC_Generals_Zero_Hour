@@ -36,6 +36,8 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+// BEATO Begin:
+#ifdef ENABLE_USE_DX8
 
 #if defined(_MSC_VER)
 #pragma once
@@ -71,3 +73,5 @@ typedef MultiListIterator<DX8TextureTrackerClass>		DX8TextureTrackerListIterator
 
 #endif //DX8LIST_H
 
+#endif //ENABLE_USE_DX8
+// BEATO End

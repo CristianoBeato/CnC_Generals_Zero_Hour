@@ -44,7 +44,7 @@
 #define VISRASTERIZER_H
 
 #include "WWLib/always.h"
-#include "matrix3d.h"
+#include "WWMath/matrix3d.h"
 #include "WWMath/matrix4.h"
 #include "WWMath/Vector3i.h"
 #include "WWMath/vector3.h"

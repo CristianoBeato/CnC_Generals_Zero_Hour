@@ -36,7 +36,11 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+// BEATO Begin:
+#ifdef ENABLE_USE_DX8
+
 //#define INDEX_BUFFER_LOG
+
 
 #include "dx8indexbuffer.h"
 #include "WW3D2/dx8wrapper.h"
@@ -502,3 +506,6 @@ unsigned short DynamicIBAccessClass::Get_Default_Index_Count(void)
 {
 	return _DynamicDX8IndexBufferSize;
 }
+
+#endif // ENABLE_USE_DX8
+// BEATO End

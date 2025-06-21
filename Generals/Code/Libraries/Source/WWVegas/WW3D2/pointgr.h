@@ -46,7 +46,7 @@
 #include "WWMath/vector4.h"
 #include "WWMath/vector3.h"
 #include "WWMath/vector2.h"
-#include "WWLib/Vector.H"  // #include "WWMath/vector.h"
+#include "WWLib/vector.h"
 
 class VertexMaterialClass;
 class RenderInfoClass;

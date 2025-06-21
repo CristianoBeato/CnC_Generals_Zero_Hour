@@ -44,9 +44,8 @@
 #include "WW3D2/rendobj.h"
 #include "w3d_file.h"
 #include "w3derr.h"
-#include "WWLib/Vector.H"
+#include "WWLib/vector.h"
 #include "WWLib/bittype.h"
-#include <string.h>
 
 #ifdef _UNIX
 #include "osdep.h"

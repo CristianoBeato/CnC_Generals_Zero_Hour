@@ -247,8 +247,8 @@ protected:
 	mutable bool					FrustumValid;
 	mutable FrustumClass			Frustum;							// world-space frustum and clip planes
 	mutable FrustumClass			ViewSpaceFrustum;				// view-space frustum and clip planes
-	mutable OBBoxClass			NearClipBBox;					// obbox which bounds the near clip plane
-	mutable Matrix4				ProjectionTransform;
+	mutable OBBoxClass				NearClipBBox;					// obbox which bounds the near clip plane
+	mutable Matrix4					ProjectionTransform;
 	mutable Matrix3D				CameraInvTransform;
 };
 

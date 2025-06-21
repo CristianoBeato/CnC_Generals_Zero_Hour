@@ -36,6 +36,9 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+// BEATO Begin:
+#ifdef ENABLE_USE_DX8
+
 #if defined(_MSC_VER)
 #pragma once
 #endif
@@ -206,3 +209,5 @@ protected:
 
 #endif //DX8INDEXBUFFER_H
 
+#endif // ENABLE_USE_DX8
+// BEATO End

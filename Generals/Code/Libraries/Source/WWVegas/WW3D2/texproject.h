@@ -44,22 +44,19 @@
 #define TEXPROJECT_H
 
 #include "WWLib/always.h"
-#include "matrix3d.h"
+#include "WWMath/matrix3d.h"
 #include "WWMath/matrix4.h"
 #include "WWMath/obbox.h"
 #include "matpass.h"
 #include "matrixmapper.h"
-#include "cullsys.h"
-#include "multilist.h"
+#include "WWMath/cullsys.h"
+#include "WWLib/multilist.h"
 #include "projector.h"
-
 
 class SpecialRenderInfoClass;
 class RenderObjClass;
 class MaterialPassClass;
 class SurfaceClass;
-
-
 
 /**
 ** TexProjectClass

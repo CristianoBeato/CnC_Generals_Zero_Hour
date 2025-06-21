@@ -49,7 +49,7 @@
 #include "WWDebug/wwdebug.h"
 #include "shader.h"
 #include "WWLib/vector.h"
-#include "matrix3d.h"
+#include "WWMath/matrix3d.h"
 #include "WWMath/matrix4.h"
 
 

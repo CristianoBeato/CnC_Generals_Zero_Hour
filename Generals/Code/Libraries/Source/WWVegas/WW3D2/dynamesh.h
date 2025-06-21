@@ -45,7 +45,10 @@
 #include "matinfo.h"
 #include "WW3D2/rendobj.h"
 #include "polyinfo.h"
+
+#ifdef ENABLE_USE_DX8
 #include "WW3D2/dx8wrapper.h"
+#endif //ENABLE_USE_DX8
 
 class	ShaderClass;
 class	IntersectionClass;

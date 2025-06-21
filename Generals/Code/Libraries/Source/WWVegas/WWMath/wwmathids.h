@@ -39,7 +39,7 @@
 #ifndef WWMATHIDS_H
 #define WWMATHIDS_H
 
-#include "saveloadids.h"
+#include "WWSaveLoad/saveloadids.h"
 
 /*
 ** Persist Factory ID's for WWMATH

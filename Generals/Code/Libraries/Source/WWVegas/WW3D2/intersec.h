@@ -55,9 +55,9 @@
 #define INTERSEC_H
 
 #include "WWLib/always.h"
-#include "matrix3d.h"
+#include "WWMath/matrix3d.h"
 #include "layer.h"
-#include "sphere.h"
+#include "WWMath/sphere.h"
 #include "WW3D2/coltype.h"
 
 

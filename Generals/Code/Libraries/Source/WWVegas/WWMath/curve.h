@@ -55,7 +55,7 @@
 #endif
 
 #ifndef PERSIST_H
-#include "persist.h"
+#include "WWSaveLoad/persist.h"
 #endif
 
 class ChunkLoadClass;

@@ -44,10 +44,10 @@
 #define ASSETMGR_H
 
 #include "WWLib/always.h"
-#include "WWLib/Vector.H"
+#include "WWLib/vector.h"
 #include "WW3D2/htreemgr.h"
 #include "WW3D2/hanimmgr.h"
-#include "WWLib/SLIST.H"
+#include "WWLib/slist.h"
 #include "WW3D2/texture.h"
 #include "WWLib/hashtemplate.h"
 #include "WWLib/simplevec.h"

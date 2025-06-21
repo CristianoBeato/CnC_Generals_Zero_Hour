@@ -38,9 +38,11 @@
 #ifndef __UTILS_H
 #define __UTILS_H
 
+#if 0
 #pragma warning (push, 3)
 #include "Mss.H"
 #pragma warning (pop)
+#endif
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -73,9 +75,15 @@
 class MMSLockClass
 {
 	public:
-		MMSLockClass (void) { ::AIL_lock (); }
-		~MMSLockClass (void) { ::AIL_unlock (); }
+		MMSLockClass (void) 
+		{ 
+			::AIL_lock (); 
+		}
 
+		~MMSLockClass (void) 
+		{ 
+			::AIL_unlock (); 
+		}
 
 	static CRITICAL_SECTION _MSSLockCriticalSection;
 };
@@ -85,21 +93,17 @@ class MMSLockClass
 //
 //  Get_Filename_From_Path
 //
-__inline LPCTSTR
-Get_Filename_From_Path (LPCTSTR path)
+inline const char* Get_Filename_From_Path ( const char* path )
 {
 	// Find the last occurance of the directory deliminator
-	LPCTSTR filename = ::strrchr (path, '\\');
-	if (filename != NULL) {
-		// Increment past the directory deliminator
-		filename ++;
-	} else {
+	const char* filename = ::strrchr ( path, '\\' );
+	if ( filename != nullptr )
+		filename ++; // Increment past the directory deliminator
+	else 
 		filename = path;
-	}
 
 	// Return the filename part of the path
 	return filename;
 }
-
 
 #endif //__UTILS_H

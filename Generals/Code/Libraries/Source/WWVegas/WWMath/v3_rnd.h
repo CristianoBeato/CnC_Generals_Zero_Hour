@@ -42,8 +42,7 @@
 
 #include "WWLib/always.h"
 #include "WWMath/vector3.h"
-#include "random.h"
-#include <limits.h>
+#include "WWLib/random.h"
 
 /*
 ** Vector3Randomizer is an abstract class for generating random Vector3s.
@@ -54,8 +53,8 @@
 ** efficiently get an array of random points.
 */
 
-class Vector3Randomizer {
-
+class Vector3Randomizer 
+{
 	public:
 
 		enum 

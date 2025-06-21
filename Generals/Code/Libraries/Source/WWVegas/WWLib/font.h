@@ -40,10 +40,9 @@
 #ifndef FONT_H
 #define FONT_H
 
-#include	"convert.h"
-#include	"point.h"
+#include	"Convert.h"
+#include	"Point.h"
 #include	"trect.h"
-#include	<stddef.h>
 
 class Surface;
 

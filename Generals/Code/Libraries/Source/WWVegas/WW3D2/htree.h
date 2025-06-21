@@ -44,8 +44,8 @@
 
 #include "WWLib/always.h"
 #include "pivot.h"
-#include "quat.h"
-#include "matrix3d.h"
+#include "WWMath/quat.h"
+#include "WWMath/matrix3d.h"
 #include "WWMath/vector3.h"
 #include "w3d_file.h"
 #include "WWDebug/wwdebug.h"

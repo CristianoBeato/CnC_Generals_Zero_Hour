@@ -19,8 +19,8 @@
 #ifndef RSACRYPT_H
 #define RSACRYPT_H
 
-#include <wwlib/int.h>
-#include <wwlib/wwfile.h>
+#include "int.h"
+#include "wwfile.h"
 
 //#define SIMPLE_AND_SLOW_RSA
 

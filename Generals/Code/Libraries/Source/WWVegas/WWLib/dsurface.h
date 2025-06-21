@@ -38,9 +38,15 @@
 #define DSURFACE_H
 
 #include	"palette.h"
-#include	"win.h"
+#include	"plat.h"
 #include	"xsurface.h"
+
+//TODO: beato: Update from direct draw to SDLrender ?   
+#if 0
 #include	<ddraw.h>
+#else
+#include 	<SDL3/SDL_render.h>
+#endif
 
 /*
 **	This is a concrete surface class that is based on the DirectDraw

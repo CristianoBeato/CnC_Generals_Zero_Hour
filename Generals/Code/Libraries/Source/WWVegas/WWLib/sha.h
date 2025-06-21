@@ -37,19 +37,13 @@
 #ifndef SHA_H
 #define SHA_H
 
-
 /*
 **	The "bool" integral type was defined by the C++ comittee in
 **	November of '94. Until the compiler supports this, use the following
 **	definition.
 */
-#include <new.h>
-#include "WWLib/always.h"
-#include	"bool.h"
-#include	<stdio.h>
-#include	<stdlib.h>
-#include	<string.h>
-
+#include 	"WWLib/always.h"
+//#include	"bool.h"
 
 /*
 **	This implements the Secure Hash Algorithm. It is a cryptographically

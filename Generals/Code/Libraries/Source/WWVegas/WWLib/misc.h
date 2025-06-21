@@ -37,8 +37,14 @@
 #ifndef MISC_H
 #define MISC_H
 
-#include	"win.h"
+#include	"plat.h"
+
+// TODO: change from direct draw to SDL_renderer
+#if 0
 #include	"ddraw.h"
+#else
+#include <SDL3/SDL_render.h>
+#endif
 
 extern unsigned char CurrentPalette[768];
 extern bool Debug_Windowed;

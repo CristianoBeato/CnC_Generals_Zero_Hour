@@ -47,7 +47,7 @@
 #include "shader.h"
 #include "proto.h"
 #include "WWMath/obbox.h"
-#include "quat.h"
+#include "WWMath/quat.h"
 #include "WWMath/vector3.h"
 #include "WWMath/vector2.h"
 #include "prim_anim.h"

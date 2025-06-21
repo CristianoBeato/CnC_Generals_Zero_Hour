@@ -44,6 +44,9 @@
 #define FORMCONV_H
 
 #include "ww3dformat.h"
+
+// BEATO Begin:
+#ifdef ENABLE_USE_DX8
 #include <d3d8.h>
 
 /*
@@ -54,5 +57,19 @@ D3DFORMAT WW3DFormat_To_D3DFormat(WW3DFormat ww3d_format);
 WW3DFormat D3DFormat_To_WW3DFormat(D3DFORMAT d3d_format);
 
 void Init_D3D_To_WW3_Conversion();
+
+#endif // ENABLE_USE_DX8
+
+#ifdef ENABLE_USE_OPENGL
+
+#include <SDL3/SDL_opengl.h>
+
+GLenum WW3DFormat_To_OGLFormat( WW3DFormat ww3d_format );
+WW3DFormat OGLFormat_To_WW3DFormat( OGL d3d_format);
+
+void Init_OGL_To_WW3_Conversion();
+
+#endif //ENABLE_USE_OPENGL
+// BEATO End
 
 #endif

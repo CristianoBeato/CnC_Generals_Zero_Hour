@@ -42,12 +42,11 @@
 #ifndef __SOUNDCULLOBJ_H
 #define __SOUNDCULLOBJ_H
 
-#include "soundsceneobj.h"
-#include "cullsys.h"
+#include "SoundSceneObj.h"
+#include "WWMath/cullsys.h"
 #include "WWLib/refcount.h"
-#include "mempool.h"
-#include "multilist.h"
-
+#include "WWLib/mempool.h"
+#include "WWLib/multilist.h"
 
 /////////////////////////////////////////////////////////////////////////////
 //

@@ -36,6 +36,9 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+// BEATO Begin:
+#ifdef ENABLE_USE_DX8
+
 #if defined(_MSC_VER)
 #pragma once
 #endif
@@ -262,3 +265,7 @@ public:
 
 
 #endif //DX8VERTEXBUFFER_H
+
+
+#endif // ENABLE_USE_DX8
+// BEATO End

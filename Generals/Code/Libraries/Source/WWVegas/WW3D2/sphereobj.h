@@ -47,8 +47,8 @@
 #include "shader.h"
 #include "proto.h"
 #include "WWMath/obbox.h"
-#include	"WWMath/Vector3i.h"
-#include	"quat.h"
+#include "WWMath/Vector3i.h"
+#include "WWMath/quat.h"
 #include "prim_anim.h"
 
 class TextureClass;

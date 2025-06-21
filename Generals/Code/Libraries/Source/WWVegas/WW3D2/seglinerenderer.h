@@ -42,7 +42,7 @@
 #include "WWLib/always.h"
 #include "shader.h"
 #include "texture.h"
-#include "matrix3d.h"
+#include "WWMath/matrix3d.h"
 #include "WWMath/vector2.h"
 
 class RenderInfoClass;

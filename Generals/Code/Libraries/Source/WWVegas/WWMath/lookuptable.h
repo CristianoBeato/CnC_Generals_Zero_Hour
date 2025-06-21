@@ -44,20 +44,18 @@
 #include "WWLib/simplevec.h"
 #include "WWLib/wwstring.h"
 #include "WWLib/refcount.h"
-#include "multilist.h"
+#include "WWLib/multilist.h"
 #include "wwmath.h"
-
 
 class Vector2;
 class Curve1DClass;
 class ChunkSaveClass;
 class ChunkLoadClass;
 
-
-/**
-** LookupTableClass
-** This class contains the tabulated values for a function. 
-*/
+//
+// LookupTableClass
+// This class contains the tabulated values for a function. 
+//
 class LookupTableClass : public RefCountClass, public MultiListObjectClass
 {
 public:

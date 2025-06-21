@@ -41,8 +41,8 @@
 #ifndef __SOUND3DOBJ_H
 #define __SOUND3DOBJ_H
 
-#include "AudibleSound.H"
-#include "mempool.h"
+#include "AudibleSound.h"
+#include "WWLib/mempool.h"
 
 
 

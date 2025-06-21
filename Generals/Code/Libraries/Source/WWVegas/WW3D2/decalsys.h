@@ -44,7 +44,7 @@
 #define DECALSYS_H
 
 #include "WWLib/always.h"
-#include "matrix3d.h"
+#include "WWMath/matrix3d.h"
 #include "WWMath/matrix4.h"
 #include "WWMath/obbox.h"
 #include "robjlist.h"

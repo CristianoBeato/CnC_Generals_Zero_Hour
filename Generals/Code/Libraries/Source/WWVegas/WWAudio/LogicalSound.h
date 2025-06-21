@@ -37,10 +37,10 @@
 #ifndef __LOGICAL_SOUND_H
 #define __LOGICAL_SOUND_H
 
-#include "SoundSceneObj.H"
+#include "SoundSceneObj.h"
 #include "WWLib/bittype.h"
 #include "WWMath/vector3.h"
-#include "Matrix3D.H"
+#include "WWMath/matrix3d.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 //

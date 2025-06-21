@@ -44,10 +44,10 @@
 #define HCANIM_H
 
 #include "WWLib/always.h"
-#include "quat.h"
+#include "WWMath/quat.h"
 #include "WWLib/refcount.h"
 #include "w3d_file.h"
-#include "slist.h"
+#include "WWLib/slist.h"
 #include "WWLib/vector.h"
 #include "hanim.h"
 

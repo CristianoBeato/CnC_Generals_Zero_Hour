@@ -22,9 +22,9 @@
  *                                                                                             *
  *                 Project Name : WWAudio                                                      *
  *                                                                                             *
- *                     $Archive:: /Commando/Code/WWAudio/SoundSceneObj.h        $*
- *																														     *
- *							  $Modtime:: 8/24/01 3:51p                                               $*
+ *                     $Archive:: /Commando/Code/WWAudio/SoundSceneObj.h        			  $*
+ *																							   *
+ *							  $Modtime:: 8/24/01 3:51p                                        $*
  *                                                                                             *
  *                    $Revision:: 12                                                          $*
  *                                                                                             *
@@ -40,11 +40,11 @@
 #define __SOUND_SCENE_OBJ_H
 
 #include "WWLib/refcount.h"
-#include "WWAudio.H"
+#include "WWAudio.h"
 #include "WWLib/bittype.h"
-#include "persist.h"
-#include "multilist.h"
-#include "mutex.h"
+#include "WWSaveLoad/persist.h"
+#include "WWLib/multilist.h"
+#include "WWLib/mutex.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Forward declarations

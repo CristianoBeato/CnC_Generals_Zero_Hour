@@ -50,6 +50,7 @@
 #pragma warning (push, 3)	// (gth) system headers complain at warning level 4...
 #endif
 
+#if defindef( _WIN32 )
 #ifndef _WINDOWS_
 #include "windows.h"
 #endif
@@ -61,6 +62,7 @@
 #ifndef _INC_VFW
 #include "vfw.h"
 #endif
+#endif //_WIN32
 
 #if defined (_MSC_VER)
 #pragma warning (pop)
@@ -73,7 +75,8 @@
 class FrameGrabClass  
 {
 public:
-	enum MODE {
+	enum MODE 
+	{
 		RAW,
 		AVI
 	};

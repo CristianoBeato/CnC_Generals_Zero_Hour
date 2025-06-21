@@ -30,6 +30,8 @@
 // $Header: $ 
 //******************************************************************************************
 
+#ifdef ENABLE_USE_DX8
+
 #ifndef DX8_WEBBROWSER_H
 #define DX8_WEBBROWSER_H
 
@@ -39,7 +41,7 @@
 // ***********************************
 // Set this to 0 to remove all embedded browser code.
 //
-#define ENABLE_EMBEDDED_BROWSER		1
+#define ENABLE_EMBEDDED_BROWSER		0
 //
 // ***********************************
 
@@ -91,3 +93,5 @@ private:
 #endif
 
 #endif
+
+#endif //ENABLE_USE_DX8

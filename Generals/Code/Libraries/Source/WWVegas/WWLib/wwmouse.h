@@ -37,7 +37,7 @@
 #ifndef WW_MOUSE_H
 #define WW_MOUSE_H
 
-#include	"win.h"
+#include	"plat.h"
 #include	"xmouse.h"
 
 class BSurface;

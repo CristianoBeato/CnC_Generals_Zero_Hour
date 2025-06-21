@@ -47,8 +47,8 @@
 #include "WWMath/vector2.h"
 
 #include "shader.h"
-#include "widestring.h"
-#include "rect.h"
+#include "WWLib/widestring.h"
+#include "WWMath/rect.h"
 #include "WWLib/bittype.h"
 
 class	Font3DInstanceClass;

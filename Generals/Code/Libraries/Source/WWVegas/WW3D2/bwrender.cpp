@@ -38,7 +38,7 @@
 
 
 #include "bwrender.h"
-#include "vp.h"
+#include "WWMath/vp.h"
 #include <string.h>
 
 

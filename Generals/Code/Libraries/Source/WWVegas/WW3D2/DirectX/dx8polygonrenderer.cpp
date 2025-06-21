@@ -36,7 +36,8 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-
+// BEATO Begin:
+#ifdef ENABLE_USE_DX8
 
 #include "dx8polygonrenderer.h"
 #include "dx8renderer.h"
@@ -113,3 +114,5 @@ void DX8PolygonRendererClass::Log()
 */	WWDEBUG_SAY((work));
 }
 
+#endif  // ENABLE_USE_DX8
+// BEATO End

@@ -40,8 +40,7 @@
 #ifndef TRECT_H
 #define TRECT_H
 
-#include	"point.h"
-
+#include	"Point.h"
 
 /*
 **	This class manages a rectangle.

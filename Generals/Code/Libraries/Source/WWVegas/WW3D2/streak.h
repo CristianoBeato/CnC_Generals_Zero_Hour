@@ -45,7 +45,7 @@
 #include "shader.h"
 #include "WWLib/simplevec.h"
 #include "seglinerenderer.h"
-#include "streakrender.h"
+#include "streakRender.h"
 
 class TextureClass;
 

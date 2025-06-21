@@ -42,7 +42,9 @@
 #ifndef __VERCHK_H
 #define __VERCHK_H
 
+#ifdef _WIN32
 #include <windows.h>
+#endif //_WIN32
 
 // Obtain version information from the specified file.
 bool GetVersionInfo(char* filename, VS_FIXEDFILEINFO* fileInfo);

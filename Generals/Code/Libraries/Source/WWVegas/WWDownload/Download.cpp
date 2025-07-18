@@ -17,14 +17,15 @@
 */
 
 // Download.cpp : Implementation of CDownload
-#include "DownloadDebug.h"
-#include "download.h"
-#include <mmsystem.h>
-#include <assert.h>
-#include <direct.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <sys/stat.h>
+#include "WWprecompiled.h"
+//#include "DownloadDebug.h"
+//#include "download.h"
+//#include <mmsystem.h>
+//#include <assert.h>
+//#include <direct.h>
+//#include <stdlib.h>
+//#include <stdio.h>
+//#include <sys/stat.h>
 
 /////////////////////////////////////////////////////////////////////////////
 // CDownload
@@ -36,13 +37,11 @@
 // is called.
 //
 
-HRESULT CDownload::DownloadFile(LPCSTR server, LPCSTR username, LPCSTR password, LPCSTR file, LPCSTR localfile, LPCSTR regkey, bool tryresume)
+int CDownload::DownloadFile( const char* server, const char* username, const char* password, const char* file, const char* localfile, const char* regkey, bool tryresume )
 {
  	// Check we're not in the middle of another download.
 	if((m_Status != DOWNLOADSTATUS_DONE ) && (m_Status != DOWNLOADSTATUS_FINDINGFILE))
-	{
 		return( DOWNLOAD_STATUSERROR );
-	}
 
 	// If we're still connected, make sure we're on the right server
 	if (m_Status == DOWNLOADSTATUS_FINDINGFILE)
@@ -57,16 +56,14 @@ HRESULT CDownload::DownloadFile(LPCSTR server, LPCSTR username, LPCSTR password,
 
 	// Check all parameters are non-null.
 
-	if( ( server == NULL ) || ( username == NULL ) ||
-		( password == NULL ) || ( file == NULL ) ||
-		( localfile == NULL ) || ( regkey == NULL ) )
+	if( ( server == NULL ) || ( username == NULL ) || ( password == NULL ) || ( file == NULL ) || ( localfile == NULL ) || ( regkey == NULL ) )
 	{
      //////////DBGMSG("Download Paramerror");
-		return( DOWNLOAD_PARAMERROR );
+		return DOWNLOAD_PARAMERROR;
 	}
 
 	// Make sure we have a download directory
-	_mkdir("download");
+	std::filesystem::create_directories( "dowload" ); //_mkdir("download");
 
 	// Copy parameters to member variables.
 	strncpy( m_Server, server, sizeof( m_Server ) );
@@ -102,21 +99,22 @@ HRESULT CDownload::DownloadFile(LPCSTR server, LPCSTR username, LPCSTR password,
 		m_Status = DOWNLOADSTATUS_GO;
 
    //////////DBGMSG("Ready to download");
-	return S_OK;
+	return 1;
 }
 
 
 //
 // Get the local filename of the last file we requested to download....
 //
-HRESULT CDownload::GetLastLocalFile(char *local_file, int maxlen) {
+int CDownload::GetLastLocalFile(char *local_file, int maxlen) 
+{
 	if (local_file==0)
-		return(E_FAIL);
+		return -1;
 
 	strncpy(local_file, m_LastLocalFile, maxlen);
 	local_file[maxlen-1]=0;
 
-	return(S_OK);
+	return 1;
 }
 
 
@@ -125,7 +123,7 @@ HRESULT CDownload::GetLastLocalFile(char *local_file, int maxlen) {
 // status flag to stop PumpMessages() from doing anything.
 //
 
-HRESULT CDownload::Abort()
+int CDownload::Abort( void )
 {
 
 	if( m_Status != DOWNLOADSTATUS_NONE )
@@ -145,7 +143,7 @@ HRESULT CDownload::Abort()
 	m_LocalFile[ 0 ]	= '\0';
 	m_RegKey[ 0 ]		= '\0';
 
-	return S_OK;
+	return 1;
 }
 
 
@@ -154,7 +152,7 @@ HRESULT CDownload::Abort()
 // download, connects to the server, finds the file and downloads it.
 //
 
-HRESULT CDownload::PumpMessages()
+int CDownload::PumpMessages()
 {
 	int iResult = 0;
 	int timetaken = 0;
@@ -166,9 +164,7 @@ HRESULT CDownload::PumpMessages()
    ////DBGMSG("Download Pump");
 
 	if( reenter != 0 )
-	{
-		return( DOWNLOAD_REENTERERROR );
-	}
+		return DOWNLOAD_REENTERERROR;
 
 	reenter = 1;
 
@@ -276,10 +272,14 @@ HRESULT CDownload::PumpMessages()
 			//   never ever change so this is not a concern.
 			//
 			// We identify patches because they are written into the patches folder.
+#ifdef _WIN32
 			struct _stat statdata;
-			if (	(_stat(m_LocalFile, &statdata) == 0) && 
-					(statdata.st_size == m_FileSize) && 
-					(_strnicmp(m_LocalFile, "patches\\", strlen("patches\\"))==0)) {
+			if ( ( _stat(m_LocalFile, &statdata) == 0 ) && ( statdata.st_size == m_FileSize ) && ( _strnicmp(m_LocalFile, "patches\\", strlen("patches\\" ) ) ==0 ) )
+#else
+			struct stat statdata;
+			if ( ( stat( m_LocalFile, &statdata) == 0) && (statdata.st_size == m_FileSize) && ( strncasecmp( m_LocalFile, "patches\\", strlen("patches\\" ) ) ==0 ) )
+#endif 
+			{
 				// OK, no need to download this again....
 
 				m_Status				= DOWNLOADSTATUS_FINDINGFILE;  // ready to find another file

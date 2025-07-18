@@ -21,81 +21,89 @@
 #include "WWDebug/wwdebug.h"
 #include "thread.h"
 #include "mpu.h"
+
+#ifdef _WIN32
 #pragma warning (disable : 4201)	// Nonstandard extension - nameless struct
-#include <windows.h>
+# include <windows.h>
+# include <intrin.h> 
+#endif //_WIN32
+
+#include <SDL3/SDL_cpuinfo.h>
+
 #include "systimer.h"
 
-#ifdef _UNIX
+#ifdef __linux__
+# include <cpuid.h>
 # include <time.h>  // for time(), localtime() and timezone variable.
-#endif
+# include <sys/utsname.h>
+# include <fstream>
+# include <sstream>
+#define stricmp strcasecmp
+#endif //_UNIX
 
-struct OSInfoStruct {
-	const char* Code;
-	const char* SubCode;
-	const char* VersionString;
-	unsigned char VersionMajor;
-	unsigned char VersionMinor;
-	unsigned short VersionSub;
-	unsigned char BuildMajor;
-	unsigned char BuildMinor;
-	unsigned short BuildSub;
+struct OSInfoStruct 
+{
+	const char*	Code = nullptr;
+	const char*	SubCode = nullptr;
+	const char*	VersionString = nullptr;
+	uint8_t 	VersionMajor = 0;
+	uint8_t 	VersionMinor = 0;
+	uint16_t	VersionSub = 0;
+	uint8_t		BuildMajor = 0;
+	uint8_t		BuildMinor = 0;
+	uint16_t	BuildSub = 0;
 };
 
-static void Get_OS_Info(
-	OSInfoStruct& os_info,
-	unsigned OSVersionPlatformId,
-	unsigned OSVersionNumberMajor,
-	unsigned OSVersionNumberMinor,
-	unsigned OSVersionBuildNumber);
+static void Get_OS_Info( OSInfoStruct& os_info, uint32_t OSVersionPlatformId, uint32_t OSVersionNumberMajor, uint32_t OSVersionNumberMinor, uint32_t OSVersionBuildNumber );
 
 
 StringClass CPUDetectClass::ProcessorLog;
 StringClass CPUDetectClass::CompactLog;
 
-int CPUDetectClass::ProcessorType;
-int CPUDetectClass::ProcessorFamily;
-int CPUDetectClass::ProcessorModel;
-int CPUDetectClass::ProcessorRevision;
-int CPUDetectClass::ProcessorSpeed;
-__int64 CPUDetectClass::ProcessorTicksPerSecond;	// Ticks per second
-double CPUDetectClass::InvProcessorTicksPerSecond;	// 1.0 / Ticks per second
+uint32_t	CPUDetectClass::ProcessorType;
+uint32_t	CPUDetectClass::ProcessorFamily;
+uint32_t	CPUDetectClass::ProcessorModel;
+uint32_t	CPUDetectClass::ProcessorRevision;
+uint32_t	CPUDetectClass::ProcessorSpeed;
+uint64_t	CPUDetectClass::ProcessorTicksPerSecond;	// Ticks per second
+double		CPUDetectClass::InvProcessorTicksPerSecond;	// 1.0 / Ticks per second
 
-unsigned CPUDetectClass::FeatureBits;
-unsigned CPUDetectClass::ExtendedFeatureBits;
+uint32_t	CPUDetectClass::FeatureBits;
+uint32_t	CPUDetectClass::ExtendedFeatureBits;
 
-unsigned CPUDetectClass::L2CacheSize;
-unsigned CPUDetectClass::L2CacheLineSize;
-unsigned CPUDetectClass::L2CacheSetAssociative;
-unsigned CPUDetectClass::L1DataCacheSize;
-unsigned CPUDetectClass::L1DataCacheLineSize;
-unsigned CPUDetectClass::L1DataCacheSetAssociative;
-unsigned CPUDetectClass::L1InstructionCacheSize;
-unsigned CPUDetectClass::L1InstructionCacheLineSize;
-unsigned CPUDetectClass::L1InstructionCacheSetAssociative;
-unsigned CPUDetectClass::L1InstructionTraceCacheSize;
-unsigned CPUDetectClass::L1InstructionTraceCacheSetAssociative;
+uint32_t	CPUDetectClass::L2CacheSize;
+uint32_t	CPUDetectClass::L2CacheLineSize;
+uint32_t	CPUDetectClass::L2CacheSetAssociative;
+uint32_t	CPUDetectClass::L1DataCacheSize;
+uint32_t	CPUDetectClass::L1DataCacheLineSize;
+uint32_t	CPUDetectClass::L1DataCacheSetAssociative;
+uint32_t	CPUDetectClass::L1InstructionCacheSize;
+uint32_t	CPUDetectClass::L1InstructionCacheLineSize;
+uint32_t	CPUDetectClass::L1InstructionCacheSetAssociative;
+uint32_t	CPUDetectClass::L1InstructionTraceCacheSize;
+uint32_t	CPUDetectClass::L1InstructionTraceCacheSetAssociative;
 
-unsigned CPUDetectClass::TotalPhysicalMemory;
-unsigned CPUDetectClass::AvailablePhysicalMemory;
-unsigned CPUDetectClass::TotalPageMemory;
-unsigned CPUDetectClass::AvailablePageMemory;
-unsigned CPUDetectClass::TotalVirtualMemory;
-unsigned CPUDetectClass::AvailableVirtualMemory;
+uint32_t	CPUDetectClass::TotalPhysicalMemory;
+uint32_t	CPUDetectClass::AvailablePhysicalMemory;
+uint32_t	CPUDetectClass::TotalPageMemory;
+uint32_t	CPUDetectClass::AvailablePageMemory;
+uint32_t	CPUDetectClass::TotalVirtualMemory;
+uint32_t	CPUDetectClass::AvailableVirtualMemory;
 
-unsigned CPUDetectClass::OSVersionNumberMajor;
-unsigned CPUDetectClass::OSVersionNumberMinor;
-unsigned CPUDetectClass::OSVersionBuildNumber;
-unsigned CPUDetectClass::OSVersionPlatformId;
-StringClass CPUDetectClass::OSVersionExtraInfo;
+uint32_t	CPUDetectClass::OSVersionNumberMajor;
+uint32_t	CPUDetectClass::OSVersionNumberMinor;
+uint32_t	CPUDetectClass::OSVersionBuildNumber;
+uint32_t	CPUDetectClass::OSVersionPlatformId;
+StringClass	CPUDetectClass::OSVersionExtraInfo;
 
-bool CPUDetectClass::HasCPUIDInstruction=false;
-bool CPUDetectClass::HasRDTSCInstruction=false;
-bool CPUDetectClass::HasSSESupport=false;
-bool CPUDetectClass::HasSSE2Support=false;
-bool CPUDetectClass::HasCMOVSupport=false;
-bool CPUDetectClass::HasMMXSupport=false;
-bool CPUDetectClass::Has3DNowSupport=false;
-bool CPUDetectClass::HasExtended3DNowSupport=false;
+bool		CPUDetectClass::HasCPUIDInstruction = false;
+bool		CPUDetectClass::HasRDTSCInstruction = false;
+bool		CPUDetectClass::HasSSESupport = false;
+bool		CPUDetectClass::HasSSE2Support = false;
+bool		CPUDetectClass::HasCMOVSupport = false;
+bool		CPUDetectClass::HasMMXSupport = false;
+bool		CPUDetectClass::Has3DNowSupport = false;
+bool		CPUDetectClass::HasExtended3DNowSupport = false;
 
 CPUDetectClass::ProcessorManufacturerType CPUDetectClass::ProcessorManufacturer = CPUDetectClass::MANUFACTURER_UNKNOWN;
 CPUDetectClass::IntelProcessorType CPUDetectClass::IntelProcessor;
@@ -108,7 +116,8 @@ char CPUDetectClass::ProcessorString[48];
 
 const char* CPUDetectClass::Get_Processor_Manufacturer_Name()
 {
-	static const char* ManufacturerNames[] = {
+	static const char* ManufacturerNames[] = 
+	{
 		"<Unknown>",
 		"Intel",
 		"UMC",
@@ -125,13 +134,14 @@ const char* CPUDetectClass::Get_Processor_Manufacturer_Name()
 
 #define ASM_RDTSC _asm _emit 0x0f _asm _emit 0x31
 
-static unsigned Calculate_Processor_Speed(__int64& ticks_per_second)
+static uint64_t Calculate_Processor_Speed( int64_t& ticks_per_second )
 {
-	struct {
-		unsigned timer0_h;
-		unsigned timer0_l;
-		unsigned timer1_h;
-		unsigned timer1_l;
+	struct 
+	{
+		uint32_t timer0_h;
+		uint32_t timer0_l;
+		uint32_t timer1_h;
+		uint32_t timer1_l;
 	} Time;
 
 #ifdef WIN32
@@ -140,49 +150,54 @@ static unsigned Calculate_Processor_Speed(__int64& ticks_per_second)
       mov Time.timer0_h, eax
       mov Time.timer0_l, edx
    }
-#elif defined(_UNIX)
+#elif defined( __GNUC__ )
       __asm__("rdtsc");
       __asm__("mov %eax, __Time.timer1_h");
       __asm__("mov %edx, __Time.timer1_l");
 #endif
 
 	unsigned start=TIMEGETTIME();
-	unsigned elapsed;
-	while ((elapsed=TIMEGETTIME()-start)<200) {
+	unsigned elapsed = 0;
+	while ((elapsed=TIMEGETTIME()-start)<200) 
+	{
 #ifdef WIN32
-      __asm {
+      __asm 
+	  {
          ASM_RDTSC;
          mov Time.timer1_h, eax
          mov Time.timer1_l, edx
       }
-#elif defined(_UNIX)
+#elif defined( __GNUC__ )
       __asm__ ("rdtsc");
       __asm__("mov %eax, __Time.timer1_h");
       __asm__("mov %edx, __Time.timer1_l");
 #endif
 	}
 
-	__int64 t=*(__int64*)&Time.timer1_h-*(__int64*)&Time.timer0_h;
-	ticks_per_second=(__int64)((1000.0/(double)elapsed)*(double)t);	// Ticks per second
-	return unsigned((double)t/(double)(elapsed*1000));
+	int64_t t=*(int64_t*)&Time.timer1_h-*(int64_t*)&Time.timer0_h;
+	ticks_per_second=(int64_t)((1000.0/(double) elapsed ) * (double)t);	// Ticks per second
+	return uint64_t( (double)t / (double)( elapsed * 1000 ));
 }
 
-void CPUDetectClass::Init_Processor_Speed()
+void CPUDetectClass::Init_Processor_Speed( void )
 {
-	if (!Has_RDTSC_Instruction()) {
-		ProcessorSpeed=0;
+	if (!Has_RDTSC_Instruction()) 
+	{
+		ProcessorSpeed = 0;
 		return;
 	}
 
 	// Loop until two subsequent samples are within 5% of each other (max 5 iterations).
-	unsigned speed1=Calculate_Processor_Speed(ProcessorTicksPerSecond);
+	unsigned speed1 = Calculate_Processor_Speed( ProcessorTicksPerSecond );
 	unsigned total_speed=speed1;
-	for (int i=0;i<5;++i) {
-		unsigned speed2=Calculate_Processor_Speed(ProcessorTicksPerSecond);
+	for (int i=0;i<5;++i) 
+	{
+		unsigned speed2=Calculate_Processor_Speed( ProcessorTicksPerSecond );
 		float rel=float(speed1)/float(speed2);
-		if (rel>=0.95f && rel<=1.05f) {
+		if (rel>=0.95f && rel<=1.05f) 
+		{
 			ProcessorSpeed=(speed1+speed2)/2;
-			InvProcessorTicksPerSecond=1.0/double(ProcessorTicksPerSecond);
+			InvProcessorTicksPerSecond=1.0/double( ProcessorTicksPerSecond );
 			return;
 		}
 		speed1=speed2;
@@ -206,20 +221,30 @@ void CPUDetectClass::Init_Processor_Manufacturer()
 
 	ProcessorManufacturer = MANUFACTURER_UNKNOWN;
 
-	if (stricmp(VendorID, "GenuineIntel") == 0) ProcessorManufacturer = MANUFACTURER_INTEL;
-	else if (stricmp(VendorID, "AuthenticAMD") == 0) ProcessorManufacturer = MANUFACTURER_AMD;
-	else if (stricmp(VendorID, "AMD ISBETTER") == 0) ProcessorManufacturer = MANUFACTURER_AMD;
-	else if (stricmp(VendorID, "UMC UMC UMC") == 0) ProcessorManufacturer = MANUFACTURER_UMC;
-	else if (stricmp(VendorID, "CyrixInstead") == 0) ProcessorManufacturer = MANUFACTURER_CYRIX;
-	else if (stricmp(VendorID, "NexGenDriven") == 0) ProcessorManufacturer = MANUFACTURER_NEXTGEN;
-	else if (stricmp(VendorID, "CentaurHauls") == 0) ProcessorManufacturer = MANUFACTURER_VIA;
-	else if (stricmp(VendorID, "RiseRiseRise") == 0) ProcessorManufacturer = MANUFACTURER_RISE;
-	else if (stricmp(VendorID, "GenuineTMx86") == 0) ProcessorManufacturer = MANUFACTURER_TRANSMETA;
+	if ( stricmp(VendorID, "GenuineIntel") == 0 ) 
+		ProcessorManufacturer = MANUFACTURER_INTEL;
+	else if (stricmp(VendorID, "AuthenticAMD") == 0) 
+		ProcessorManufacturer = MANUFACTURER_AMD;
+	else if ( stricmp(VendorID, "AMD ISBETTER") == 0) 
+		ProcessorManufacturer = MANUFACTURER_AMD;
+	else if ( stricmp(VendorID, "UMC UMC UMC") == 0) 
+		ProcessorManufacturer = MANUFACTURER_UMC;
+	else if ( stricmp(VendorID, "CyrixInstead") == 0 ) 
+		ProcessorManufacturer = MANUFACTURER_CYRIX;
+	else if ( stricmp(VendorID, "NexGenDriven") == 0 ) 
+		ProcessorManufacturer = MANUFACTURER_NEXTGEN;
+	else if ( stricmp(VendorID, "CentaurHauls") == 0 ) 
+		ProcessorManufacturer = MANUFACTURER_VIA;
+	else if ( stricmp(VendorID, "RiseRiseRise") == 0 ) 
+		ProcessorManufacturer = MANUFACTURER_RISE;
+	else if ( stricmp(VendorID, "GenuineTMx86") == 0 ) 
+		ProcessorManufacturer = MANUFACTURER_TRANSMETA;
 }
 
-void CPUDetectClass::Process_Cache_Info(unsigned value)
+void CPUDetectClass::Process_Cache_Info( uint32_t value)
 {
-	switch (value) {
+	switch ( value ) 
+	{
 	case 0x00: // Null
 		break;
 	case 0x01: // Instruction TLB, 4K pages, 4-way set associative, 32 entries
@@ -915,70 +940,38 @@ void CPUDetectClass::Init_Memory()
 #endif
 }
 
-void CPUDetectClass::Init_OS()
+void CPUDetectClass::Init_OS( void )
 {
+#ifdef defined( _WIN32 )
 	OSVERSIONINFO os;
-#ifdef WIN32
-   os.dwOSVersionInfoSize = sizeof(os);
+	os.dwOSVersionInfoSize = sizeof(os);
 	GetVersionEx(&os);
 
-   OSVersionNumberMajor = os.dwMajorVersion;
-   OSVersionNumberMinor = os.dwMinorVersion;
-   OSVersionBuildNumber = os.dwBuildNumber;
-   OSVersionPlatformId  = os.dwPlatformId;
-   OSVersionExtraInfo   = os.szCSDVersion;
-#elif defined(_UNIX)
+	OSVersionNumberMajor = os.dwMajorVersion;
+	OSVersionNumberMinor = os.dwMinorVersion;
+	OSVersionBuildNumber = os.dwBuildNumber;
+	OSVersionPlatformId  = os.dwPlatformId;
+	OSVersionExtraInfo   = os.szCSDVersion;
+#elif defined( __linux__ )
 #warning FIX Init_OS()
 #endif
 }
 
-bool CPUDetectClass::CPUID(
-	unsigned& u_eax_,
-	unsigned& u_ebx_,
-	unsigned& u_ecx_,
-	unsigned& u_edx_,
-	unsigned cpuid_type)
+bool CPUDetectClass::CPUID( uint32_t& u_eax_, uint32_t& u_ebx_, uint32_t& u_ecx_, uint32_t& u_edx_, uint32_t cpuid_type )
 {
-	if (!Has_CPUID_Instruction()) return false;	// Most processors since 486 have CPUID...
-
-	unsigned u_eax;
-	unsigned u_ebx;
-	unsigned u_ecx;
-	unsigned u_edx;
-
+	if ( !Has_CPUID_Instruction() ) 
+		return false;	// Most processors since 486 have CPUID...
+		
 #ifdef WIN32
-   __asm
-   {
-      pushad
-      mov	eax, [cpuid_type]
-      xor	ebx, ebx
-      xor	ecx, ecx
-      xor	edx, edx
-      cpuid
-      mov	[u_eax], eax
-      mov	[u_ebx], ebx
-      mov	[u_ecx], ecx
-      mov	[u_edx], edx
-      popad
-   }
-#elif defined(_UNIX)
-   __asm__("pusha");
-   __asm__("mov	__cpuid_type, %eax");
-   __asm__("xor	%ebx, %ebx");
-   __asm__("xor	%ecx, %ecx");
-   __asm__("xor	%edx, %edx");
-   __asm__("cpuid");
-   __asm__("mov	%eax, __u_eax");
-   __asm__("mov	%ebx, __u_ebx");
-   __asm__("mov	%ecx, __u_ecx");
-   __asm__("mov	%edx, __u_edx");
-   __asm__("popa");
+	int regs[4]{ 0, 0, 0, 0 };
+    __cpuid(regs, static_cast<int>(type));
+    u_eax_ = regs[0];
+    u_ebx_ = regs[1];
+    u_ecx_ = regs[2];
+    u_edx_ = regs[3];
+#elif defined(__GNUC__)
+	__get_cpuid( cpuid_type, &u_eax_, &u_ebx_, &u_ecx_, &u_edx_ );
 #endif
-
-	u_eax_=u_eax;
-	u_ebx_=u_ebx;
-	u_ecx_=u_ecx;
-	u_edx_=u_edx;
 
 	return true;
 }

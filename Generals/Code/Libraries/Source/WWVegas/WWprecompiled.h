@@ -36,22 +36,34 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-
 #ifndef __WWPRECOMPILED_H__
 #define __WWPRECOMPILED_H__
 
 //
 #include <cstdio>
-#include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <cstddef>
+#include <cstdarg>
+#include <filesystem>
 #include <cmath>
 #include <new>
+#include <algorithm>
 #include <limits.h> 
 #include <float.h>
 #include <assert.h>
 #include <memory.h>
+#include <errno.h>
+#include <sys/stat.h>
+
+#include <SDL3/SDL_video.h>
+#include <SDL3/SDL_surface.h>
+#include <SDL3/SDL_render.h>
+#include <SDL3/SDL_pixels.h>
+#include <SDL3/SDL_timer.h>
+
+#include <SDL3/SDL_mutex.hpp>
+#include <SDL3/SDL_thread.hpp>
 
 // WWLib common utilities lib 
 #include "WWLib/always.h"

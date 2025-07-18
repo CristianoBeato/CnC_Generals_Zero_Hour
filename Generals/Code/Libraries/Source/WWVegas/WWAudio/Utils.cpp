@@ -36,7 +36,10 @@
 
 #pragma warning (disable : 4514)
 
-#include "Utils.H"
+#include "Utils.h"
 
-
+#if 0
 CRITICAL_SECTION MMSLockClass::_MSSLockCriticalSection;
+#else
+SDL::Mutex MMSLockClass::_MSSLockCriticalSection;
+#endif

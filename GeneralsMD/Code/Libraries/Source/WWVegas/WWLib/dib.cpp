@@ -37,9 +37,10 @@
  *   DIB8C::Clear -- clears the DIB                                                            * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-#include "WWLib/always.h"
+#include "WWprecompiled.h"
 #include "dib.h"
-#include <math.h>
+
+#define NUM_PAL_COLORS 256
 
 /*********************************************************************************************** 
  * DIB8C::DIB8Class -- constructor                                                             * 
@@ -53,21 +54,23 @@
  * HISTORY:                                                                                    * 
  *   04/18/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
-DIB8Class::DIB8Class(HWND hwnd,int width,int height,PaletteClass & pal):
+DIB8Class::DIB8Class( SDL_Window* hwnd,int width,int height,PaletteClass & pal):
 	IsZombie(false),
-	Info(NULL),
+//	Info(nullptr),
 	Handle(0),
-	Pixels(NULL),
+	Pixels(nullptr),
 	Width(width),
 	Height(height),
-	PixelBase(NULL),
-	Pitch(NULL),
-	Surface(NULL)
+	PixelBase(nullptr),
+	Pitch( 0 ),
+	Surface(nullptr)
 {
+#if 0
 	// Allocate a BITMAPINFO structure
 	Info = (BITMAPINFO *) new char [sizeof(BITMAPINFO) + 256*sizeof(RGBQUAD)];
 
-	if (Info == NULL) {
+	if (Info == NULL) 
+	{
 		IsZombie = true;
 		return;
 	}
@@ -84,27 +87,55 @@ DIB8Class::DIB8Class(HWND hwnd,int width,int height,PaletteClass & pal):
 	Info->bmiHeader.biYPelsPerMeter = 0;
 	Info->bmiHeader.biClrUsed = 256;
 	Info->bmiHeader.biClrImportant = 256;
-
+	
 	// Fill in the DIB's palette.
-	for (int i=0; i<256; i++) {
+	for ( int i = 0; i<256; i++ ) 
+	{
 		Info->bmiColors[i].rgbBlue =		(unsigned char)pal[i].Get_Blue();
 		Info->bmiColors[i].rgbGreen =		(unsigned char)pal[i].Get_Green();
 		Info->bmiColors[i].rgbRed =		(unsigned char)pal[i].Get_Red();
 		Info->bmiColors[i].rgbReserved =	0;
 	}
+#endif
 	
 	// Create the DIB.
-	HDC hdc = GetDC(hwnd);
-	Handle = CreateDIBSection(hdc, Info, DIB_RGB_COLORS,(void**)&Pixels, NULL, 0);
-	ReleaseDC(hwnd, hdc);
+#if 0
+	//HDC hdc = GetDC(hwnd);
+	//Handle = CreateDIBSection(hdc, Info, DIB_RGB_COLORS,(void**)&Pixels, NULL, 0);
+	//ReleaseDC(hwnd, hdc);
 
-	if (!Handle) {
+#elif 1
+
+	// Create the surface palette
+	Palette = SDL_CreatePalette( NUM_PAL_COLORS );
+	
+	// Fill in the DIB's palette.
+	SDL_Color palColors[NUM_PAL_COLORS];
+	for ( int i = 0; i < NUM_PAL_COLORS; i++ )
+	{
+		palColors[i].r = static_cast<Uint8>( pal[i].Get_Red() );
+		palColors[i].g = static_cast<Uint8>( pal[i].Get_Green() );
+		palColors[i].b = static_cast<Uint8>( pal[i].Get_Blue() );
+		palColors[i].a = 255;
+	}
+	
+	// Update the surface palette colors 
+	SDL_SetPaletteColors( Palette, palColors, 0, NUM_PAL_COLORS );
+	
+	// Create the surface 
+	Handle = SDL_CreateSurfaceFrom( width, height, SDL_PIXELFORMAT_INDEX8, (void**)&Pixels, Pitch );
+
+	SDL_SetSurfacePalette( Handle, Palette );
+#endif
+
+	if (!Handle) 
+	{
 		IsZombie = true;
 		return;
     }
 
-	Width = Info->bmiHeader.biWidth;
-	Height = abs(Info->bmiHeader.biHeight);
+	Width = width;
+	Height = std::abs( height );
 	Pitch = (Width + 3) & 0xfffffffC;
 
 	// Check if the DIB is bottom-up or top-down.
@@ -126,7 +157,8 @@ DIB8Class::DIB8Class(HWND hwnd,int width,int height,PaletteClass & pal):
 	int surfwid = abs(Pitch);
 	Surface = new BSurface(surfwid,Height,1,Pixels);
 
-	if (Surface == NULL) {
+	if ( Surface == nullptr ) 
+	{
 		IsZombie = true;
 		return;
 	}

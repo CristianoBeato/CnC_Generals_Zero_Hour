@@ -61,9 +61,6 @@
 #endif
 
 // SYSTEM INCLUDES ////////////////////////////////////////////////////////////
-
-#include <new>
-#include <cstdio>
 #ifdef MEMORYPOOL_OVERRIDE_MALLOC
 	#include <malloc.h>
 #endif
@@ -217,16 +214,16 @@ class BlockCheckpointInfo;
 // TYPE DEFINES ///////////////////////////////////////////////////////////////
 
 // ----------------------------------------------------------------------------
-/**
-	This class is purely a convenience used to pass optional arguments to initMemoryManager(),
-	and by extension, to createDynamicMemoryAllocator(). You can specify how many sub-pools you
-	want, what size each is, what the allocation counts are to be, etc. Most apps will
-	construct an array of these to pass to initMemoryManager() and never use it elsewhere.
-*/
+///
+///	This class is purely a convenience used to pass optional arguments to initMemoryManager(),
+///	and by extension, to createDynamicMemoryAllocator(). You can specify how many sub-pools you
+///	want, what size each is, what the allocation counts are to be, etc. Most apps will
+///	construct an array of these to pass to initMemoryManager() and never use it elsewhere.
+///
 struct PoolInitRec
 {
-	const char *poolName;					///< name of the pool; by convention, "dmaPool_XXX" where XXX is allocationSize
-	Int allocationSize;						///< size, in bytes, of the pool.
+	const char *poolName;			///< name of the pool; by convention, "dmaPool_XXX" where XXX is allocationSize
+	Int allocationSize;				///< size, in bytes, of the pool.
 	Int initialAllocationCount;		///< initial number of blocks to allocate.
 	Int overflowAllocationCount;	///< when the pool runs out of space, allocate more blocks in this increment
 };
@@ -862,24 +859,24 @@ extern void userMemoryAdjustPoolSize(const char *poolName, Int& initialAllocatio
 
 	#define _OPERATOR_NEW_DEFINED_
 
-	extern void * __cdecl operator new		(size_t size);
-	extern void __cdecl operator delete		(void *p);
+	extern void * WWCALL operator new		(size_t size);
+	extern void WWCALL operator delete		(void *p);
 
-	extern void * __cdecl operator new[]	(size_t size);
-	extern void __cdecl operator delete[]	(void *p);
+	extern void * WWCALL operator new[]	(size_t size);
+	extern void WWCALL operator delete[]	(void *p);
 
 	// additional overloads to account for VC/MFC funky versions
-	extern void* __cdecl operator new(size_t nSize, const char *, int);
-	extern void __cdecl operator delete(void *, const char *, int);
+	extern void* WWCALL operator new(size_t nSize, const char *, int);
+	extern void WWCALL operator delete(void *, const char *, int);
 
-	extern void* __cdecl operator new[](size_t nSize, const char *, int);
-	extern void __cdecl operator delete[](void *, const char *, int);
+	extern void* WWCALL operator new[](size_t nSize, const char *, int);
+	extern void WWCALL operator delete[](void *, const char *, int);
 
 	// additional overloads for 'placement new'
-	//inline void* __cdecl operator new							(size_t s, void *p) { return p; }
-	//inline void __cdecl operator delete						(void *, void *p)		{ }
-	inline void* __cdecl operator new[]						(size_t s, void *p) { return p; }
-	inline void __cdecl operator delete[]					(void *, void *p)		{ }
+	//inline void* WWCALL operator new							(size_t s, void *p) { return p; }
+	//inline void WWCALL operator delete						(void *, void *p)		{ }
+	inline void* WWCALL operator new[]						(size_t s, void *p) { return p; }
+	inline void WWCALL operator delete[]					(void *, void *p)		{ }
 
 #endif
 

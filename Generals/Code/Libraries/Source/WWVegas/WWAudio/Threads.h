@@ -40,9 +40,11 @@
 #include "WWLib/vector.h"
 #include "WWLib/mutex.h"
 
+#include <SDL3/SDL_thread.hpp>
+#include <SDL3/SDL_mutex.hpp>
+
 // Forward declarations
 class RefCountClass;
-
 
 //////////////////////////////////////////////////////////////////////////
 //
@@ -69,7 +71,7 @@ class WWAudioThreadsClass
 		//
 		//	Delayed release mechanism
 		//
-		static HANDLE		Create_Delayed_Release_Thread( void* param = nullptr );
+		static SDL::Thread	Create_Delayed_Release_Thread( void* param = nullptr );
 		static void			End_Delayed_Release_Thread( uint32_t timeout = 20000 );
 		static void			Add_Delayed_Release_Object( RefCountClass *object, uint32_t delay = 2000 );
 		static void			Flush_Delayed_Release_Objects( void );
@@ -79,7 +81,7 @@ class WWAudioThreadsClass
 		//////////////////////////////////////////////////////////////////////
 		//	Private methods
 		//////////////////////////////////////////////////////////////////////
-		static void	__cdecl Delayed_Release_Thread_Proc( void* param );
+		static int	__cdecl Delayed_Release_Thread_Proc( void* param );
 
 		//////////////////////////////////////////////////////////////////////
 		//	Private data types
@@ -97,8 +99,8 @@ class WWAudioThreadsClass
 		//////////////////////////////////////////////////////////////////////
 		//	Private member data
 		//////////////////////////////////////////////////////////////////////
-		static HANDLE						m_hDelayedReleaseThread;
-		static HANDLE						m_hDelayedReleaseEvent;
+		static SDL::Thread				m_hDelayedReleaseThread;
+		static SDL::Semaphore			m_hDelayedReleaseEvent;
 		//static RELEASE_LIST			m_ReleaseList;
 		static CriticalSectionClass		m_CriticalSection;
 		static DELAYED_RELEASE_INFO *	m_ReleaseListHead;

@@ -1324,7 +1324,7 @@ void WW3D::Make_Screen_Shot( const char * filename_base )
  *=============================================================================================*/
 void WW3D::Start_Movie_Capture( const char * filename_base, float frame_rate )
 {
-#ifdef _WINDOWS
+//#ifdef _WINDOWS
 	if (IsCapturing) {
 		Stop_Movie_Capture();
 	}
@@ -1349,7 +1349,7 @@ void WW3D::Start_Movie_Capture( const char * filename_base, float frame_rate )
 	Movie = W3DNEW FrameGrabClass( filename_base, FrameGrabClass::AVI, width, height, depth, frame_rate);
 
 	WWDEBUG_SAY(( "Starting Movie %s\n", filename_base ));
-#endif
+//#endif
 }
 
 
@@ -1367,8 +1367,9 @@ void WW3D::Start_Movie_Capture( const char * filename_base, float frame_rate )
  *=============================================================================================*/
 void WW3D::Stop_Movie_Capture( void )
 {
-#ifdef _WINDOWS
-	if (IsCapturing) {
+//#ifdef _WINDOWS
+	if (IsCapturing) 
+	{
 		IsCapturing = false;
 		WWDEBUG_SAY(( "Stoping Movie\n" ));
 
@@ -1376,7 +1377,7 @@ void WW3D::Stop_Movie_Capture( void )
 		delete Movie;
 		Movie = NULL;
 	}
-#endif
+//#endif
 }
 
 

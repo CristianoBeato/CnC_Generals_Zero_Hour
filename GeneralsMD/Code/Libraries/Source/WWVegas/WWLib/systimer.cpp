@@ -55,8 +55,6 @@ SysTimeClass SystemTime;
  *=============================================================================================*/
 SysTimeClass::SysTimeClass(void)
 {
-	//tell windows we need single ms precision.
-	timeBeginPeriod(1);
 }
 
 /***********************************************************************************************
@@ -75,8 +73,6 @@ SysTimeClass::SysTimeClass(void)
  *=============================================================================================*/
 SysTimeClass::~SysTimeClass(void)
 {
-	//tell windows we need single ms precision.
-	timeEndPeriod(1);
 }
 
 /***********************************************************************************************
@@ -117,14 +113,14 @@ void SysTimeClass::Reset(void)
  *=============================================================================================*/
 bool SysTimeClass::Is_Getting_Late(void)
 {
-	/*
-	** Even though the timers are all unsigned so we have a max time of 0xffffffff the game casts it to int in various places
-	** so it's safer to assume a signed max value.
-	*/
-	if (Get() > 0x6fffffff) {
-		return(true);
-	}
-	return(false);
+	//
+	// Even though the timers are all unsigned so we have a max time of 0xffffffff the game casts it to int in various places
+	// so it's safer to assume a signed max value.
+	//
+	if ( Get() > 0x6fffffff ) 
+		return true ;
+	
+	return false;
 }
 
 

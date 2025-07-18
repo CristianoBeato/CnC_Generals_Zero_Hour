@@ -50,7 +50,7 @@
 #pragma warning (push, 3)	// (gth) system headers complain at warning level 4...
 #endif
 
-#if defindef( _WIN32 )
+#if defined( _WIN32 )
 #ifndef _WINDOWS_
 #include "windows.h"
 #endif
@@ -84,37 +84,40 @@ public:
 	// depending on which mode you select, it will produce either frames or an AVI.
 	FrameGrabClass(const char *filename, MODE mode, int width, int height, int bitdepth, float framerate );
 
-	virtual ~FrameGrabClass();
+	virtual ~FrameGrabClass( void );
 
 	void ConvertGrab(void *BitmapPointer);
 	void Grab(void *BitmapPointer);
 
-	long * GetBuffer()			{ return Bitmap; }
-	float	GetFrameRate()			{ return FrameRate; }
+	long * GetBuffer( void ) { return Bitmap; }
+	float	GetFrameRate( void ) { return FrameRate; }
 
 protected:
-	const char *Filename;
-	float			FrameRate;
-
-	MODE Mode;
-	long Counter; // used for incrementing filename cunter, etc.
-
-	void GrabAVI(void *BitmapPointer);
-	void GrabRawFrame(void *BitmapPointer);
-
+// BEATO Begin:
+	MODE 				Mode;
+	float				FrameRate;
+	int 				Width;
+	int 				Height;
+	uint64_t 			Counter; // used for incrementing filename cunter, etc.
+	const char*			Filename;
+	long*				Bitmap;
 	// avi settings
-	PAVIFILE				AVIFile;  
-	long					*Bitmap;
-	PAVISTREAM			Stream;     
-	AVISTREAMINFO		AVIStreamInfo;
-	BITMAPINFOHEADER	BitmapInfoHeader; 
+	AVFormatContext* 	fmt_ctx;
+	AVCodecContext* 	codec_ctx;
+	SwsContext* 		sws_ctx;
+	AVStream* 			stream;
+    AVFrame* 			frame;
+// BEATO end
 
+	
 	// general purpose cleanup routine
 	void CleanupAVI();
 
 	// convert the SR image into AVI byte ordering
 	void ConvertFrame(void *BitmapPointer);
 
+	void GrabAVI(void *BitmapPointer);
+	void GrabRawFrame(void *BitmapPointer);
 };
 
 #endif

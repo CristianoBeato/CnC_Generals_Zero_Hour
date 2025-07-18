@@ -37,8 +37,8 @@
 
 class MutexClass
 {
-	void* handle;
-	unsigned locked;
+	SDL_Mutex*	handle;
+	uint32_t 	locked;
 
 	// Lock and unlock are private so that you can't use them directly. Use LockClass as a sentry instead!
 	// Lock returns true if lock was succesful, false otherwise
@@ -82,17 +82,17 @@ public:
 
 class CriticalSectionClass
 {
-	void* handle;
-	unsigned locked;
+	SDL_Mutex* 	handle;
+	uint32_t	locked;
 
 	// Lock and unlock are private so that you can't use them directly. Use LockClass as a sentry instead!
-	void Lock();
-	void Unlock();
+	void Lock( void );
+	void Unlock( void );
 
 public:
 	// Name can (and usually should) be NULL. Use name only if you wish to create a globally unique mutex
-	CriticalSectionClass();
-	~CriticalSectionClass();
+	CriticalSectionClass( void );
+	~CriticalSectionClass( void );
 
 	class LockClass
 	{
@@ -101,7 +101,7 @@ public:
 		// In order to lock a mutex create a local instance of LockClass with mutex as a parameter.
 		// Time is in milliseconds, INFINITE means infinite wait.
 		LockClass(CriticalSectionClass& c);
-		~LockClass();
+		~LockClass( void );
 	private:
 		LockClass &operator=(const LockClass&) { return(*this); }
 	};

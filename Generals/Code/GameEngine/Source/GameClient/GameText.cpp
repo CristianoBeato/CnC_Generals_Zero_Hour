@@ -1397,7 +1397,7 @@ Char	GameTextManager::readChar( File *file )
 // GameTextManager::compareLUT 
 //============================================================================
 
-static int __cdecl compareLUT ( const void *i1,  const void*i2)
+static int WWCALL compareLUT ( const void *i1,  const void*i2)
 {
 	StringLookUp *lut1 = (StringLookUp*) i1;
 	StringLookUp *lut2 = (StringLookUp*) i2;

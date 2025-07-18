@@ -390,64 +390,72 @@ inline void UnicodeString::concat(const WideChar c)
 inline int UnicodeString::compare(const UnicodeString& stringSrc) const
 {
 	validate();
-	return wcscmp(this->str(), stringSrc.str());
+	return std::wcscmp(this->str(), stringSrc.str());
 }
 
 // -----------------------------------------------------
 inline int UnicodeString::compare(const WideChar* s) const
 {
 	validate();
-	return wcscmp(this->str(), s);
+	return std::wcscmp(this->str(), s);
 }
 
 // -----------------------------------------------------
 inline int UnicodeString::compareNoCase(const UnicodeString& stringSrc) const
 {
 	validate();
+#if defined( _MSC_VER )
 	return _wcsicmp(this->str(), stringSrc.str());
+#elif defined( __GNUC__ )
+	return wcscasecmp(this->str(), stringSrc.str());
+#endif 
 }
 
 // -----------------------------------------------------
 inline int UnicodeString::compareNoCase(const WideChar* s) const
 {
 	validate();
+#if defined( _MSC_VER )
 	return _wcsicmp(this->str(), s);
+#elif defined( __GNUC__ )
+	return wcscasecmp(this->str(), s);
+#endif
 }
 
 // -----------------------------------------------------
 inline Bool operator==(const UnicodeString& s1, const UnicodeString& s2)
 {
-	return wcscmp(s1.str(), s2.str()) == 0;
+	return std::wcscmp(s1.str(), s2.str()) == 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator!=(const UnicodeString& s1, const UnicodeString& s2)
 {
-	return wcscmp(s1.str(), s2.str()) != 0;
+	return std::wcscmp(s1.str(), s2.str()) != 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator<(const UnicodeString& s1, const UnicodeString& s2)
 {
-	return wcscmp(s1.str(), s2.str()) < 0;
+	return std::wcscmp(s1.str(), s2.str()) < 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator<=(const UnicodeString& s1, const UnicodeString& s2)
 {
-	return wcscmp(s1.str(), s2.str()) <= 0;
+	return std::wcscmp(s1.str(), s2.str()) <= 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator>(const UnicodeString& s1, const UnicodeString& s2)
 {
-	return wcscmp(s1.str(), s2.str()) > 0;
+	return std::wcscmp(s1.str(), s2.str()) > 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator>=(const UnicodeString& s1, const UnicodeString& s2)
 {
-	return wcscmp(s1.str(), s2.str()) >= 0;
+	return std::wcscmp(s1.str(), s2.str()) >= 0;
 }
 
 #endif // UNICODESTRING_H

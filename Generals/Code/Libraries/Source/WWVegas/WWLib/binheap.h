@@ -202,7 +202,7 @@ class BinaryHeapClass
 		// Take the smallest element out of the tree and reorder
 		HeapNodeClass<Key_Type>* Remove_Min (void)
 		{
-			unsigned int	child;
+			uint32_t child;
 			HeapNodeClass<Key_Type>*  	last_element;
 			HeapNodeClass<Key_Type>* 	min_element;
 
@@ -224,7 +224,7 @@ class BinaryHeapClass
 			// Decrement the number of elements in the tree.
 			Number_Of_Elements--;
 
-			for (unsigned int i = 1; (i * 2) <= Number_Of_Elements; i = child)
+			for ( uint32_t i = 1; (i * 2) <= Number_Of_Elements; i = child)
 			{
 				// Find a smaller child.
 				child = i * 2;
@@ -245,8 +245,8 @@ class BinaryHeapClass
 				}
 			}
 
-			Elements[i] = last_element;
-			Elements[i]->Set_Heap_Location(i);
+			//Elements[i] = last_element;
+			//Elements[i]->Set_Heap_Location(i);
 
 			return (min_element);
 		}

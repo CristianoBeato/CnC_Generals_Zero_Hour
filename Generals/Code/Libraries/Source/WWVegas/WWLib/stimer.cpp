@@ -36,20 +36,18 @@
 
 #include	"WWLib/always.h"
 #include	"stimer.h"
-#include	"win.h"
+#include	"plat.h"
 
 #ifdef _MSC_VER
+
 #pragma warning (push,3)
-#endif
-
 #include <mmsystem.h>
-
-#ifdef _MSC_VER
 #pragma warning (pop)
+
 #endif
 
 
-long SystemTimerClass::operator () (void) const
+long SystemTimerClass::operator () ( void ) const
 {
 	return timeGetTime()/16;
 }

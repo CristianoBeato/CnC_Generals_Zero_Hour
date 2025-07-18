@@ -34,24 +34,27 @@
  * Functions:                                                                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-
-#include "audiblesound.h"
-#include "wwaudio.h"
-#include "ww3d.h"
-#include "wwdebug.h"
-#include "soundbuffer.h"
-#include "utils.h"
-#include "soundscene.h"
-#include "filteredsound.h"
-#include "threads.h"
-#include "soundchunkids.h"
-#include "simpledefinitionfactory.h"
-#include "persistfactory.h"
-#include "logicalsound.h"
-#include "definitionclassids.h"
-#include "soundstreamhandle.h"
-#include "sound2dhandle.h"
-
+#if 1
+#	include "WWprecompiled.h"
+#	include "AudibleSound.h"
+#else
+#	include "audiblesound.h"
+#	include "wwaudio.h"
+#	include "ww3d.h"
+#	include "wwdebug.h"
+#	include "soundbuffer.h"
+#	include "utils.h"
+#	include "soundscene.h"
+#	include "filteredsound.h"
+#	include "threads.h"
+#	include "soundchunkids.h"
+#	include "simpledefinitionfactory.h"
+#	include "persistfactory.h"
+#	include "logicalsound.h"
+#	include "definitionclassids.h"
+#	include "soundstreamhandle.h"
+#	include "sound2dhandle.h"
+#endif
 
 //////////////////////////////////////////////////////////////////////////////////
 //	Static factories

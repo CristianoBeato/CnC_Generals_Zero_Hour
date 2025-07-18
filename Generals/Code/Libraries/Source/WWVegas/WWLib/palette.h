@@ -42,10 +42,10 @@
 
 #include	"rgb.h"
 
-/*
-**	The palette class is used to manipulate a palette as a whole. All 256 colors are
-**	represented by the palette class object.
-*/
+//
+//	The palette class is used to manipulate a palette as a whole. All 256 colors are
+//	represented by the palette class object.
+//
 class PaletteClass
 {
 	public:
@@ -76,6 +76,5 @@ class PaletteClass
 	protected:
 		RGBClass Palette[COLOR_COUNT];
 };
-
 
 #endif

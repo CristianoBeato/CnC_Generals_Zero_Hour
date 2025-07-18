@@ -173,4 +173,10 @@ void					WWDebug_DBWin32_Message_Handler( const char * message);
 #define WWDEBUG_PROFILE_STOP(x)
 #endif
 
+// BEATO Begin
+#if !defined( _WIN32 )
+#define OutputDebugString std::printf
+#endif
+// BEATO End
+
 #endif

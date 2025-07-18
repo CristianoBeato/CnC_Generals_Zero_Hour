@@ -48,9 +48,6 @@
 #ifndef ASCIISTRING_H
 #define ASCIISTRING_H
 
-#include <stdarg.h>
-#include <stdio.h>
-#include <string.h>
 #include "Lib/BaseType.h"
 #include "Common/Debug.h"
 #include "Common/Errors.h"
@@ -440,112 +437,120 @@ inline void AsciiString::concat(const char c)
 inline int AsciiString::compare(const AsciiString& stringSrc) const
 {
 	validate();
-	return strcmp(this->str(), stringSrc.str());
+	return std::strcmp(this->str(), stringSrc.str());
 }
 
 // -----------------------------------------------------
 inline int AsciiString::compare(const char* s) const
 {
 	validate();
-	return strcmp(this->str(), s);
+	return std::strcmp(this->str(), s);
 }
 
 // -----------------------------------------------------
 inline int AsciiString::compareNoCase(const AsciiString& stringSrc) const
 {
 	validate();
+#if defined( _MSC_VER )
 	return _stricmp(this->str(), stringSrc.str());
+#elif defined(__GNUC__)
+	return strcasecmp( this->str(), stringSrc.str() );
+#endif
 }
 
 // -----------------------------------------------------
 inline int AsciiString::compareNoCase(const char* s) const
 {
 	validate();
+#if defined( _MSC_VER )
 	return _stricmp(this->str(), s);
+#elif defined( __GNUC__ )
+	return strcasecmp(this->str(), s);
+#endif
 }
 
 // -----------------------------------------------------
 inline const char* AsciiString::find(char c) const
 {
-	return strchr(this->str(), c);
+	return std::strchr( this->str(), c );
 }
 
 // -----------------------------------------------------
 inline const char* AsciiString::reverseFind(char c) const
 {
-	return strrchr(this->str(), c);
+	return std::strrchr(this->str(), c);
 }
 
 // -----------------------------------------------------
 inline Bool operator==(const AsciiString& s1, const AsciiString& s2)
 {
-	return strcmp(s1.str(), s2.str()) == 0;
+	return std::strcmp(s1.str(), s2.str()) == 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator!=(const AsciiString& s1, const AsciiString& s2)
 {
-	return strcmp(s1.str(), s2.str()) != 0;
+	return std::strcmp(s1.str(), s2.str()) != 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator<(const AsciiString& s1, const AsciiString& s2)
 {
-	return strcmp(s1.str(), s2.str()) < 0;
+	return std::strcmp(s1.str(), s2.str()) < 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator<=(const AsciiString& s1, const AsciiString& s2)
 {
-	return strcmp(s1.str(), s2.str()) <= 0;
+	return std::strcmp(s1.str(), s2.str()) <= 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator>(const AsciiString& s1, const AsciiString& s2)
 {
-	return strcmp(s1.str(), s2.str()) > 0;
+	return std::strcmp(s1.str(), s2.str()) > 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator>=(const AsciiString& s1, const AsciiString& s2)
 {
-	return strcmp(s1.str(), s2.str()) >= 0;
+	return std::strcmp(s1.str(), s2.str()) >= 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator==(const AsciiString& s1, const char* s2)
 {
-	return strcmp(s1.str(), s2) == 0;
+	return std::strcmp(s1.str(), s2) == 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator!=(const AsciiString& s1, const char* s2)
 {
-	return strcmp(s1.str(), s2) != 0;
+	return std::strcmp(s1.str(), s2) != 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator<(const AsciiString& s1, const char* s2)
 {
-	return strcmp(s1.str(), s2) < 0;
+	return std::strcmp(s1.str(), s2) < 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator<=(const AsciiString& s1, const char* s2)
 {
-	return strcmp(s1.str(), s2) <= 0;
+	return std::strcmp(s1.str(), s2) <= 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator>(const AsciiString& s1, const char* s2)
 {
-	return strcmp(s1.str(), s2) > 0;
+	return std::strcmp(s1.str(), s2) > 0;
 }
 
 // -----------------------------------------------------
 inline Bool operator>=(const AsciiString& s1, const char* s2)
 {
-	return strcmp(s1.str(), s2) >= 0;
+	return std::strcmp(s1.str(), s2) >= 0;
 }
 
 #endif // ASCIISTRING_H

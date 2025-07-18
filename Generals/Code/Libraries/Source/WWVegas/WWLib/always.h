@@ -47,10 +47,10 @@
 // Disable warning about exception handling not being enabled. It's used as part of STL - in a part of STL we don't use.
 #pragma warning(disable : 4530)
 
-/*
-** Define for debug memory allocation to include __FILE__ and __LINE__ for every memory allocation.
-** This helps find leaks.
-*/
+//
+// Define for debug memory allocation to include __FILE__ and __LINE__ for every memory allocation.
+// This helps find leaks.
+//
 
 // BEATO Begin:
 /* By default SDL uses the C calling convention */
@@ -61,6 +61,14 @@
 #define WWCALL
 #endif
 #endif // WWCALL
+
+// Jani: MSVC doesn't necessarily inline code with inline keyword. Using __forceinline results better inlining
+// and also prints out a warning if inlining wasn't possible. __forceinline is MSVC specific.
+#if defined(_MSC_VER)
+#define WWINLINE __forceinline
+#else
+#define WWINLINE inline
+#endif
 // BEATO End
 
 //#define STEVES_NEW_CATCHER
@@ -89,37 +97,35 @@
 
 	#define _OPERATOR_NEW_DEFINED_
 
-	extern void * WWCALL operator new		(size_t size);
-	extern void WWCALL operator delete		(void *p);
-
-	extern void * WWCALL operator new[]	(size_t size);
-	extern void WWCALL operator delete[]	(void *p);
-
-	// additional overloads to account for VC/MFC funky versions
-	extern void* WWCALL operator new			(size_t nSize, const char *, int);
-	extern void WWCALL operator delete		(void *, const char *, int);
-
-	extern void* WWCALL operator new[]		(size_t nSize, const char *, int);
-	extern void WWCALL operator delete[]	(void *, const char *, int);
+	extern void * WWCALL operator new( size_t size );
+	extern void * WWCALL operator new( size_t nSize , const char *, int );
+	extern void * WWCALL operator new[]( size_t size );
+	extern void * WWCALL operator new[]( size_t nSize, const char *, int );
+		
+	extern void WWCALL operator delete( void *p );
+	extern void WWCALL operator delete( void *, const char *, int );
+	extern void WWCALL operator delete[]( void *p );
+	extern void WWCALL operator delete[]( void *, const char *, int );
 
 	// additional overloads for 'placement new'
 	//inline void* WWCALL operator new							(size_t s, void *p) { return p; }
 	//inline void WWCALL operator delete						(void *, void *p)		{ }
-	inline void* WWCALL operator new[]						(size_t s, void *p) { return p; }
-	inline void WWCALL operator delete[]					(void *, void *p)		{ }
-
+#if 0
+	WWINLINE void* WWCALL operator new[](size_t s, void *p) { return p; }
+	WWINLINE void WWCALL operator delete[](void *, void *p)		{ }
+#endif
 #endif
 
 #if (defined(_DEBUG) || defined(_INTERNAL)) 
-	#define MSGW3DNEW(MSG)					new( MSG, 0 )
-	#define MSGW3DNEWARRAY(MSG)			new( MSG, 0 )
-	#define W3DNEW									new("W3D_" __FILE__, 0)
-	#define W3DNEWARRAY							new("W3A_" __FILE__, 0)
+	#define MSGW3DNEW(MSG)		new( MSG, 0 )
+	#define MSGW3DNEWARRAY(MSG)	new( MSG, 0 )
+	#define W3DNEW				new("W3D_" __FILE__, 0)
+	#define W3DNEWARRAY			new("W3A_" __FILE__, 0)
 #else
-	#define MSGW3DNEW(MSG)					new
-	#define MSGW3DNEWARRAY(MSG)			new
-	#define W3DNEW									new
-	#define W3DNEWARRAY							new
+	#define MSGW3DNEW(MSG)		new
+	#define MSGW3DNEWARRAY(MSG)	new
+	#define W3DNEW				new
+	#define W3DNEWARRAY			new
 #endif
 
 // ----------------------------------------------------------------------------
@@ -176,14 +182,6 @@ public:
 #pragma warning ( disable: 271 ) // trailing comma is nonstandard
 #pragma warning ( disable: 171 ) // invalid type conversion
 #pragma warning ( disable: 1 ) // last line of file ends without a newline
-#endif
-
-// Jani: MSVC doesn't necessarily inline code with inline keyword. Using __forceinline results better inlining
-// and also prints out a warning if inlining wasn't possible. __forceinline is MSVC specific.
-#if defined(_MSC_VER)
-#define WWINLINE __forceinline
-#else
-#define WWINLINE inline
 #endif
 
 /*

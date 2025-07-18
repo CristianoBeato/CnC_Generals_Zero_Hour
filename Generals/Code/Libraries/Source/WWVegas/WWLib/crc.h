@@ -40,9 +40,9 @@
 #ifndef CRC_H
 #define CRC_H
 
-#include	<stdlib.h>
-#ifdef _UNIX
-	#include "osdep.h"
+#include	<cstdlib>
+#ifdef __GNUC__
+#	include "bit"
 #endif
 
 /*
@@ -78,9 +78,15 @@ class CRCEngine {
 			return(Index != 0);
 		};
 
-		long Value(void) const {
-			if (Buffer_Needs_Data()) {
-				return(_lrotl(CRC, 1) + StagingBuffer.Composite);
+		long Value(void) const 
+		{
+			if (Buffer_Needs_Data()) 
+			{
+#ifdef __GNUC__
+				return ( std::__rotl( CRC, 1 ) + StagingBuffer.Composite );
+#else
+				return( _lrotl(CRC, 1) + StagingBuffer.Composite );
+#endif
 			}
 			return(CRC);
 		};

@@ -16,35 +16,28 @@
 **	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include "WWprecompiled.h"
 #include "mutex.h"
 #include "WWDebug/wwdebug.h"
-#include <windows.h>
-
 
 // ----------------------------------------------------------------------------
 
 MutexClass::MutexClass(const char* name) : handle(NULL), locked(false)
 {
-	#ifdef _UNIX
-		//assert(0);
-	#else
 		handle=CreateMutex(NULL,false,name);
 		WWASSERT(handle);
-	#endif
 }
 
-MutexClass::~MutexClass()
+MutexClass::~MutexClass( void )
 {
-	#ifdef _UNIX
-		//assert(0);
-	#else
-		WWASSERT(!locked); // Can't delete locked mutex!
-		CloseHandle(handle);
-	#endif
+	WWASSERT( !locked ); // Can't delete locked mutex!
+	SDL_( handle );
 }
 
 bool MutexClass::Lock(int time)
 {
+
+	SDL_TryLockMutex( )
 	#ifdef _UNIX
 		//assert(0);
 		return true;
@@ -56,17 +49,11 @@ bool MutexClass::Lock(int time)
 	#endif
 }
 
-void MutexClass::Unlock()
+void MutexClass::Unlock( void )
 {
-	#ifdef _UNIX
-		//assert(0);
-	#else
-		WWASSERT(locked);
-		int res=ReleaseMutex(handle);
-		res;	// silence compiler warnings
-		WWASSERT(res);
-		locked--;
-	#endif
+	WWASSERT(locked);
+	SDL_UnlockMutex( );
+	locked--;
 }
 
 // ----------------------------------------------------------------------------
@@ -81,54 +68,31 @@ MutexClass::LockClass::~LockClass()
 	if (!failed) mutex.Unlock();
 }
 
-
-
-
-
-
-
 // ----------------------------------------------------------------------------
 
-CriticalSectionClass::CriticalSectionClass() : handle(NULL), locked(false)
+CriticalSectionClass::CriticalSectionClass() : handle( nullptr ), locked(false)
 {
-	#ifdef _UNIX
-		//assert(0);
-	#else
-		handle=W3DNEWARRAY char[sizeof(CRITICAL_SECTION)];
-		InitializeCriticalSection((CRITICAL_SECTION*)handle);
-	#endif
+	handle = SDL_CreateMutex();
+	WWASSERT( handle );
 }
 
 CriticalSectionClass::~CriticalSectionClass()
 {
-	#ifdef _UNIX
-		//assert(0);
-	#else
-		WWASSERT(!locked); // Can't delete locked mutex!
-		DeleteCriticalSection((CRITICAL_SECTION*)handle);
-		delete[] handle;
-	#endif
+	WWASSERT(!locked); // Can't delete locked mutex!
+	SDL_DestroyMutex( handle );
 }
 
-void CriticalSectionClass::Lock()
+void CriticalSectionClass::Lock( void )
 {
-	#ifdef _UNIX
-		//assert(0);
-	#else
-		EnterCriticalSection((CRITICAL_SECTION*)handle);
-		locked++;
-	#endif
+	SDL_LockMutex( handle );
+	locked++;
 }
 
-void CriticalSectionClass::Unlock()
+void CriticalSectionClass::Unlock( void )
 {
-	#ifdef _UNIX
-		//assert(0);
-	#else
-		WWASSERT(locked);
-		LeaveCriticalSection((CRITICAL_SECTION*)handle);
-		locked--;
-	#endif
+	WWASSERT(locked);
+	SDL_UnlockMutex( handle );
+	locked--;
 }
 
 // ----------------------------------------------------------------------------

@@ -31,18 +31,17 @@
 class IDownload
 {
  public:
-	virtual HRESULT OnError( int error )=0;
-	virtual HRESULT OnEnd()=0;
-	virtual HRESULT OnQueryResume()=0;
-	virtual HRESULT OnProgressUpdate(int bytesread, int totalsize, int timetaken, int timeleft)=0;
-	virtual HRESULT OnStatusUpdate(int status)=0;
+	virtual int OnError( int error )=0;
+	virtual int OnEnd( void )=0;
+	virtual int OnQueryResume( void )=0;
+	virtual int OnProgressUpdate( size_t bytesread, size_t totalsize, int timetaken, int timeleft )=0;
+	virtual int OnStatusUpdate(int status)=0;
 };
 
 class CDownload
 {
 public:
-	CDownload(IDownload *listener) :
-		Listener(listener)
+	CDownload( IDownload *listener ) : Listener( listener )
 	{
 		m_Status			= DOWNLOADSTATUS_NONE;
 		m_TimeStarted		= 0;
@@ -64,13 +63,17 @@ public:
 			m_predictionTimes[i] = 0;
 		}
 	}
-	~CDownload() { delete m_Ftp; }
+
+	~CDownload( void ) 
+	{ 
+		delete m_Ftp; 
+	}
 
 public:
-	virtual HRESULT PumpMessages();
-	virtual HRESULT Abort();
-	virtual HRESULT DownloadFile(LPCSTR server, LPCSTR username, LPCSTR password, LPCSTR file, LPCSTR localfile, LPCSTR regkey, bool tryresume=true);
-	virtual HRESULT GetLastLocalFile(char *local_file, int maxlen);
+	virtual int PumpMessages( void );
+	virtual int Abort( void );
+	virtual int DownloadFile( const char* server, const char* username, const char* password, const char* file, const char* localfile, const char* regkey, bool tryresume=true);
+	virtual int GetLastLocalFile( char *local_file, size_t maxlen );
 
 private:
 	char m_Server[ 256 ];

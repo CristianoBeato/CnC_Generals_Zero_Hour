@@ -21,11 +21,10 @@
 #ifndef __FTP_H_
 #define __FTP_H_
 
-
-//#include "../resource.h"       // main symbols
-
-#ifdef _WIN32
-#include "winsock.h"
+#if defined( _WIN32 )
+#	include <winsock.h>
+#elif defined( __linux__ )
+#	include <arpa/inet.h>
 #endif //_WIN32
 
 #include "WWDownload/ftpdefs.h"
@@ -97,21 +96,21 @@ public:
 	virtual ~Cftp();
 
 public:
-	HRESULT ConnectToServer(LPCSTR szServerName);
-	HRESULT DisconnectFromServer();
+	int ConnectToServer(const char* szServerName);
+	int DisconnectFromServer();
 
-	HRESULT LoginToServer( LPCSTR szUserName, LPCSTR szPassword );
-	HRESULT LogoffFromServer( void );
+	int LoginToServer( const char* szUserName, const char* szPassword );
+	int LogoffFromServer( void );
 
-	HRESULT FindFile( LPCSTR szRemoteFileName, int * piSize );
+	int FindFile( const char* szRemoteFileName, int * piSize );
 
-	HRESULT FileRecoveryPosition( LPCSTR szLocalFileName, LPCSTR szRegistryRoot );
-	HRESULT RestartFrom( int i ) { m_iFilePos = i; return FTP_SUCCEEDED;  };
+	int FileRecoveryPosition( const char* szLocalFileName, const char* szRegistryRoot );
+	int RestartFrom( int i ) { m_iFilePos = i; return FTP_SUCCEEDED;  };
 
-	HRESULT GetNextFileBlock( LPCSTR szLocalFileName, int * piTotalRead );
+	int GetNextFileBlock( const char* szLocalFileName, int * piTotalRead );
 
-	HRESULT RecvReply( LPCSTR pReplyBuffer, int iSize, int * piRetCode );
-	HRESULT SendCommand( LPCSTR pCommand, int iSize );
+	int RecvReply( const char* pReplyBuffer, int iSize, int * piRetCode );
+	int SendCommand( const char* pCommand, int iSize );
 
 };
 

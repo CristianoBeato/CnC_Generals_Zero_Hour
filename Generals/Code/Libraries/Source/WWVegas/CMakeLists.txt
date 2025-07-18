@@ -330,7 +330,7 @@ set( WWDOWLOAD_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/WWDownload/DownloadDebug.h
     ${CMAKE_CURRENT_SOURCE_DIR}/WWDownload/downloaddefs.h
     ${CMAKE_CURRENT_SOURCE_DIR}/WWDownload/Download.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/WWDownload/FTP.CPP
+    ${CMAKE_CURRENT_SOURCE_DIR}/WWDownload/ftp.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/WWDownload/ftpdefs.h
     ${CMAKE_CURRENT_SOURCE_DIR}/WWDownload/ftp.h
     ${CMAKE_CURRENT_SOURCE_DIR}/WWDownload/registry.cpp
@@ -720,11 +720,4 @@ set( WWCOMMON_SOURCES_ALL
     )
 
 add_library( WWVegas STATIC ${WWCOMMON_SOURCES_ALL} )
-target_precompile_headers( WWVegas 
-    PUBLIC 
-        "$<$<COMPILE_LANGUAGE:CXX>:${CMAKE_SOURCE_DIR}/GameEngine/Include/Precompiled/PreRTS.h>" 
-    PRIVATE 
-        "$<$<COMPILE_LANGUAGE:CXX>:${CMAKE_CURRENT_SOURCE_DIR}/WWprecompiled.h>"
-         )
-
-#target_include_directories( WWCommon PUBLIC ${CMAKE_SOURCE_DIR}/Libraries/Include )
+target_precompile_headers( WWVegas PUBLIC "$<$<COMPILE_LANGUAGE:CXX>:${CMAKE_CURRENT_SOURCE_DIR}/WWprecompiled.h>" )
